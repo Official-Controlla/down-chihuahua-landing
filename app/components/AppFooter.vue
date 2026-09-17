@@ -94,9 +94,9 @@ const currentYear = new Date().getFullYear();
           <address class="not-italic flex flex-col gap-2.5 text-sm text-[#1d1d1b] text-left">
             <p>Chihuahua, Chihuahua, México</p>
             <p>
-              Teléfono:
-              <a href="tel:6144123456" class="hover:text-[#0071bc] transition-colors">
-                (614) 412-3456
+              Teléfono / WhatsApp:
+              <a href="https://wa.me/526145334010" target="_blank" rel="noopener noreferrer" class="hover:text-[#0071bc] transition-colors">
+                614 533 40 10
               </a>
             </p>
             <p>

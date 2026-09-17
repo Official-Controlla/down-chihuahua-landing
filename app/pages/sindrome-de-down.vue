@@ -206,7 +206,7 @@ useSchemaOrg([
         </div>
 
         <!-- WhatsApp CTA -->
-        <a href="https://wa.me/526144123456" target="_blank" rel="noopener noreferrer"
+        <a href="https://wa.me/526145334010" target="_blank" rel="noopener noreferrer"
           class="inline-flex items-center gap-4 pl-7 pr-5 py-4 rounded-full bg-[#25d366] hover:bg-[#20bd5a] text-white font-bold text-base shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-0.5"
           aria-label="Contactar un orientador en WhatsApp">
           <span>Contactar un orientador en WhatsApp</span>

@@ -920,7 +920,7 @@ const localePath = useLocalePath();
                 <Button label="Agenda una visita" icon="pi pi-chevron-right" iconPos="right"
                   class="!rounded-full !bg-[#0071bc] !border-none !text-white font-bold !px-8 !py-4 hover:!bg-[#005a96] transition-all shadow-md" />
               </NuxtLink>
-              <a href="https://wa.me/526144123456" target="_blank" rel="noopener noreferrer">
+              <a href="https://wa.me/526145334010" target="_blank" rel="noopener noreferrer">
                 <Button label="Escríbenos por WhatsApp" icon="pi pi-chevron-right" iconPos="right"
                   class="!rounded-full !bg-white !border-2 !border-[#0071bc] !text-[#0071bc] font-bold !px-8 !py-4 hover:!bg-blue-50 transition-all" />
               </a>

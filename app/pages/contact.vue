@@ -3,7 +3,7 @@ import Button from "primevue/button";
 
 useSeoMeta({
   title: "Contacto y Colaboración | Instituto Down de Chihuahua A.C.",
-  description: "¿Tienes dudas, quieres inscribir a un familiar o conocernos? Contáctanos por WhatsApp (614 416 0521), visítanos en Av. Mirador 4307 en Chihuahua o súmate como voluntario.",
+  description: "¿Tienes dudas, quieres inscribir a un familiar o conocernos? Contáctanos por WhatsApp (614 533 40 10), visítanos en Av. Mirador 4307 en Chihuahua o súmate como voluntario.",
   keywords: "Contacto Instituto Down Chihuahua, dirección Instituto Down, teléfono instituto down, voluntariado síndrome de down, donaciones chihuahua",
   ogTitle: "Contacto y Colaboración | Instituto Down de Chihuahua A.C.",
   ogDescription: "Estamos listos para escucharte. Conoce nuestras vías de contacto, ubicación, voluntariado y donaciones en Chihuahua.",
@@ -19,7 +19,7 @@ useSchemaOrg([
   defineLocalBusiness({
     "@type": "EducationalOrganization",
     name: "Instituto Down de Chihuahua A.C.",
-    telephone: "+52-614-416-0521",
+    telephone: "+52-614-533-4010",
     email: "instituto@downchihuahua.org",
     address: {
       streetAddress: "Av. Mirador 4307, Campestre I Etapa, Campestre Residencial",
@@ -64,7 +64,7 @@ const localePath = useLocalePath();
           </p>
 
           <div class="flex flex-wrap items-center gap-4 pt-2">
-            <a href="https://wa.me/526144160521" target="_blank" rel="noopener noreferrer">
+            <a href="https://wa.me/526145334010" target="_blank" rel="noopener noreferrer">
               <Button label="WhatsApp" icon="pi pi-whatsapp" iconPos="right"
                 class="!rounded-full !bg-[#25d366] !border-none !text-white font-bold !px-6 !py-3 hover:!bg-[#20bd5a] transition-all shadow-md" />
             </a>
@@ -150,7 +150,7 @@ const localePath = useLocalePath();
           <!-- Contact items list -->
           <div class="flex flex-col gap-6 w-full">
             <!-- Item 1: WhatsApp -->
-            <a href="https://wa.me/526144160521" target="_blank" rel="noopener noreferrer"
+            <a href="https://wa.me/526145334010" target="_blank" rel="noopener noreferrer"
               class="flex items-center gap-4 group">
               <div
                 class="w-12 h-12 rounded-xl bg-[#d9b421] flex items-center justify-center shrink-0 group-hover:scale-105 transition-transform">
@@ -158,8 +158,7 @@ const localePath = useLocalePath();
               </div>
               <div class="flex flex-col gap-0.5">
                 <span class="text-xs font-bold uppercase text-[#4a4a48]">WhatsApp de Atención</span>
-                <span class="text-base font-bold text-[#1d1d1b] group-hover:text-[#0071bc] transition-colors">(614) 416
-                  0521</span>
+                <span class="text-base font-bold text-[#1d1d1b] group-hover:text-[#0071bc] transition-colors">614 533 40 10</span>
               </div>
             </a>
 
@@ -357,7 +356,7 @@ const localePath = useLocalePath();
 
         <!-- Buttons -->
         <div class="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6 w-full">
-          <a href="https://wa.me/526144160521" target="_blank" rel="noopener noreferrer">
+          <a href="https://wa.me/526145334010" target="_blank" rel="noopener noreferrer">
             <Button label="Reportar Donativo" icon="pi pi-arrow-right" iconPos="right"
               class="!rounded-full !bg-[#d9b421] !border-none !text-[#0071bc] font-bold !px-8 !py-4 hover:!bg-[#c4a21d] transition-all shadow-md" />
           </a>

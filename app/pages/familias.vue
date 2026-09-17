@@ -227,7 +227,7 @@ const localePath = useLocalePath();
           <p class="text-lg font-bold text-[#1d1d1b] text-center sm:text-left">
             ¿No encuentras lo que buscas? Escríbenos
           </p>
-          <a href="https://wa.me/526144123456" target="_blank" rel="noopener noreferrer"
+          <a href="https://wa.me/526145334010" target="_blank" rel="noopener noreferrer"
             class="inline-flex items-center gap-2.5 px-6 py-3 rounded-full bg-[#25d366] text-white font-bold text-sm hover:bg-[#20bd5a] transition-all shrink-0">
             <span>WhatsApp</span>
             <div class="w-8 h-8 rounded-full bg-white flex items-center justify-center shrink-0">
@@ -250,7 +250,7 @@ const localePath = useLocalePath();
         </h2>
 
         <div class="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6 w-full">
-          <NuxtLink href="https://wa.me/526144123456" target="_blank" rel="noopener noreferrer">
+          <NuxtLink href="https://wa.me/526145334010" target="_blank" rel="noopener noreferrer">
             <Button label="Habla con nosotros" icon="pi pi-phone" iconPos="right"
               class="!rounded-full !bg-[#d9b421] !border-none !text-[#0071bc] font-bold !px-8 !py-4 hover:!bg-[#c4a21d] transition-all shadow-md" />
           </NuxtLink>
