@@ -1,0 +1,190 @@
+{
+  "nav": {
+    "home": "Home",
+    "downSyndrome": "Down Syndrome",
+    "programs": "Programs",
+    "families": "Families",
+    "recycling": "Recycling",
+    "about": "About Us",
+    "contact": "Contact",
+    "collaborate": "Collaborate",
+    "services": "Services",
+    "approach": "Approach",
+    "caseStudies": "Case Studies",
+    "getInTouch": "Get in touch"
+  },
+  "hero": {
+    "badge": "Chihuahua Advantage",
+    "title": "Engineered Intelligence.",
+    "titleHighlight": "Software Engineering Meets Human-Centric AI",
+    "subtitle": "We build custom software, scale existing platforms, and integrate AI into your operations. Backed by 7+ years of expertise, we don't just write code—we understand your business first to deliver solutions that reduce errors and accelerate growth.",
+    "primaryBtn": "Start a Project",
+    "secondaryBtn": "View Case Studies"
+  },
+  "services": {
+    "badge": "What We Do",
+    "title": "Full-Cycle Engineering & AI",
+    "subtitle": "Whether you need a product built from scratch or legacy code modernized, we provide the technical firepower.",
+    "cards": {
+      "software": {
+        "title": "End-to-End Development",
+        "desc": "From a blank canvas to a market-ready product. We design, build, and deploy custom software solutions perfectly tailored to your unique operational needs."
+      },
+      "legacy": {
+        "title": "Legacy & Existing Systems",
+        "desc": "Have a project that needs saving or scaling? We are stack-agnostic problem solvers who step in to optimize, maintain, and evolve your existing codebase."
+      },
+      "ai": {
+        "title": "Applied Artificial Intelligence",
+        "desc": "We help small and medium businesses adopt AI safely. Automate workflows, reduce human error, and gain speed without losing the human touch."
+      }
+    }
+  },
+  "seo": {
+    "title": "Controlla Technologies {'|'} Custom Software Engineering & AI Solutions",
+    "description": "Controlla Technologies is a nearshore software engineering agency. We build custom software, scale existing platforms, and integrate applied AI to transform your enterprise operations.",
+    "keywords": "Controlla Technologies, software engineering agency mexico, custom software development, nearshore software mexico, ai integration services, applied artificial intelligence",
+    "orgName": "Controlla Technologies",
+    "faq1_q": "What services does Controlla provide?",
+    "faq1_a": "We provide end-to-end custom software development, legacy system modernization, and applied artificial intelligence solutions.",
+    "faq2_q": "Where is Controlla located?",
+    "faq2_a": "We are strategically positioned in Mexico, allowing us to offer nearshore engineering talent with seamless real-time collaboration in US time zones.",
+    "faq3_q": "How does Controlla approach AI integration?",
+    "faq3_a": "We focus on safe, practical AI adoption for small and medium businesses, automating workflows and reducing errors without losing the human touch."
+  },
+  "about": {
+    "badge": "Core Advantages",
+    "cards": {
+      "mastery": {
+        "title": "7+ Years of Mastery",
+        "desc": "Nearly a decade of technical rigor across diverse stacks and industries. We bring battle-tested experience to ensure robust and scalable enterprise solutions.",
+        "tag1": "Established 2017",
+        "tag2": "Proven Record"
+      },
+      "location": {
+        "title": "Chihuahua Advantage",
+        "desc": "Strategically positioned in Chihuahua, Mexico. We offer seamless real-time collaboration in US time zones, deep cultural affinity, and world-class engineering talent at highly competitive rates.",
+        "tag1": "Time Zone Aligned",
+        "tag2": "Cost Efficient"
+      }
+    }
+  },
+  "approach": {
+    "badge": "Our Approach",
+    "title": "Empathy Before Code.",
+    "p1": "In an era of automated everything, we believe the best technical solutions start with human understanding. We sit down with your team, analyze your day-to-day operations, and identify the true friction points.",
+    "p2": "Only then do we deploy our engineered intelligence—fast, precise, and built around the people who will actually use it."
+  },
+  "caseStudies": {
+    "badge": "Success Stories",
+    "title": "Proven Impact",
+    "subtitle": "Discover how we've applied engineered intelligence to transform operations and scale digital platforms.",
+    "readBtn": "Read Case Study",
+    "modal": {
+      "challenge": "The Challenge",
+      "solution": "Our Solution",
+      "techStack": "Tech Stack",
+      "integrations": "Integrations",
+      "visitWeb": "Visit Website",
+      "appStore": "App Store",
+      "playStore": "Play Store",
+      "gallery": "Platform Mockups"
+    }
+  },
+  "cta": {
+    "title": "Ready to elevate your operations?",
+    "subtitle": "Whether you need a team to build your next big idea or an AI strategy to streamline your business, we are ready to partner with you.",
+    "btn": "Schedule a Consultation"
+  },
+  "footer": {
+    "description": "Controlla Technologies builds custom software and AI solutions that scale businesses globally from our HQ in Chihuahua, Mexico.",
+    "contact": "Contact",
+    "social": "Social",
+    "rights": "All rights reserved."
+  },
+  "contactPage": {
+    "seo": {
+      "title": "Contact {'|'} Start Your Software Project with Controlla Technologies",
+      "description": "Get in touch with our engineering team to discuss your next custom software or AI integration project.",
+      "keywords": "contact controlla technologies, software project quote, nearshore engineering mexico, ai consulting contact, software agency contact"
+    },
+    "badge": "Let's Connect",
+    "title": "Engineer Your Reality.",
+    "subtitle": "Initiate a dialogue with our technical architects to discuss bespoke AI solutions and intelligent infrastructure for your enterprise.",
+    "globalPresence": "Global Presence",
+    "hq": "Headquarters",
+    "hqDesc1": "Chihuahua, Mexico HQ",
+    "hqDesc2": "Operating at the intersection of LATAM talent and global tech standards.",
+    "directComm": "Direct Communication",
+    "email": "ltorres{'@'}controlla.com.mx",
+    "emailDesc": "Average response time: < 4 hours during business days.",
+    "formTitle": "Project Inquiry",
+    "formDesc": "Provide details about your operational requirements, and our engineering team will prepare a structured response.",
+    "fullName": "Full Name",
+    "fullNamePlaceholder": "e.g. Jane Doe",
+    "emailLabel": "Corporate Email",
+    "emailPlaceholder": "jane{'@'}company.com",
+    "projectType": "Project Classification",
+    "projectTypePlaceholder": "Select an area of expertise...",
+    "typeOptions": {
+      "ai": "AI Integration & Automation",
+      "data": "Data Engineering Pipeline",
+      "custom": "Custom Software Architecture",
+      "consulting": "Technical Consulting"
+    },
+    "message": "Scope & Objectives",
+    "messagePlaceholder": "Briefly describe your current technical challenges or the specific outcomes you aim to achieve...",
+    "submit": "Get a Quotation",
+    "submitting": "Sending...",
+    "success": "Message sent successfully!",
+    "error": "Failed to send message. Please try again later."
+  },
+  "integrations": {
+    "badge": "Integrations",
+    "title": "Integrations We Master",
+    "subtitle": "We connect your software with the best tools and platforms in the market.",
+    "footerText": "Can't find the integration you're looking for? Don't worry. Our engineering team constantly trains and adapts to master any SDK, API, or technology your project requires."
+  },
+  "servicesPage": {
+    "seo": {
+      "title": "Software Engineering & AI Services | Controlla",
+      "description": "We build custom software, scale legacy platforms, and integrate AI into your operations. High-performance nearshore engineering from Chihuahua, Mexico.",
+      "keywords": "software engineering, custom software development, nearshore outsourcing, legacy modernization, applied artificial intelligence, AI integration, controlla services"
+    },
+    "badge": "01 // SERVICES",
+    "heroTitle": "Engineered Intelligence for the Modern Enterprise.",
+    "heroSubtitle": "We bridge the gap between human-centric business logic and high-performance machine intelligence. Our specialized services are designed to build efficiency, accelerate delivery, and future-proof your digital operations.",
+    "cards": {
+      "software": {
+        "title": "Full-Cycle Software Engineering",
+        "desc": "From a blank canvas to a market-ready product. We design, build, and deploy custom software solutions perfectly tailored to your unique operational needs.",
+        "feat1": "End-to-End Development",
+        "feat2": "Custom Architecture",
+        "link": "Explore Engineering"
+      },
+      "nearshore": {
+        "title": "Nearshore Delivery Model",
+        "desc": "High-velocity engineering teams embedded in your time zone. We deliver scalable, robust software architecture with uncompromising code quality from our Chihuahua, Mexico HQ.",
+        "link": "View Delivery Model"
+      },
+      "legacy": {
+        "title": "Legacy Modernization",
+        "desc": "Have a project that needs saving or scaling? We step in to optimize, maintain, and evolve your existing codebase to meet modern infrastructure standards.",
+        "link": "Discover Modernization"
+      },
+      "ai": {
+        "title": "Applied Artificial Intelligence",
+        "desc": "We help small and medium businesses adopt AI safely. Automate workflows, reduce human error, and gain speed without losing the human touch.",
+        "feat1": "Process Automation",
+        "feat2": "Intelligent Decision Support",
+        "link": "See AI Integration"
+      }
+    },
+    "cta": {
+      "title": "Ready to Engineer Your Future?",
+      "subtitle": "Partner with us to build intelligent, scalable solutions that drive measurable business impact.",
+      "btn1": "Start a Project",
+      "btn2": "Schedule a Consultation"
+    }
+  }
+}
