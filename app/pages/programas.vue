@@ -28,23 +28,24 @@ const localePath = useLocalePath();
 <template>
   <main class="flex flex-col flex-1 bg-white font-sans overflow-x-hidden">
     <!-- HERO SECTION: Programas de Vida -->
-    <section aria-labelledby="hero-title" class="bg-[#fff5e0] px-4 sm:px-6 md:px-12 lg:px-20 py-12 md:py-16 lg:py-24">
+    <section aria-labelledby="hero-title" data-scroll data-scroll-class="is-inview"
+      class="bg-[#fff5e0] px-4 sm:px-6 md:px-12 lg:px-20 py-12 md:py-16 lg:py-24">
       <div class="max-w-7xl mx-auto flex flex-col lg:flex-row items-center justify-between gap-10 lg:gap-16">
         <!-- Left Content -->
-        <div class="flex flex-col items-start gap-6 lg:w-1/2">
+        <div class="flex flex-col items-start gap-6 lg:w-1/2 reveal-fade-up">
           <div
-            class="inline-flex items-center px-4 py-1.5 rounded-full bg-white border-[1.5px] border-[#d9b421] shadow-xs">
+            class="inline-flex items-center px-4 py-1.5 rounded-full bg-white border-[1.5px] border-[#d9b421] shadow-xs reveal-fade-up stagger-1">
             <span class="text-xs sm:text-[13px] font-bold uppercase tracking-wider text-[#0071bc]">
               Nuestros Caminos de Apoyo
             </span>
           </div>
 
-          <h1 id="hero-title" class="text-3xl sm:text-4xl md:text-5xl lg:text-[52px] text-[#0071bc] leading-tight">
+          <h1 id="hero-title" class="text-3xl sm:text-4xl md:text-5xl lg:text-[52px] text-[#0071bc] leading-tight reveal-fade-up stagger-2">
             <span class="font-bold">Programas de </span>
             <span class="font-black italic">Vida</span>
           </h1>
 
-          <p class="text-base sm:text-lg text-[#4a4a48] leading-relaxed max-w-2xl">
+          <p class="text-base sm:text-lg text-[#4a4a48] leading-relaxed max-w-2xl reveal-fade-up stagger-3">
             Acompañamos a la persona con síndrome de Down en cada etapa de su vida. Nuestros programas están pensados
             para que, paso a paso, gane autonomía, confianza y las herramientas que necesita para incluirse en la
             escuela, el trabajo y la comunidad.
@@ -52,17 +53,17 @@ const localePath = useLocalePath();
         </div>
 
         <!-- Right Visual Container -->
-        <div class="flex justify-center items-center lg:w-1/2 w-full">
+        <div class="flex justify-center items-center lg:w-1/2 w-full reveal-scale">
           <div class="relative w-full max-w-[420px]">
             <!-- Main Arched Image Frame -->
-            <div
+            <div data-scroll data-scroll-speed="0.03"
               class="w-full h-[420px] sm:h-[500px] overflow-hidden rounded-tl-[180px] sm:rounded-tl-[210px] rounded-tr-[180px] sm:rounded-tr-[210px] rounded-bl-3xl rounded-br-3xl bg-[#f4f6f8] border border-[#9a9a97] shadow-xl">
               <img src="@/assets/images/programas-hero.png"
                 alt="Programas de Vida e Inclusión del Instituto Down de Chihuahua"
                 class="w-full h-full object-cover" />
             </div>
             <!-- Decorative Arc SVG -->
-            <div
+            <div data-scroll data-scroll-speed="-0.03"
               class="absolute -right-4 sm:-right-8 top-5 w-[100px] sm:w-[140px] h-[50px] sm:h-[70px] overflow-hidden">
               <svg width="140" height="70" viewBox="0 0 140 70" fill="none" xmlns="http://www.w3.org/2000/svg"
                 class="w-full h-full">
@@ -75,7 +76,7 @@ const localePath = useLocalePath();
     </section>
 
     <!-- BANNER: ¿Acabas de recibir la noticia? -->
-    <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12 pt-12 md:pt-16 pb-6 w-full">
+    <section data-scroll data-scroll-class="is-inview" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12 pt-12 md:pt-16 pb-6 w-full reveal-fade-up">
       <FamiliasNuevasCard />
     </section>
 
@@ -83,7 +84,7 @@ const localePath = useLocalePath();
     <section aria-labelledby="camino-desarrollo-title"
       class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12 py-12 md:py-16 w-full flex flex-col gap-12">
       <!-- Section Header -->
-      <div class="flex flex-col items-center gap-4 text-center">
+      <div data-scroll data-scroll-class="is-inview" class="flex flex-col items-center gap-4 text-center reveal-fade-up">
         <h2 id="camino-desarrollo-title" class="text-3xl sm:text-4xl lg:text-[40px] font-bold text-[#0071bc]">
           El Camino del Desarrollo
         </h2>
@@ -93,8 +94,8 @@ const localePath = useLocalePath();
       <!-- Development Stages List -->
       <div class="flex flex-col gap-12 lg:gap-16">
         <!-- Stage 1 -->
-        <article
-          class="flex flex-col lg:flex-row items-center gap-8 lg:gap-16 p-6 sm:p-10 lg:p-12 rounded-3xl bg-[#0071bc] shadow-xl text-white"
+        <article data-scroll data-scroll-class="is-inview"
+          class="flex flex-col lg:flex-row items-center gap-8 lg:gap-16 p-6 sm:p-10 lg:p-12 rounded-3xl bg-[#0071bc] shadow-xl text-white card-hover-subtle reveal-fade-up"
           style="box-shadow: 0px 16px 40px 0 rgba(29,29,27,0.06);">
           <div
             class="w-full lg:w-[480px] h-[260px] sm:h-[340px] rounded-3xl border-8 border-white overflow-hidden shadow-2xl shrink-0">
@@ -132,8 +133,8 @@ const localePath = useLocalePath();
         </article>
 
         <!-- Stage 2 -->
-        <article
-          class="flex flex-col-reverse lg:flex-row items-center gap-8 lg:gap-16 p-6 sm:p-10 lg:p-12 rounded-3xl bg-[#d9b421] shadow-xl text-[#1d1d1b]"
+        <article data-scroll data-scroll-class="is-inview"
+          class="flex flex-col-reverse lg:flex-row items-center gap-8 lg:gap-16 p-6 sm:p-10 lg:p-12 rounded-3xl bg-[#d9b421] shadow-xl text-[#1d1d1b] card-hover-subtle reveal-fade-up"
           style="box-shadow: 0px 16px 40px 0 rgba(29,29,27,0.06);">
           <div class="flex flex-col items-start gap-5 flex-1">
             <div class="flex flex-wrap items-center gap-3">
@@ -163,8 +164,8 @@ const localePath = useLocalePath();
         </article>
 
         <!-- Stage 3 -->
-        <article
-          class="flex flex-col lg:flex-row items-center gap-8 lg:gap-16 p-6 sm:p-10 lg:p-12 rounded-3xl bg-[#e8734a] shadow-xl text-white"
+        <article data-scroll data-scroll-class="is-inview"
+          class="flex flex-col lg:flex-row items-center gap-8 lg:gap-16 p-6 sm:p-10 lg:p-12 rounded-3xl bg-[#e8734a] shadow-xl text-white card-hover-subtle reveal-fade-up"
           style="box-shadow: 0px 16px 40px 0 rgba(29,29,27,0.06);">
           <div
             class="w-full lg:w-[480px] h-[260px] sm:h-[340px] rounded-3xl border-8 border-white overflow-hidden shadow-2xl shrink-0">
@@ -194,8 +195,8 @@ const localePath = useLocalePath();
         </article>
 
         <!-- Stage 4 -->
-        <article
-          class="flex flex-col-reverse lg:flex-row items-center gap-8 lg:gap-16 p-6 sm:p-10 lg:p-12 rounded-3xl bg-[#2aa198] shadow-xl text-white"
+        <article data-scroll data-scroll-class="is-inview"
+          class="flex flex-col-reverse lg:flex-row items-center gap-8 lg:gap-16 p-6 sm:p-10 lg:p-12 rounded-3xl bg-[#2aa198] shadow-xl text-white card-hover-subtle reveal-fade-up"
           style="box-shadow: 0px 16px 40px 0 rgba(29,29,27,0.06);">
           <div class="flex flex-col items-start gap-5 flex-1">
             <div class="flex flex-wrap items-center gap-3">
@@ -231,7 +232,7 @@ const localePath = useLocalePath();
     <section aria-labelledby="cuotas-title" class="bg-[#fffdf4] py-16 md:py-24 px-4 sm:px-6 lg:px-12 w-full">
       <div class="max-w-7xl mx-auto flex flex-col gap-16 lg:gap-20">
         <!-- Section Header -->
-        <div class="flex flex-col items-center text-center gap-5 max-w-4xl mx-auto">
+        <div data-scroll data-scroll-class="is-inview" class="flex flex-col items-center text-center gap-5 max-w-4xl mx-auto reveal-fade-up">
           <div class="inline-flex items-center px-4 py-1.5 rounded-full bg-[#0071bc]">
             <span class="text-xs font-bold uppercase tracking-wider text-white">
               GUÍA DE ORIENTACIÓN · CICLO ESCOLAR 2026–2027
@@ -248,8 +249,8 @@ const localePath = useLocalePath();
         </div>
 
         <!-- Inscripción General Banner Card -->
-        <div
-          class="max-w-4xl mx-auto w-full p-6 sm:p-8 rounded-[20px] bg-white flex flex-col sm:flex-row justify-between items-start sm:items-center gap-6 shadow-xl"
+        <div data-scroll data-scroll-class="is-inview"
+          class="max-w-4xl mx-auto w-full p-6 sm:p-8 rounded-[20px] bg-white flex flex-col sm:flex-row justify-between items-start sm:items-center gap-6 shadow-xl card-hover-subtle reveal-scale"
           style="box-shadow: 0px 12px 32px 0 rgba(0,113,188,0.15);">
           <div class="flex flex-col gap-1">
             <h3 class="text-xl font-bold text-[#1d1d1b]">
@@ -271,7 +272,7 @@ const localePath = useLocalePath();
 
         <!-- Subcategory 1: Acompañamiento individual -->
         <div class="flex flex-col gap-8">
-          <div class="flex flex-col gap-2">
+          <div data-scroll data-scroll-class="is-inview" class="flex flex-col gap-2 reveal-fade-up">
             <div class="flex items-center gap-4">
               <div class="w-1.5 h-8 rounded-full bg-[#0071bc]"></div>
               <h3 class="text-2xl font-bold text-[#0071bc]">
@@ -287,8 +288,8 @@ const localePath = useLocalePath();
           <!-- Individual Services Grid -->
           <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
             <!-- Card 1 -->
-            <div
-              class="flex flex-col justify-between p-6 sm:p-8 rounded-tl-lg rounded-tr-[20px] rounded-bl-lg rounded-br-[20px] bg-white border-t border-r border-b border-l-[6px] border-[#0071bc] shadow-sm h-full gap-4"
+            <div data-scroll data-scroll-class="is-inview"
+              class="flex flex-col justify-between p-6 sm:p-8 rounded-tl-lg rounded-tr-[20px] rounded-bl-lg rounded-br-[20px] bg-white border-t border-r border-b border-l-[6px] border-[#0071bc] shadow-sm h-full gap-4 card-hover-subtle reveal-fade-up stagger-1"
               style="box-shadow: 0px 8px 24px 0 rgba(0,113,188,0.05);">
               <div class="flex flex-col gap-3">
                 <span
@@ -310,8 +311,8 @@ const localePath = useLocalePath();
             </div>
 
             <!-- Card 2 -->
-            <div
-              class="flex flex-col justify-between p-6 sm:p-8 rounded-tl-lg rounded-tr-[20px] rounded-bl-lg rounded-br-[20px] bg-white border-t border-r border-b border-l-[6px] border-[#0071bc] shadow-sm h-full gap-4"
+            <div data-scroll data-scroll-class="is-inview"
+              class="flex flex-col justify-between p-6 sm:p-8 rounded-tl-lg rounded-tr-[20px] rounded-bl-lg rounded-br-[20px] bg-white border-t border-r border-b border-l-[6px] border-[#0071bc] shadow-sm h-full gap-4 card-hover-subtle reveal-fade-up stagger-2"
               style="box-shadow: 0px 8px 24px 0 rgba(0,113,188,0.05);">
               <div class="flex flex-col gap-3">
                 <span
@@ -333,8 +334,8 @@ const localePath = useLocalePath();
             </div>
 
             <!-- Card 3 -->
-            <div
-              class="flex flex-col justify-between p-6 sm:p-8 rounded-tl-lg rounded-tr-[20px] rounded-bl-lg rounded-br-[20px] bg-white border-t border-r border-b border-l-[6px] border-[#0071bc] shadow-sm h-full gap-4"
+            <div data-scroll data-scroll-class="is-inview"
+              class="flex flex-col justify-between p-6 sm:p-8 rounded-tl-lg rounded-tr-[20px] rounded-bl-lg rounded-br-[20px] bg-white border-t border-r border-b border-l-[6px] border-[#0071bc] shadow-sm h-full gap-4 card-hover-subtle reveal-fade-up stagger-3"
               style="box-shadow: 0px 8px 24px 0 rgba(0,113,188,0.05);">
               <div class="flex flex-col gap-3">
                 <span
@@ -356,8 +357,8 @@ const localePath = useLocalePath();
             </div>
 
             <!-- Card 4 -->
-            <div
-              class="flex flex-col justify-between p-6 sm:p-8 rounded-tl-lg rounded-tr-[20px] rounded-bl-lg rounded-br-[20px] bg-white border-t border-r border-b border-l-[6px] border-[#0071bc] shadow-sm h-full gap-4"
+            <div data-scroll data-scroll-class="is-inview"
+              class="flex flex-col justify-between p-6 sm:p-8 rounded-tl-lg rounded-tr-[20px] rounded-bl-lg rounded-br-[20px] bg-white border-t border-r border-b border-l-[6px] border-[#0071bc] shadow-sm h-full gap-4 card-hover-subtle reveal-fade-up stagger-4"
               style="box-shadow: 0px 8px 24px 0 rgba(0,113,188,0.05);">
               <div class="flex flex-col gap-3">
                 <span
@@ -379,8 +380,8 @@ const localePath = useLocalePath();
             </div>
 
             <!-- Card 5 -->
-            <div
-              class="flex flex-col justify-between p-6 sm:p-8 rounded-tl-lg rounded-tr-[20px] rounded-bl-lg rounded-br-[20px] bg-white border-t border-r border-b border-l-[6px] border-[#0071bc] shadow-sm h-full gap-4"
+            <div data-scroll data-scroll-class="is-inview"
+              class="flex flex-col justify-between p-6 sm:p-8 rounded-tl-lg rounded-tr-[20px] rounded-bl-lg rounded-br-[20px] bg-white border-t border-r border-b border-l-[6px] border-[#0071bc] shadow-sm h-full gap-4 card-hover-subtle reveal-fade-up stagger-1"
               style="box-shadow: 0px 8px 24px 0 rgba(0,113,188,0.05);">
               <div class="flex flex-col gap-3">
                 <span
@@ -402,8 +403,8 @@ const localePath = useLocalePath();
             </div>
 
             <!-- Card 6 -->
-            <div
-              class="flex flex-col justify-between p-6 sm:p-8 rounded-tl-lg rounded-tr-[20px] rounded-bl-lg rounded-br-[20px] bg-white border-t border-r border-b border-l-[6px] border-[#0071bc] shadow-sm h-full gap-4"
+            <div data-scroll data-scroll-class="is-inview"
+              class="flex flex-col justify-between p-6 sm:p-8 rounded-tl-lg rounded-tr-[20px] rounded-bl-lg rounded-br-[20px] bg-white border-t border-r border-b border-l-[6px] border-[#0071bc] shadow-sm h-full gap-4 card-hover-subtle reveal-fade-up stagger-2"
               style="box-shadow: 0px 8px 24px 0 rgba(0,113,188,0.05);">
               <div class="flex flex-col gap-3">
                 <span
@@ -425,8 +426,8 @@ const localePath = useLocalePath();
             </div>
 
             <!-- Card 7 -->
-            <div
-              class="flex flex-col justify-between p-6 sm:p-8 rounded-tl-lg rounded-tr-[20px] rounded-bl-lg rounded-br-[20px] bg-white border-t border-r border-b border-l-[6px] border-[#0071bc] shadow-sm h-full gap-4"
+            <div data-scroll data-scroll-class="is-inview"
+              class="flex flex-col justify-between p-6 sm:p-8 rounded-tl-lg rounded-tr-[20px] rounded-bl-lg rounded-br-[20px] bg-white border-t border-r border-b border-l-[6px] border-[#0071bc] shadow-sm h-full gap-4 card-hover-subtle reveal-fade-up stagger-3"
               style="box-shadow: 0px 8px 24px 0 rgba(0,113,188,0.05);">
               <div class="flex flex-col gap-3">
                 <span
@@ -451,7 +452,7 @@ const localePath = useLocalePath();
 
         <!-- Subcategory 2: Acompañamiento grupal escolares -->
         <div class="flex flex-col gap-8">
-          <div class="flex flex-col gap-2">
+          <div data-scroll data-scroll-class="is-inview" class="flex flex-col gap-2 reveal-fade-up">
             <div class="flex items-center gap-4">
               <div class="w-1.5 h-8 rounded-full bg-[#d9b421]"></div>
               <h3 class="text-2xl font-bold text-[#0071bc]">
@@ -467,8 +468,8 @@ const localePath = useLocalePath();
           <!-- Group Programs Grid -->
           <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
             <!-- Group Card 1: Estimulación Temprana (Grupal) -->
-            <div
-              class="flex flex-col justify-between p-6 sm:p-8 rounded-tl-lg rounded-tr-[20px] rounded-bl-lg rounded-br-[20px] bg-white border-t border-r border-b border-l-[6px] border-[#0071bc] gap-6"
+            <div data-scroll data-scroll-class="is-inview"
+              class="flex flex-col justify-between p-6 sm:p-8 rounded-tl-lg rounded-tr-[20px] rounded-bl-lg rounded-br-[20px] bg-white border-t border-r border-b border-l-[6px] border-[#0071bc] gap-6 card-hover-subtle reveal-fade-up stagger-1"
               style="box-shadow: 0px 8px 24px 0 rgba(0,113,188,0.05);">
               <div class="flex justify-between items-center flex-wrap gap-3">
                 <h4 class="text-xl sm:text-[22px] font-bold text-[#1d1d1b]">
@@ -507,8 +508,8 @@ const localePath = useLocalePath();
             </div>
 
             <!-- Group Card 2: Adaptación -->
-            <div
-              class="flex flex-col justify-between p-6 sm:p-8 rounded-tl-lg rounded-tr-[20px] rounded-bl-lg rounded-br-[20px] bg-white border-t border-r border-b border-l-[6px] border-[#0071bc] gap-6"
+            <div data-scroll data-scroll-class="is-inview"
+              class="flex flex-col justify-between p-6 sm:p-8 rounded-tl-lg rounded-tr-[20px] rounded-bl-lg rounded-br-[20px] bg-white border-t border-r border-b border-l-[6px] border-[#0071bc] gap-6 card-hover-subtle reveal-fade-up stagger-2"
               style="box-shadow: 0px 8px 24px 0 rgba(0,113,188,0.05);">
               <div class="flex justify-between items-center flex-wrap gap-3">
                 <h4 class="text-xl sm:text-[22px] font-bold text-[#1d1d1b]">
@@ -551,8 +552,8 @@ const localePath = useLocalePath();
             </div>
 
             <!-- Group Card 3: Nivel 1 -->
-            <div
-              class="flex flex-col justify-between p-6 sm:p-8 rounded-tl-lg rounded-tr-[20px] rounded-bl-lg rounded-br-[20px] bg-white border-t border-r border-b border-l-[6px] border-[#0071bc] gap-6"
+            <div data-scroll data-scroll-class="is-inview"
+              class="flex flex-col justify-between p-6 sm:p-8 rounded-tl-lg rounded-tr-[20px] rounded-bl-lg rounded-br-[20px] bg-white border-t border-r border-b border-l-[6px] border-[#0071bc] gap-6 card-hover-subtle reveal-fade-up stagger-1"
               style="box-shadow: 0px 8px 24px 0 rgba(0,113,188,0.05);">
               <div class="flex justify-between items-center flex-wrap gap-3">
                 <h4 class="text-xl sm:text-[22px] font-bold text-[#1d1d1b]">
@@ -599,8 +600,8 @@ const localePath = useLocalePath();
             </div>
 
             <!-- Group Card 4: Nivel 2 -->
-            <div
-              class="flex flex-col justify-between p-6 sm:p-8 rounded-tl-lg rounded-tr-[20px] rounded-bl-lg rounded-br-[20px] bg-white border-t border-r border-b border-l-[6px] border-[#0071bc] gap-6"
+            <div data-scroll data-scroll-class="is-inview"
+              class="flex flex-col justify-between p-6 sm:p-8 rounded-tl-lg rounded-tr-[20px] rounded-bl-lg rounded-br-[20px] bg-white border-t border-r border-b border-l-[6px] border-[#0071bc] gap-6 card-hover-subtle reveal-fade-up stagger-2"
               style="box-shadow: 0px 8px 24px 0 rgba(0,113,188,0.05);">
               <div class="flex justify-between items-center flex-wrap gap-3">
                 <h4 class="text-xl sm:text-[22px] font-bold text-[#1d1d1b]">
@@ -647,8 +648,8 @@ const localePath = useLocalePath();
             </div>
 
             <!-- Group Card 5: Transición -->
-            <div
-              class="flex flex-col justify-between p-6 sm:p-8 rounded-tl-lg rounded-tr-[20px] rounded-bl-lg rounded-br-[20px] bg-white border-t border-r border-b border-l-[6px] border-[#0071bc] gap-6 lg:col-span-2"
+            <div data-scroll data-scroll-class="is-inview"
+              class="flex flex-col justify-between p-6 sm:p-8 rounded-tl-lg rounded-tr-[20px] rounded-bl-lg rounded-br-[20px] bg-white border-t border-r border-b border-l-[6px] border-[#0071bc] gap-6 lg:col-span-2 card-hover-subtle reveal-fade-up stagger-3"
               style="box-shadow: 0px 8px 24px 0 rgba(0,113,188,0.05);">
               <div class="flex justify-between items-center flex-wrap gap-3">
                 <h4 class="text-xl sm:text-[22px] font-bold text-[#1d1d1b]">
@@ -696,7 +697,7 @@ const localePath = useLocalePath();
           </div>
 
           <!-- Note Box -->
-          <div class="flex items-center gap-3 px-6 py-4 rounded-xl bg-white border border-[#e8ecef] shadow-xs">
+          <div data-scroll data-scroll-class="is-inview" class="flex items-center gap-3 px-6 py-4 rounded-xl bg-white border border-[#e8ecef] shadow-xs reveal-fade-up">
             <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"
               class="w-4 h-4 shrink-0 text-[#0071bc]">
               <path
@@ -711,7 +712,7 @@ const localePath = useLocalePath();
 
         <!-- Subcategory 3: Acompañamiento a jóvenes y adultos -->
         <div class="flex flex-col gap-8">
-          <div class="flex flex-col gap-2">
+          <div data-scroll data-scroll-class="is-inview" class="flex flex-col gap-2 reveal-fade-up">
             <div class="flex items-center gap-4">
               <div class="w-1.5 h-8 rounded-full bg-[#e8734a]"></div>
               <h3 class="text-2xl font-bold text-[#0071bc]">
@@ -727,8 +728,8 @@ const localePath = useLocalePath();
           <!-- Layout Grid -->
           <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
             <!-- Main Program Card (Autonomía Personal) -->
-            <div
-              class="lg:col-span-2 flex flex-col justify-between p-6 sm:p-8 rounded-tl-lg rounded-tr-[20px] rounded-bl-lg rounded-br-[20px] bg-white border-t border-r border-b border-l-[6px] border-[#0071bc] gap-6 shadow-sm"
+            <div data-scroll data-scroll-class="is-inview"
+              class="lg:col-span-2 flex flex-col justify-between p-6 sm:p-8 rounded-tl-lg rounded-tr-[20px] rounded-bl-lg rounded-br-[20px] bg-white border-t border-r border-b border-l-[6px] border-[#0071bc] gap-6 shadow-sm card-hover-subtle reveal-scale"
               style="box-shadow: 0px 8px 24px 0 rgba(0,113,188,0.05);">
               <div class="flex justify-between items-center flex-wrap gap-3">
                 <span class="px-4 py-1.5 rounded-full bg-[#0071bc] text-xs font-bold uppercase text-white">
@@ -793,8 +794,8 @@ const localePath = useLocalePath();
             <!-- Side Cards (Apoyo Adicional & Valoración) -->
             <div class="flex flex-col gap-6 lg:col-span-1">
               <!-- Apoyo Adicional Card -->
-              <div
-                class="flex flex-col justify-between p-6 sm:p-8 rounded-tl-lg rounded-tr-[20px] rounded-bl-lg rounded-br-[20px] bg-white border-t border-r border-b border-l-[6px] border-[#0071bc] gap-4 flex-1 shadow-sm"
+              <div data-scroll data-scroll-class="is-inview"
+                class="flex flex-col justify-between p-6 sm:p-8 rounded-tl-lg rounded-tr-[20px] rounded-bl-lg rounded-br-[20px] bg-white border-t border-r border-b border-l-[6px] border-[#0071bc] gap-4 flex-1 shadow-sm card-hover-subtle reveal-fade-up stagger-1"
                 style="box-shadow: 0px 8px 24px 0 rgba(0,113,188,0.05);">
                 <div class="flex justify-between items-center">
                   <h4 class="text-xl font-bold text-[#1d1d1b]">
@@ -813,8 +814,8 @@ const localePath = useLocalePath();
               </div>
 
               <!-- Valoración Card -->
-              <div
-                class="flex flex-col justify-between p-6 sm:p-8 rounded-tl-lg rounded-tr-[20px] rounded-bl-lg rounded-br-[20px] bg-white border-t border-r border-b border-l-[6px] border-[#0071bc] gap-4 flex-1 shadow-sm"
+              <div data-scroll data-scroll-class="is-inview"
+                class="flex flex-col justify-between p-6 sm:p-8 rounded-tl-lg rounded-tr-[20px] rounded-bl-lg rounded-br-[20px] bg-white border-t border-r border-b border-l-[6px] border-[#0071bc] gap-4 flex-1 shadow-sm card-hover-subtle reveal-fade-up stagger-2"
                 style="box-shadow: 0px 8px 24px 0 rgba(0,113,188,0.05);">
                 <h4 class="text-xl font-bold text-[#1d1d1b]">
                   Valoración para Externos
@@ -833,7 +834,7 @@ const localePath = useLocalePath();
 
         <!-- Subcategory 4: Talleres Extracurriculares -->
         <div class="flex flex-col gap-8">
-          <div class="flex flex-col gap-2">
+          <div data-scroll data-scroll-class="is-inview" class="flex flex-col gap-2 reveal-fade-up">
             <div class="flex items-center gap-4">
               <div class="w-1.5 h-8 rounded-full bg-[#2aa198]"></div>
               <h3 class="text-2xl font-bold text-[#0071bc]">
@@ -848,8 +849,8 @@ const localePath = useLocalePath();
 
           <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
             <!-- Vital Stim 1 -->
-            <div
-              class="flex flex-col justify-between p-6 sm:p-8 rounded-tl-lg rounded-tr-[20px] rounded-bl-lg rounded-br-[20px] bg-white border-t border-r border-b border-l-[6px] border-[#0071bc] gap-5 shadow-sm"
+            <div data-scroll data-scroll-class="is-inview"
+              class="flex flex-col justify-between p-6 sm:p-8 rounded-tl-lg rounded-tr-[20px] rounded-bl-lg rounded-br-[20px] bg-white border-t border-r border-b border-l-[6px] border-[#0071bc] gap-5 shadow-sm card-hover-subtle reveal-fade-up stagger-1"
               style="box-shadow: 0px 8px 24px 0 rgba(0,113,188,0.05);">
               <div class="flex justify-between items-center flex-wrap gap-2">
                 <h4 class="text-xl font-bold text-[#1d1d1b]">
@@ -869,8 +870,8 @@ const localePath = useLocalePath();
             </div>
 
             <!-- Vital Stim 2 -->
-            <div
-              class="flex flex-col justify-between p-6 sm:p-8 rounded-tl-lg rounded-tr-[20px] rounded-bl-lg rounded-br-[20px] bg-white border-t border-r border-b border-l-[6px] border-[#0071bc] gap-5 shadow-sm"
+            <div data-scroll data-scroll-class="is-inview"
+              class="flex flex-col justify-between p-6 sm:p-8 rounded-tl-lg rounded-tr-[20px] rounded-bl-lg rounded-br-[20px] bg-white border-t border-r border-b border-l-[6px] border-[#0071bc] gap-5 shadow-sm card-hover-subtle reveal-fade-up stagger-2"
               style="box-shadow: 0px 8px 24px 0 rgba(0,113,188,0.05);">
               <div class="flex justify-between items-center flex-wrap gap-2">
                 <h4 class="text-xl font-bold text-[#1d1d1b]">
@@ -894,8 +895,8 @@ const localePath = useLocalePath();
         <!-- Subcategory 5: Subvenciones, Becas & Acciones -->
         <div class="flex flex-col items-center gap-12 max-w-4xl mx-auto w-full pt-6">
           <!-- Funding note -->
-          <div
-            class="w-full p-6 sm:p-10 rounded-tl-lg rounded-tr-3xl rounded-bl-lg rounded-br-3xl bg-white border-l-[6px] border-[#d9b421] shadow-md"
+          <div data-scroll data-scroll-class="is-inview"
+            class="w-full p-6 sm:p-10 rounded-tl-lg rounded-tr-3xl rounded-bl-lg rounded-br-3xl bg-white border-l-[6px] border-[#d9b421] shadow-md card-hover-subtle reveal-fade-up"
             style="box-shadow: 0px 8px 24px 0 rgba(29,29,27,0.03);">
             <p class="text-base sm:text-lg text-[#1d1d1b] leading-relaxed">
               Gracias a los esfuerzos permanentes de procuración de fondos, alianzas estratégicas y gestión de fuentes
@@ -906,7 +907,7 @@ const localePath = useLocalePath();
           </div>
 
           <!-- Scholarship & SAT details + CTA Buttons -->
-          <div class="flex flex-col items-center text-center gap-8 w-full">
+          <div data-scroll data-scroll-class="is-inview" class="flex flex-col items-center text-center gap-8 w-full reveal-scale">
             <p class="text-base sm:text-lg text-[#4a4a48] leading-relaxed">
               Estas cuotas son meramente orientativas y pueden variar según la situación socioeconómica de cada familia.
               Contamos con un sólido esquema de becas y cuotas escalonadas para garantizar que ninguna familia se quede

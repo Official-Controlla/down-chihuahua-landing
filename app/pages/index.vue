@@ -48,11 +48,11 @@ useSchemaOrg([
             class="relative bg-[#fff5e0] px-4 sm:px-6 md:px-12 lg:px-20 py-12 md:py-16 lg:py-[110px] overflow-hidden">
             <div class="max-w-7xl mx-auto flex flex-col lg:flex-row items-center justify-between gap-12 lg:gap-16">
                 <!-- Left Content Column -->
-                <div class="flex flex-col items-start w-full lg:max-w-[620px] gap-8 md:gap-9">
+                <div data-scroll data-scroll-class="is-inview" class="flex flex-col items-start w-full lg:max-w-[620px] gap-8 md:gap-9 reveal-fade-up">
                     <div class="flex flex-col items-start gap-6 w-full">
                         <!-- Badge -->
                         <div
-                            class="inline-flex items-center px-[18px] py-1.5 rounded-full bg-white border-[1.5px] border-[#d9b421] shadow-xs">
+                            class="inline-flex items-center px-[18px] py-1.5 rounded-full bg-white border-[1.5px] border-[#d9b421] shadow-xs reveal-fade-up stagger-1">
                             <span
                                 class="text-xs md:text-[13px] font-bold text-left uppercase text-[#0071bc] tracking-wide">
                                 40 Años de Amor y Desarrollo
@@ -61,13 +61,13 @@ useSchemaOrg([
 
                         <!-- H1 Title -->
                         <h1 id="hero-title"
-                            class="text-3xl sm:text-4xl md:text-5xl lg:text-[52px] font-bold text-left text-[#0071bc] leading-tight md:leading-[1.15]">
+                            class="text-3xl sm:text-4xl md:text-5xl lg:text-[52px] font-bold text-left text-[#0071bc] leading-tight md:leading-[1.15] reveal-fade-up stagger-2">
                             40 años impulsando a cada persona con síndrome de Down a vivir su vida <span
                                 class="font-black">al máximo.</span>
                         </h1>
 
                         <!-- Subtitle -->
-                        <p class="text-base sm:text-lg text-left text-[#4a4a48] leading-relaxed">
+                        <p class="text-base sm:text-lg text-left text-[#4a4a48] leading-relaxed reveal-fade-up stagger-3">
                             En Chihuahua acompañamos a niñas, niños, jóvenes y adultos con síndrome de Down y a sus
                             familias con estimulación temprana, educación, inclusión y una comunidad que camina a su
                             lado en cada etapa de la vida.
@@ -75,7 +75,7 @@ useSchemaOrg([
                     </div>
 
                     <!-- Action Buttons -->
-                    <div class="flex flex-wrap items-center gap-4 sm:gap-5 w-full">
+                    <div class="flex flex-wrap items-center gap-4 sm:gap-5 w-full reveal-fade-up stagger-4">
                         <a href="https://www.paypal.com/donate/?hosted_button_id=SBY6NYQWH6CDJ" target="_blank"
                             rel="noopener noreferrer">
                             <Button label="Donar" icon="pi pi-arrow-right" iconPos="right"
@@ -95,9 +95,9 @@ useSchemaOrg([
                 </div>
 
                 <!-- Right Visual Column -->
-                <div
-                    class="relative flex justify-center items-center w-full max-w-[420px] lg:max-w-none lg:w-[480px] shrink-0">
-                    <div
+                <div data-scroll data-scroll-class="is-inview"
+                    class="relative flex justify-center items-center w-full max-w-[420px] lg:max-w-none lg:w-[480px] shrink-0 reveal-scale">
+                    <div data-scroll data-scroll-speed="0.03"
                         class="relative w-full aspect-[4/5] max-h-[500px] overflow-hidden rounded-t-[180px] sm:rounded-t-[210px] rounded-b-3xl bg-[#f4f6f8] border border-[#9a9a97] shadow-xl">
                         <img src="/assets/images/arch-bg.png"
                             alt=" Niños y jóvenes participando en el Instituto Down Chihuahua"
@@ -105,7 +105,8 @@ useSchemaOrg([
                     </div>
 
                     <!-- Floating Badge -->
-                    <div class="absolute -left-4 sm:left-2 lg:-left-6 bottom-6 sm:bottom-10 flex flex-col p-5 md:p-6 rounded-[20px] bg-white shadow-xl max-w-[180px] sm:max-w-[200px]"
+                    <div data-scroll data-scroll-speed="0.06"
+                        class="absolute -left-4 sm:left-2 lg:-left-6 bottom-6 sm:bottom-10 flex flex-col p-5 md:p-6 rounded-[20px] bg-white shadow-xl max-w-[180px] sm:max-w-[200px]"
                         style="box-shadow: 0px 12px 32px 0 rgba(29,29,27,0.15);">
                         <span
                             class="text-4xl sm:text-5xl lg:text-[56px] font-bold text-left text-[#0071bc] leading-none mb-1">
@@ -117,7 +118,7 @@ useSchemaOrg([
                     </div>
 
                     <!-- Decorative Arch SVG -->
-                    <div class="absolute -right-4 sm:-right-6 -top-4 sm:-top-6 pointer-events-none z-10">
+                    <div data-scroll data-scroll-speed="-0.03" class="absolute -right-4 sm:-right-6 -top-4 sm:-top-6 pointer-events-none z-10">
                         <div class="w-[100px] h-[50px] sm:w-[140px] sm:h-[70px] overflow-hidden">
                             <svg width="140" height="70" viewBox="0 0 140 70" fill="none"
                                 xmlns="http://www.w3.org/2000/svg" class="w-full h-full" preserveAspectRatio="none">
@@ -133,7 +134,7 @@ useSchemaOrg([
         <section aria-labelledby="about-title" class="bg-white px-4 sm:px-6 md:px-12 lg:px-20 py-16 md:py-24 lg:py-32">
             <div class="max-w-7xl mx-auto flex flex-col lg:flex-row items-center justify-between gap-12 lg:gap-20">
                 <!-- Text Column -->
-                <div class="flex flex-col items-start flex-1 gap-6 md:gap-7">
+                <div data-scroll data-scroll-class="is-inview" class="flex flex-col items-start flex-1 gap-6 md:gap-7 reveal-slide-right">
                     <h2 id="about-title"
                         class="text-3xl sm:text-4xl lg:text-[40px] text-left text-[#0071bc] leading-tight">
                         <span class="font-bold">¿Quiénes </span>
@@ -148,7 +149,7 @@ useSchemaOrg([
                 </div>
 
                 <!-- Image Frame Column -->
-                <div class="w-full lg:w-[480px] shrink-0">
+                <div data-scroll data-scroll-class="is-inview" data-scroll-speed="0.04" class="w-full lg:w-[480px] shrink-0 reveal-scale">
                     <div class="relative w-full aspect-[4/3] rounded-[32px] border-[8px] md:border-[12px] border-white overflow-hidden shadow-2xl"
                         style="filter: drop-shadow(0px 16px 40px rgba(29,29,27,0.08));">
                         <img src="/assets/images/qs-image.png"
@@ -164,7 +165,7 @@ useSchemaOrg([
             class="bg-[#fff5e0] px-4 sm:px-6 md:px-12 lg:px-20 py-16 md:py-24 lg:py-[120px]">
             <div class="max-w-7xl mx-auto flex flex-col items-center gap-12 md:gap-16">
                 <!-- Section Header -->
-                <div class="flex flex-col items-center text-center gap-3 md:gap-4 max-w-3xl">
+                <div data-scroll data-scroll-class="is-inview" class="flex flex-col items-center text-center gap-3 md:gap-4 max-w-3xl reveal-fade-up">
                     <span class="text-xs sm:text-sm font-bold uppercase tracking-wider text-[#0071bc]">
                         El valor de nuestra trayectoria
                     </span>
@@ -177,8 +178,8 @@ useSchemaOrg([
                 <!-- 3 Cards Grid -->
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8 w-full">
                     <!-- Card 1 (Blue) -->
-                    <article
-                        class="flex flex-col justify-between items-start gap-8 p-8 md:p-10 rounded-3xl bg-[#0071bc] text-white shadow-lg transition-transform hover:-translate-y-1">
+                    <article data-scroll data-scroll-class="is-inview"
+                        class="flex flex-col justify-between items-start gap-8 p-8 md:p-10 rounded-3xl bg-[#0071bc] text-white shadow-lg card-hover-subtle reveal-fade-up stagger-1">
                         <div
                             class="flex justify-center items-center w-14 h-14 rounded-2xl bg-white text-[#0071bc] shadow-xs">
                             <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
@@ -200,8 +201,8 @@ useSchemaOrg([
                     </article>
 
                     <!-- Card 2 (Yellow) -->
-                    <article
-                        class="flex flex-col justify-between items-start gap-8 p-8 md:p-10 rounded-3xl bg-[#d9b421] text-[#0071bc] shadow-lg transition-transform hover:-translate-y-1">
+                    <article data-scroll data-scroll-class="is-inview"
+                        class="flex flex-col justify-between items-start gap-8 p-8 md:p-10 rounded-3xl bg-[#d9b421] text-[#0071bc] shadow-lg card-hover-subtle reveal-fade-up stagger-2">
                         <div
                             class="flex justify-center items-center w-14 h-14 rounded-2xl bg-white text-[#d9b421] shadow-xs">
                             <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
@@ -223,8 +224,8 @@ useSchemaOrg([
                     </article>
 
                     <!-- Card 3 (Coral/Orange) -->
-                    <article
-                        class="flex flex-col justify-between items-start gap-8 p-8 md:p-10 rounded-3xl bg-[#e8734a] text-white shadow-lg transition-transform hover:-translate-y-1">
+                    <article data-scroll data-scroll-class="is-inview"
+                        class="flex flex-col justify-between items-start gap-8 p-8 md:p-10 rounded-3xl bg-[#e8734a] text-white shadow-lg card-hover-subtle reveal-fade-up stagger-3">
                         <div
                             class="flex justify-center items-center w-14 h-14 rounded-2xl bg-white text-[#e8734a] shadow-xs">
                             <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
@@ -253,7 +254,7 @@ useSchemaOrg([
             class="bg-[#f4f6f8] px-4 sm:px-6 md:px-12 lg:px-20 py-16 md:py-24 lg:py-[120px]">
             <div class="max-w-7xl mx-auto flex flex-col items-center gap-12 md:gap-14">
                 <!-- Section Header -->
-                <div class="flex flex-col items-center text-center gap-3 md:gap-4 max-w-3xl">
+                <div data-scroll data-scroll-class="is-inview" class="flex flex-col items-center text-center gap-3 md:gap-4 max-w-3xl reveal-fade-up">
                     <span class="text-xs sm:text-sm font-bold uppercase tracking-wider text-[#d9b421]">
                         Caminos de participación
                     </span>
@@ -266,12 +267,12 @@ useSchemaOrg([
                 <!-- 4 Cards Grid -->
                 <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 w-full">
                     <!-- Card 1 -->
-                    <article
-                        class="flex flex-col justify-between overflow-hidden rounded-3xl bg-white shadow-sm hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
+                    <article data-scroll data-scroll-class="is-inview"
+                        class="group flex flex-col justify-between overflow-hidden rounded-3xl bg-white shadow-sm hover:shadow-xl card-hover-subtle transition-all duration-300 reveal-fade-up stagger-1">
                         <div class="w-full h-44 overflow-hidden relative bg-slate-100">
                             <img src="@/assets/images/card-1.png"
                                 alt="Familias nuevas - Apoyo a familias con síndrome de Down"
-                                class="w-full h-full object-cover" loading="lazy" />
+                                class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" loading="lazy" />
                         </div>
                         <div class="flex flex-col justify-between flex-1 p-6 md:p-7 gap-5">
                             <div class="flex flex-col gap-2">
@@ -291,11 +292,11 @@ useSchemaOrg([
                     </article>
 
                     <!-- Card 2 -->
-                    <article
-                        class="flex flex-col justify-between overflow-hidden rounded-3xl bg-white shadow-sm hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
+                    <article data-scroll data-scroll-class="is-inview"
+                        class="group flex flex-col justify-between overflow-hidden rounded-3xl bg-white shadow-sm hover:shadow-xl card-hover-subtle transition-all duration-300 reveal-fade-up stagger-2">
                         <div class="w-full h-44 overflow-hidden relative bg-slate-100">
                             <img src="@/assets/images/card-2.png" alt="Programas de atención integral y educación"
-                                class="w-full h-full object-cover" loading="lazy" />
+                                class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" loading="lazy" />
                         </div>
                         <div class="flex flex-col justify-between flex-1 p-6 md:p-7 gap-5">
                             <div class="flex flex-col gap-2">
@@ -316,11 +317,11 @@ useSchemaOrg([
                     </article>
 
                     <!-- Card 3 -->
-                    <article
-                        class="flex flex-col justify-between overflow-hidden rounded-3xl bg-white shadow-sm hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
+                    <article data-scroll data-scroll-class="is-inview"
+                        class="group flex flex-col justify-between overflow-hidden rounded-3xl bg-white shadow-sm hover:shadow-xl card-hover-subtle transition-all duration-300 reveal-fade-up stagger-3">
                         <div class="w-full h-44 overflow-hidden relative bg-slate-100">
                             <img src="@/assets/images/card-4.png" alt="Programa de reciclaje ecológico y donaciones"
-                                class="w-full h-full object-cover" loading="lazy" />
+                                class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" loading="lazy" />
                         </div>
                         <div class="flex flex-col justify-between flex-1 p-6 md:p-7 gap-5">
                             <div class="flex flex-col gap-2">
@@ -341,11 +342,11 @@ useSchemaOrg([
                     </article>
 
                     <!-- Card 4 -->
-                    <article
-                        class="flex flex-col justify-between overflow-hidden rounded-3xl bg-white shadow-sm hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
+                    <article data-scroll data-scroll-class="is-inview"
+                        class="group flex flex-col justify-between overflow-hidden rounded-3xl bg-white shadow-sm hover:shadow-xl card-hover-subtle transition-all duration-300 reveal-fade-up stagger-4">
                         <div class="w-full h-44 overflow-hidden relative bg-slate-100">
                             <img src="@/assets/images/card-3.png" alt="Colabora y apoya al Instituto Down de Chihuahua"
-                                class="w-full h-full object-cover" loading="lazy" />
+                                class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" loading="lazy" />
                         </div>
                         <div class="flex flex-col justify-between flex-1 p-6 md:p-7 gap-5">
                             <div class="flex flex-col gap-2">
@@ -370,7 +371,7 @@ useSchemaOrg([
         <!-- SECTION: CTA BANNER -->
         <section aria-labelledby="cta-title"
             class="bg-[#0071bc] text-white px-4 sm:px-6 md:px-12 lg:px-[120px] py-16 md:py-20 lg:py-[110px] overflow-hidden">
-            <div class="max-w-4xl mx-auto flex flex-col items-center text-center gap-8 md:gap-9">
+            <div data-scroll data-scroll-class="is-inview" class="max-w-4xl mx-auto flex flex-col items-center text-center gap-8 md:gap-9 reveal-scale">
                 <h2 id="cta-title"
                     class="text-2xl sm:text-3xl md:text-4xl lg:text-[38px] font-bold text-center text-white leading-tight md:leading-snug">
                     Cada persona con síndrome de Down tiene una vida por delante llena de posibilidades. Ayúdanos a que
@@ -399,7 +400,7 @@ useSchemaOrg([
             class="bg-[#f4f6f8] px-4 sm:px-6 md:px-12 lg:px-20 py-16 md:py-24">
             <div class="max-w-7xl mx-auto flex flex-col items-center gap-10 md:gap-14">
                 <!-- Header -->
-                <div class="flex flex-col items-center text-center">
+                <div data-scroll data-scroll-class="is-inview" class="flex flex-col items-center text-center reveal-fade-up">
                     <h2 id="informe-anual-title"
                         class="text-3xl sm:text-4xl md:text-[40px] font-bold text-[#0071bc] text-center inline-block border-b-4 border-[#0071bc] pb-1 tracking-tight">
                         Informe Anual
@@ -408,8 +409,8 @@ useSchemaOrg([
 
                 <!-- 4 Cards Grid -->
                 <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 w-full">
-                    <article v-for="informe in informes" :key="informe.year"
-                        class="flex flex-col justify-between p-6 sm:p-7 rounded-3xl bg-white shadow-xs hover:shadow-md transition-all duration-300 min-h-[140px]">
+                    <article v-for="(informe, index) in informes" :key="informe.year" data-scroll data-scroll-class="is-inview"
+                        :class="['flex flex-col justify-between p-6 sm:p-7 rounded-3xl bg-white shadow-xs hover:shadow-md card-hover-subtle transition-all duration-300 min-h-[140px] reveal-fade-up', `stagger-${index + 1}`]">
                         <div class="flex flex-col gap-2">
                             <h3 class="text-xl sm:text-[22px] font-bold text-left text-[#0071bc]">
                                 {{ informe.title }}

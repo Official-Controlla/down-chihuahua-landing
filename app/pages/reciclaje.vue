@@ -29,31 +29,32 @@ const localePath = useLocalePath();
   <main class="flex flex-col flex-1 bg-white font-sans overflow-x-hidden">
     <!-- HERO SECTION: Sostenibilidad con Causa -->
     <section aria-labelledby="hero-reciclaje-title"
-      class="bg-[#fff5e0] px-4 sm:px-6 md:px-12 lg:px-20 py-12 md:py-16 lg:py-24">
+      class="bg-[#fff5e0] px-4 sm:px-6 md:px-12 lg:px-20 py-12 md:py-16 lg:py-24"
+      data-scroll data-scroll-class="is-inview">
       <div class="max-w-7xl mx-auto flex flex-col lg:flex-row items-center justify-between gap-10 lg:gap-16">
         <!-- Left Content -->
         <div class="flex flex-col items-start gap-6 lg:w-1/2">
           <div
-            class="inline-flex items-center px-4 py-1.5 rounded-full bg-white border-[1.5px] border-[#d9b421] shadow-xs">
+            class="inline-flex items-center px-4 py-1.5 rounded-full bg-white border-[1.5px] border-[#d9b421] shadow-xs reveal-fade-up">
             <span class="text-xs sm:text-[13px] font-bold uppercase tracking-wider text-[#0071bc]">
               Sostenibilidad con Causa
             </span>
           </div>
 
           <h1 id="hero-reciclaje-title"
-            class="text-3xl sm:text-4xl md:text-5xl lg:text-[52px] text-[#0071bc] leading-tight">
+            class="text-3xl sm:text-4xl md:text-5xl lg:text-[52px] text-[#0071bc] leading-tight reveal-fade-up stagger-1">
             <span class="font-bold">Centro de Acopio y </span>
             <span class="font-black italic">Reciclaje</span>
           </h1>
 
-          <p class="text-base sm:text-lg text-[#4a4a48] leading-relaxed max-w-2xl">
+          <p class="text-base sm:text-lg text-[#4a4a48] leading-relaxed max-w-2xl reveal-fade-up stagger-2">
             Somos pioneros del reciclaje en Chihuahua. Operamos un centro de acopio que recibe cartón, aluminio y otros
             materiales con un doble impacto: cuidas el medio ambiente y financias el desarrollo de jóvenes con síndrome
             de Down.
           </p>
 
           <!-- CTA Buttons -->
-          <div class="flex flex-col sm:flex-row items-center gap-4 w-full sm:w-auto pt-2">
+          <div class="flex flex-col sm:flex-row items-center gap-4 w-full sm:w-auto pt-2 reveal-fade-up stagger-3">
             <NuxtLink :to="localePath('/contacto')" class="w-full sm:w-auto">
               <Button label="Programa tu recolección" icon="pi pi-arrow-right" iconPos="right"
                 class="!w-full sm:!w-auto !rounded-full !bg-[#d9b421] !border-none !text-[#0071bc] font-bold !px-6 !py-3.5 hover:!bg-[#c4a21d] transition-all shadow-sm" />
@@ -69,18 +70,18 @@ const localePath = useLocalePath();
 
         <!-- Right Visual Container -->
         <div class="flex justify-center items-center lg:w-1/2 w-full">
-          <div class="relative w-full max-w-[440px] flex justify-center py-4">
+          <div class="relative w-full max-w-[440px] flex justify-center py-4" data-scroll data-scroll-speed="0.02">
             <!-- Main Arched Image Frame -->
             <div
-              class="w-full max-w-[380px] sm:max-w-[420px] h-[400px] sm:h-[500px] overflow-hidden rounded-tl-[180px] sm:rounded-tl-[210px] rounded-tr-[180px] sm:rounded-tr-[210px] rounded-bl-3xl rounded-br-3xl bg-white border border-[#e4e6e8] shadow-xl relative">
+              class="w-full max-w-[380px] sm:max-w-[420px] h-[400px] sm:h-[500px] overflow-hidden rounded-tl-[180px] sm:rounded-tl-[210px] rounded-tr-[180px] sm:rounded-tr-[210px] rounded-bl-3xl rounded-br-3xl bg-white border border-[#e4e6e8] shadow-xl relative reveal-scale">
               <img src="@/assets/images/hero-reciclaje.png"
                 alt="Centro de Acopio y Reciclaje del Instituto Down de Chihuahua" class="w-full h-full object-cover" />
             </div>
 
             <!-- Floating Badge Overlay (100% de los fondos) -->
             <div
-              class="absolute left-2 sm:left-4 bottom-6 sm:bottom-10 w-[180px] sm:w-[200px] gap-2 p-4 sm:p-6 rounded-[20px] bg-white z-10"
-              style="box-shadow: 0px 12px 32px 0 rgba(29,29,27,0.1);">
+              class="absolute left-2 sm:left-4 bottom-6 sm:bottom-10 w-[180px] sm:w-[200px] gap-2 p-4 sm:p-6 rounded-[20px] bg-white z-10 reveal-fade-up stagger-2"
+              style="box-shadow: 0px 12px 32px 0 rgba(29,29,27,0.1);" data-scroll data-scroll-speed="-0.02">
               <span class="block text-3xl sm:text-[40px] font-bold text-[#0071bc] leading-none mb-1">
                 100%
               </span>
@@ -91,7 +92,7 @@ const localePath = useLocalePath();
 
             <!-- Decorative Arc SVG -->
             <div
-              class="absolute -right-2 sm:-right-4 top-2 w-[100px] sm:w-[140px] h-[50px] sm:h-[70px] overflow-hidden">
+              class="absolute -right-2 sm:-right-4 top-2 w-[100px] sm:w-[140px] h-[50px] sm:h-[70px] overflow-hidden reveal-fade-in stagger-3">
               <svg width="140" height="70" viewBox="0 0 140 70" fill="none" xmlns="http://www.w3.org/2000/svg"
                 class="w-full h-full">
                 <circle cx="70" r="70" fill="#D9B421"></circle>
@@ -104,9 +105,10 @@ const localePath = useLocalePath();
 
     <!-- SECTION: El doble valor de reciclar / Doble Impacto -->
     <section aria-labelledby="doble-impacto-title"
-      class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12 py-16 md:py-24 w-full flex flex-col gap-12 md:gap-16">
+      class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12 py-16 md:py-24 w-full flex flex-col gap-12 md:gap-16"
+      data-scroll data-scroll-class="is-inview">
       <!-- Section Header -->
-      <div class="flex flex-col items-center text-center gap-4 max-w-4xl mx-auto">
+      <div class="flex flex-col items-center text-center gap-4 max-w-4xl mx-auto reveal-fade-up">
         <span class="text-xs sm:text-sm font-bold uppercase tracking-wider text-[#0071bc]">
           El doble valor de reciclar
         </span>
@@ -119,7 +121,7 @@ const localePath = useLocalePath();
       <!-- 2 Impact Cards -->
       <div class="grid grid-cols-1 md:grid-cols-2 gap-8 w-full">
         <!-- Impact Card 1: Ecológico -->
-        <article class="flex flex-col justify-between gap-6 p-8 sm:p-10 rounded-3xl bg-[#34a853] text-white shadow-xl">
+        <article class="flex flex-col justify-between gap-6 p-8 sm:p-10 rounded-3xl bg-[#34a853] text-white shadow-xl reveal-fade-up stagger-1 card-hover-subtle">
           <div class="w-14 h-14 rounded-2xl bg-white flex items-center justify-center shrink-0">
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"
               class="w-6 h-6">
@@ -140,7 +142,7 @@ const localePath = useLocalePath();
         </article>
 
         <!-- Impact Card 2: Inclusión y Desarrollo -->
-        <article class="flex flex-col justify-between gap-6 p-8 sm:p-10 rounded-3xl bg-[#e8734a] text-white shadow-xl">
+        <article class="flex flex-col justify-between gap-6 p-8 sm:p-10 rounded-3xl bg-[#e8734a] text-white shadow-xl reveal-fade-up stagger-2 card-hover-subtle">
           <div class="w-14 h-14 rounded-2xl bg-white flex items-center justify-center shrink-0">
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"
               class="w-6 h-6">
@@ -163,10 +165,11 @@ const localePath = useLocalePath();
     </section>
 
     <!-- SECTION: ¿Cómo participar? -->
-    <section aria-labelledby="participar-title" class="bg-[#f4f6f8] py-16 md:py-24 px-4 sm:px-6 lg:px-12 w-full">
+    <section aria-labelledby="participar-title" class="bg-[#f4f6f8] py-16 md:py-24 px-4 sm:px-6 lg:px-12 w-full"
+      data-scroll data-scroll-class="is-inview">
       <div class="max-w-7xl mx-auto flex flex-col items-center gap-12 md:gap-16">
         <!-- Header -->
-        <div class="flex flex-col items-center text-center gap-4 max-w-4xl mx-auto">
+        <div class="flex flex-col items-center text-center gap-4 max-w-4xl mx-auto reveal-fade-up">
           <span class="text-xs sm:text-sm font-bold uppercase tracking-wider text-[#d9b421]">
             ¿Cómo participar?
           </span>
@@ -178,11 +181,11 @@ const localePath = useLocalePath();
         <!-- 2 Participation Cards -->
         <div class="grid grid-cols-1 md:grid-cols-2 gap-8 w-full">
           <!-- Card 1: Personas y familias -->
-          <div class="flex flex-col justify-between overflow-hidden rounded-3xl bg-white shadow-sm"
+          <div class="flex flex-col justify-between overflow-hidden rounded-3xl bg-white shadow-sm reveal-fade-up stagger-1 card-hover-subtle"
             style="box-shadow: 0px 12px 32px 0 rgba(29,29,27,0.02);">
             <div class="w-full h-[220px] overflow-hidden bg-[#f4f6f8]">
               <img src="@/assets/images/reciclaje-familias.png" alt="Reciclaje para personas y familias en Chihuahua"
-                class="w-full h-full object-cover" />
+                class="w-full h-full object-cover transition-transform duration-500 hover:scale-105" />
             </div>
             <div class="flex flex-col gap-5 p-6 sm:p-8 flex-1 justify-between">
               <div class="flex flex-col gap-3">
@@ -202,11 +205,11 @@ const localePath = useLocalePath();
           </div>
 
           <!-- Card 2: Empresas y maquilas -->
-          <div class="flex flex-col justify-between overflow-hidden rounded-3xl bg-white shadow-sm"
+          <div class="flex flex-col justify-between overflow-hidden rounded-3xl bg-white shadow-sm reveal-fade-up stagger-2 card-hover-subtle"
             style="box-shadow: 0px 12px 32px 0 rgba(29,29,27,0.02);">
             <div class="w-full h-[220px] overflow-hidden bg-[#f4f6f8]">
               <img src="@/assets/images/reciclaje-empresas.png"
-                alt="Reciclaje corporativo para empresas y maquilas en Chihuahua" class="w-full h-full object-cover" />
+                alt="Reciclaje corporativo para empresas y maquilas en Chihuahua" class="w-full h-full object-cover transition-transform duration-500 hover:scale-105" />
             </div>
             <div class="flex flex-col gap-5 p-6 sm:p-8 flex-1 justify-between">
               <div class="flex flex-col gap-3">
@@ -230,9 +233,10 @@ const localePath = useLocalePath();
 
     <!-- SECTION: ¿Qué recibimos? Materiales -->
     <section aria-labelledby="materiales-title"
-      class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12 py-16 md:py-24 w-full flex flex-col gap-12 md:gap-16">
+      class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12 py-16 md:py-24 w-full flex flex-col gap-12 md:gap-16"
+      data-scroll data-scroll-class="is-inview">
       <!-- Header -->
-      <div class="flex flex-col items-center text-center gap-4 max-w-4xl mx-auto">
+      <div class="flex flex-col items-center text-center gap-4 max-w-4xl mx-auto reveal-fade-up">
         <span class="text-xs sm:text-sm font-bold uppercase tracking-wider text-[#0071bc]">
           ¿Qué recibimos?
         </span>
@@ -244,7 +248,7 @@ const localePath = useLocalePath();
       <!-- Materials Grid (6 Items) -->
       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 w-full">
         <!-- PET -->
-        <div class="flex flex-col gap-3 p-6 sm:p-8 rounded-3xl bg-[#f4f6f8] border-l-4 border-[#0071bc]">
+        <div class="flex flex-col gap-3 p-6 sm:p-8 rounded-3xl bg-[#f4f6f8] border-l-4 border-[#0071bc] reveal-fade-up stagger-1 card-hover-subtle">
           <h3 class="text-xl font-bold text-[#0071bc]">PET</h3>
           <p class="text-[15px] text-[#4a4a48]">
             Botellas de plástico de refresco, agua y jugos limpias.
@@ -252,7 +256,7 @@ const localePath = useLocalePath();
         </div>
 
         <!-- Cartón -->
-        <div class="flex flex-col gap-3 p-6 sm:p-8 rounded-3xl bg-[#f4f6f8] border-l-4 border-[#d9b421]">
+        <div class="flex flex-col gap-3 p-6 sm:p-8 rounded-3xl bg-[#f4f6f8] border-l-4 border-[#d9b421] reveal-fade-up stagger-2 card-hover-subtle">
           <h3 class="text-xl font-bold text-[#0071bc]">Cartón</h3>
           <p class="text-[15px] text-[#4a4a48]">
             Cajas corrugadas, empaques limpios y desarmados.
@@ -260,7 +264,7 @@ const localePath = useLocalePath();
         </div>
 
         <!-- Papel -->
-        <div class="flex flex-col gap-3 p-6 sm:p-8 rounded-3xl bg-[#f4f6f8] border-l-4 border-[#e8734a]">
+        <div class="flex flex-col gap-3 p-6 sm:p-8 rounded-3xl bg-[#f4f6f8] border-l-4 border-[#e8734a] reveal-fade-up stagger-3 card-hover-subtle">
           <h3 class="text-xl font-bold text-[#0071bc]">Papel</h3>
           <p class="text-[15px] text-[#4a4a48]">
             Hojas, cuadernos, libros y archivos de oficina.
@@ -268,7 +272,7 @@ const localePath = useLocalePath();
         </div>
 
         <!-- Vidrio -->
-        <div class="flex flex-col gap-3 p-6 sm:p-8 rounded-3xl bg-[#f4f6f8] border-l-4 border-[#34a853]">
+        <div class="flex flex-col gap-3 p-6 sm:p-8 rounded-3xl bg-[#f4f6f8] border-l-4 border-[#34a853] reveal-fade-up stagger-1 card-hover-subtle">
           <h3 class="text-xl font-bold text-[#0071bc]">Vidrio</h3>
           <p class="text-[15px] text-[#4a4a48]">
             Botellas y frascos de vidrio (no rotos ni espejos).
@@ -276,7 +280,7 @@ const localePath = useLocalePath();
         </div>
 
         <!-- Aluminio -->
-        <div class="flex flex-col gap-3 p-6 sm:p-8 rounded-3xl bg-[#f4f6f8] border-l-4 border-[#0071bc]">
+        <div class="flex flex-col gap-3 p-6 sm:p-8 rounded-3xl bg-[#f4f6f8] border-l-4 border-[#0071bc] reveal-fade-up stagger-2 card-hover-subtle">
           <h3 class="text-xl font-bold text-[#0071bc]">Aluminio</h3>
           <p class="text-[15px] text-[#4a4a48]">
             Latas de bebidas, botes limpios y aplastados.
@@ -284,7 +288,7 @@ const localePath = useLocalePath();
         </div>
 
         <!-- Electrónicos -->
-        <div class="flex flex-col gap-3 p-6 sm:p-8 rounded-3xl bg-[#f4f6f8] border-l-4 border-[#e8734a]">
+        <div class="flex flex-col gap-3 p-6 sm:p-8 rounded-3xl bg-[#f4f6f8] border-l-4 border-[#e8734a] reveal-fade-up stagger-3 card-hover-subtle">
           <h3 class="text-xl font-bold text-[#0071bc]">Electrónicos</h3>
           <p class="text-[15px] text-[#4a4a48]">
             Equipos de cómputo, cables y electrodomésticos obsoletos.
@@ -294,7 +298,7 @@ const localePath = useLocalePath();
 
       <!-- Corporate Banner Box -->
       <div
-        class="flex flex-col md:flex-row justify-between items-start md:items-center gap-6 p-6 sm:p-8 rounded-3xl bg-white w-full border border-blue-50"
+        class="flex flex-col md:flex-row justify-between items-start md:items-center gap-6 p-6 sm:p-8 rounded-3xl bg-white w-full border border-blue-50 reveal-fade-up stagger-4 card-hover-subtle"
         style="box-shadow: 0px 12px 32px 0 rgba(0,113,188,0.12);">
         <div class="flex items-center gap-4 flex-1">
           <div class="w-12 h-12 rounded-xl bg-[#d9b421] flex items-center justify-center shrink-0">
@@ -317,8 +321,9 @@ const localePath = useLocalePath();
     </section>
 
     <!-- SECTION: CTA Blue Banner ("Cada kilo de material reciclado...") -->
-    <section aria-labelledby="cta-reciclaje-title" class="bg-[#0071bc] py-16 md:py-24 px-4 sm:px-6 lg:px-12 w-full">
-      <div class="max-w-4xl mx-auto flex flex-col items-center text-center gap-8">
+    <section aria-labelledby="cta-reciclaje-title" class="bg-[#0071bc] py-16 md:py-24 px-4 sm:px-6 lg:px-12 w-full"
+      data-scroll data-scroll-class="is-inview">
+      <div class="max-w-4xl mx-auto flex flex-col items-center text-center gap-8 reveal-fade-up">
         <h2 id="cta-reciclaje-title" class="text-2xl sm:text-3xl lg:text-[38px] font-bold text-white leading-relaxed">
           Cada kilo de material reciclado en Chihuahua se transforma directamente en terapias, educación y autonomía
           para una persona con síndrome de Down.

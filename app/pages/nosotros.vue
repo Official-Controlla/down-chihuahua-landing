@@ -29,30 +29,31 @@ const localePath = useLocalePath();
   <main class="flex flex-col flex-1 bg-white font-sans overflow-x-hidden">
     <!-- HERO SECTION: Quiénes Somos -->
     <section aria-labelledby="hero-nosotros-title"
-      class="bg-[#fff5e0] px-4 sm:px-6 md:px-12 lg:px-20 py-12 md:py-16 lg:py-24">
+      class="bg-[#fff5e0] px-4 sm:px-6 md:px-12 lg:px-20 py-12 md:py-16 lg:py-24"
+      data-scroll data-scroll-class="is-inview">
       <div class="max-w-7xl mx-auto flex flex-col lg:flex-row items-center justify-between gap-10 lg:gap-16">
         <!-- Left Content -->
         <div class="flex flex-col items-start gap-6 lg:w-1/2">
           <div
-            class="inline-flex items-center px-4 py-1.5 rounded-full bg-white border-[1.5px] border-[#d9b421] shadow-xs">
+            class="inline-flex items-center px-4 py-1.5 rounded-full bg-white border-[1.5px] border-[#d9b421] shadow-xs reveal-fade-up">
             <span class="text-xs sm:text-[13px] font-bold uppercase tracking-wider text-[#0071bc]">
               Quiénes Somos
             </span>
           </div>
 
           <h1 id="hero-nosotros-title"
-            class="text-3xl sm:text-4xl md:text-5xl lg:text-[52px] text-[#0071bc] leading-tight">
+            class="text-3xl sm:text-4xl md:text-5xl lg:text-[52px] text-[#0071bc] leading-tight reveal-fade-up stagger-1">
             <span class="font-bold">Nuestra misión es hacer posible una vida autónoma y </span>
             <span class="font-black italic">plena.</span>
           </h1>
 
-          <p class="text-base sm:text-lg text-[#4a4a48] leading-relaxed max-w-2xl">
+          <p class="text-base sm:text-lg text-[#4a4a48] leading-relaxed max-w-2xl reveal-fade-up stagger-2">
             Desde 1984 en la ciudad de Chihuahua, damos atención integral a personas con síndrome de Down de todas las
             edades. Impulsamos al máximo el desarrollo de sus capacidades para asegurar su plena inclusión en el ámbito
             escolar, laboral y social.
           </p>
 
-          <div class="flex flex-wrap items-center gap-4 pt-2">
+          <div class="flex flex-wrap items-center gap-4 pt-2 reveal-fade-up stagger-3">
             <NuxtLink :to="localePath('/contacto')">
               <Button label="Agenda una visita" icon="pi pi-arrow-right" iconPos="right"
                 class="!rounded-full !bg-[#d9b421] !border-none !text-[#0071bc] font-bold !px-6 !py-3 hover:!bg-[#c4a21d] transition-all shadow-md" />
@@ -66,18 +67,18 @@ const localePath = useLocalePath();
 
         <!-- Right Visual Container -->
         <div class="flex justify-center items-center lg:w-1/2 w-full">
-          <div class="relative w-full max-w-[440px] flex justify-center py-4">
+          <div class="relative w-full max-w-[440px] flex justify-center py-4" data-scroll data-scroll-speed="0.02">
             <!-- Main Arched Image Frame -->
             <div
-              class="w-full max-w-[380px] sm:max-w-[420px] h-[400px] sm:h-[500px] overflow-hidden rounded-tl-[180px] sm:rounded-tl-[210px] rounded-tr-[180px] sm:rounded-tr-[210px] rounded-bl-3xl rounded-br-3xl bg-[#f4f6f8] border border-[#9a9a97] shadow-xl relative">
+              class="w-full max-w-[380px] sm:max-w-[420px] h-[400px] sm:h-[500px] overflow-hidden rounded-tl-[180px] sm:rounded-tl-[210px] rounded-tr-[180px] sm:rounded-tr-[210px] rounded-bl-3xl rounded-br-3xl bg-[#f4f6f8] border border-[#9a9a97] shadow-xl relative reveal-scale">
               <img src="@/assets/images/nosotros-hero.png" alt="Misión del Instituto Down de Chihuahua"
                 class="w-full h-full object-cover" />
             </div>
 
             <!-- Floating Badge Overlay -->
             <div
-              class="absolute left-2 sm:left-4 bottom-6 sm:bottom-10 w-[170px] sm:w-[190px] gap-2 p-4 sm:p-5 rounded-[20px] bg-white z-10"
-              style="box-shadow: 0px 12px 32px 0 rgba(29,29,27,0.1);">
+              class="absolute left-2 sm:left-4 bottom-6 sm:bottom-10 w-[170px] sm:w-[190px] gap-2 p-4 sm:p-5 rounded-[20px] bg-white z-10 reveal-fade-up stagger-2"
+              style="box-shadow: 0px 12px 32px 0 rgba(29,29,27,0.1);" data-scroll data-scroll-speed="-0.02">
               <span class="block text-4xl sm:text-[56px] font-bold text-[#0071bc] leading-none">
                 40
               </span>
@@ -88,7 +89,7 @@ const localePath = useLocalePath();
 
             <!-- Decorative Arc SVG -->
             <div
-              class="absolute -right-2 sm:-right-4 top-2 w-[100px] sm:w-[140px] h-[50px] sm:h-[70px] overflow-hidden">
+              class="absolute -right-2 sm:-right-4 top-2 w-[100px] sm:w-[140px] h-[50px] sm:h-[70px] overflow-hidden reveal-fade-in stagger-3">
               <svg width="140" height="70" viewBox="0 0 140 70" fill="none" xmlns="http://www.w3.org/2000/svg"
                 class="w-full h-full">
                 <circle cx="70" r="70" fill="#D9B421"></circle>
@@ -100,10 +101,11 @@ const localePath = useLocalePath();
     </section>
 
     <!-- SECTION: Nuestra Historia / Trayectoria -->
-    <section aria-labelledby="historia-title" class="bg-[#f4f6f8] py-16 md:py-24 px-4 sm:px-6 lg:px-12 w-full">
+    <section aria-labelledby="historia-title" class="bg-[#f4f6f8] py-16 md:py-24 px-4 sm:px-6 lg:px-12 w-full"
+      data-scroll data-scroll-class="is-inview">
       <div class="max-w-7xl mx-auto flex flex-col items-center gap-12 md:gap-16">
         <!-- Header -->
-        <div class="flex flex-col items-center text-center gap-4 max-w-3xl">
+        <div class="flex flex-col items-center text-center gap-4 max-w-3xl reveal-fade-up">
           <span class="text-xs sm:text-sm font-bold uppercase tracking-wider text-[#0071bc]">
             Nuestra Trayectoria
           </span>
@@ -122,7 +124,7 @@ const localePath = useLocalePath();
         <div class="w-full max-w-5xl flex flex-col items-center gap-8">
           <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-4 w-full">
             <!-- Event 1: 1984 -->
-            <div class="flex flex-col items-center text-center gap-4 relative">
+            <div class="flex flex-col items-center text-center gap-4 relative reveal-fade-up stagger-1">
               <div
                 class="w-16 h-16 rounded-full bg-[#0071bc] text-white flex items-center justify-center text-lg font-bold shadow-md shrink-0">
                 1984
@@ -136,7 +138,7 @@ const localePath = useLocalePath();
             </div>
 
             <!-- Event 2: 1996 -->
-            <div class="flex flex-col items-center text-center gap-4 relative">
+            <div class="flex flex-col items-center text-center gap-4 relative reveal-fade-up stagger-2">
               <div
                 class="w-16 h-16 rounded-full bg-[#d9b421] text-white flex items-center justify-center text-lg font-bold shadow-md shrink-0">
                 1996
@@ -150,7 +152,7 @@ const localePath = useLocalePath();
             </div>
 
             <!-- Event 3: 1998 -->
-            <div class="flex flex-col items-center text-center gap-4 relative">
+            <div class="flex flex-col items-center text-center gap-4 relative reveal-fade-up stagger-3">
               <div
                 class="w-16 h-16 rounded-full bg-[#0071bc] text-white flex items-center justify-center text-lg font-bold shadow-md shrink-0">
                 1998
@@ -164,7 +166,7 @@ const localePath = useLocalePath();
             </div>
 
             <!-- Event 4: Hoy -->
-            <div class="flex flex-col items-center text-center gap-4 relative">
+            <div class="flex flex-col items-center text-center gap-4 relative reveal-fade-up stagger-4">
               <div
                 class="w-16 h-16 rounded-full bg-[#d9b421] text-white flex items-center justify-center text-lg font-bold shadow-md shrink-0">
                 Hoy
@@ -178,7 +180,7 @@ const localePath = useLocalePath();
             </div>
           </div>
 
-          <p class="text-xs italic text-[#9a9a97] text-center mt-4">
+          <p class="text-xs italic text-[#9a9a97] text-center mt-4 reveal-fade-in stagger-4">
             Fuente: sitio oficial del Instituto Down de Chihuahua y Junta de Asistencia Social Privada del Estado de
             Chihuahua.
           </p>
@@ -187,10 +189,11 @@ const localePath = useLocalePath();
     </section>
 
     <!-- SECTION: Certificaciones y Reconocimientos (Transparencia) -->
-    <section aria-labelledby="certificaciones-title" class="bg-white py-16 md:py-24 px-4 sm:px-6 lg:px-12 w-full">
+    <section aria-labelledby="certificaciones-title" class="bg-white py-16 md:py-24 px-4 sm:px-6 lg:px-12 w-full"
+      data-scroll data-scroll-class="is-inview">
       <div class="max-w-7xl mx-auto flex flex-col items-center gap-12 md:gap-16">
         <!-- Header -->
-        <div class="flex flex-col items-center text-center gap-4 max-w-3xl">
+        <div class="flex flex-col items-center text-center gap-4 max-w-3xl reveal-fade-up">
           <span class="text-xs sm:text-sm font-bold uppercase tracking-wider text-[#0071bc]">
             Transparencia y Respaldo
           </span>
@@ -203,7 +206,7 @@ const localePath = useLocalePath();
         <div class="grid grid-cols-1 md:grid-cols-2 gap-6 w-full max-w-5xl">
           <!-- Card 1: Reconocimiento SEECH -->
           <div
-            class="flex flex-col sm:flex-row items-start sm:items-center gap-6 p-6 sm:p-8 rounded-3xl bg-[#f4f6f8] border border-[#eaecef]">
+            class="flex flex-col sm:flex-row items-start sm:items-center gap-6 p-6 sm:p-8 rounded-3xl bg-[#f4f6f8] border border-[#eaecef] reveal-fade-up stagger-1 card-hover-subtle">
             <div class="w-16 h-16 rounded-2xl bg-[#0071bc]/10 flex items-center justify-center shrink-0">
               <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"
                 class="w-8 h-8">
@@ -225,7 +228,7 @@ const localePath = useLocalePath();
 
           <!-- Card 2: Donataria Autorizada -->
           <div
-            class="flex flex-col sm:flex-row items-start sm:items-center gap-6 p-6 sm:p-8 rounded-3xl bg-[#f4f6f8] border border-[#eaecef]">
+            class="flex flex-col sm:flex-row items-start sm:items-center gap-6 p-6 sm:p-8 rounded-3xl bg-[#f4f6f8] border border-[#eaecef] reveal-fade-up stagger-2 card-hover-subtle">
             <div class="w-16 h-16 rounded-2xl bg-[#0071bc]/10 flex items-center justify-center shrink-0">
               <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"
                 class="w-8 h-8">
@@ -249,10 +252,11 @@ const localePath = useLocalePath();
     </section>
 
     <!-- SECTION: Nuestros Especialistas -->
-    <section aria-labelledby="especialistas-title" class="bg-[#fff5e0] py-16 md:py-24 px-4 sm:px-6 lg:px-12 w-full">
+    <section aria-labelledby="especialistas-title" class="bg-[#fff5e0] py-16 md:py-24 px-4 sm:px-6 lg:px-12 w-full"
+      data-scroll data-scroll-class="is-inview">
       <div class="max-w-7xl mx-auto flex flex-col items-center gap-12 md:gap-16">
         <!-- Header -->
-        <div class="flex flex-col items-center text-center gap-4 max-w-3xl">
+        <div class="flex flex-col items-center text-center gap-4 max-w-3xl reveal-fade-up">
           <h2 id="especialistas-title" class="text-3xl sm:text-4xl lg:text-[32px] font-bold text-[#0071bc]">
             Nuestros Especialistas
           </h2>
@@ -266,7 +270,7 @@ const localePath = useLocalePath();
         <div class="grid grid-cols-1 md:grid-cols-3 gap-6 w-full max-w-6xl">
           <!-- Specialist 1 -->
           <div
-            class="flex flex-col justify-between gap-4 p-6 sm:p-8 rounded-3xl bg-white border border-[#eaecef] h-full"
+            class="flex flex-col justify-between gap-4 p-6 sm:p-8 rounded-3xl bg-white border border-[#eaecef] h-full reveal-fade-up stagger-1 card-hover-subtle"
             style="box-shadow: 0px 12px 32px 0 rgba(29,29,27,0.02);">
             <div class="flex flex-col gap-1">
               <h3 class="text-xl font-bold text-[#1d1d1b]">
@@ -284,7 +288,7 @@ const localePath = useLocalePath();
 
           <!-- Specialist 2 -->
           <div
-            class="flex flex-col justify-between gap-4 p-6 sm:p-8 rounded-3xl bg-white border border-[#eaecef] h-full"
+            class="flex flex-col justify-between gap-4 p-6 sm:p-8 rounded-3xl bg-white border border-[#eaecef] h-full reveal-fade-up stagger-2 card-hover-subtle"
             style="box-shadow: 0px 12px 32px 0 rgba(29,29,27,0.02);">
             <div class="flex flex-col gap-1">
               <h3 class="text-xl font-bold text-[#1d1d1b]">
@@ -302,7 +306,7 @@ const localePath = useLocalePath();
 
           <!-- Specialist 3 -->
           <div
-            class="flex flex-col justify-between gap-4 p-6 sm:p-8 rounded-3xl bg-white border border-[#eaecef] h-full"
+            class="flex flex-col justify-between gap-4 p-6 sm:p-8 rounded-3xl bg-white border border-[#eaecef] h-full reveal-fade-up stagger-3 card-hover-subtle"
             style="box-shadow: 0px 12px 32px 0 rgba(29,29,27,0.02);">
             <div class="flex flex-col gap-1">
               <h3 class="text-xl font-bold text-[#1d1d1b]">
@@ -322,10 +326,11 @@ const localePath = useLocalePath();
     </section>
 
     <!-- SECTION: Nuestras Instalaciones -->
-    <section aria-labelledby="instalaciones-title" class="bg-white py-16 md:py-24 px-4 sm:px-6 lg:px-12 w-full">
+    <section aria-labelledby="instalaciones-title" class="bg-white py-16 md:py-24 px-4 sm:px-6 lg:px-12 w-full"
+      data-scroll data-scroll-class="is-inview">
       <div class="max-w-7xl mx-auto flex flex-col items-center gap-12 md:gap-16">
         <!-- Header -->
-        <div class="flex flex-col items-center text-center gap-4 max-w-3xl">
+        <div class="flex flex-col items-center text-center gap-4 max-w-3xl reveal-fade-up">
           <h2 id="instalaciones-title" class="text-3xl sm:text-4xl lg:text-[32px] font-bold text-[#0071bc]">
             Nuestras Instalaciones
           </h2>
@@ -339,10 +344,12 @@ const localePath = useLocalePath();
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 w-full max-w-6xl">
           <!-- Facility 1 -->
           <div
-            class="flex flex-col rounded-3xl bg-white border border-[#f4f6f8] overflow-hidden shadow-xs hover:shadow-md transition-all"
+            class="flex flex-col rounded-3xl bg-white border border-[#f4f6f8] overflow-hidden shadow-xs hover:shadow-md transition-all reveal-fade-up stagger-1 card-hover-subtle group"
             style="box-shadow: 0px 12px 24px 0 rgba(29,29,27,0.03);">
-            <img src="@/assets/images/card-2.png" alt="Espacios de estimulación temprana"
-              class="w-full h-[220px] object-cover bg-[#f4f6f8]" />
+            <div class="w-full h-[220px] overflow-hidden bg-[#f4f6f8]">
+              <img src="@/assets/images/card-2.png" alt="Espacios de estimulación temprana"
+                class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
+            </div>
             <div class="p-6">
               <h3 class="text-base font-bold text-[#0071bc]">
                 Espacios de estimulación temprana
@@ -352,10 +359,12 @@ const localePath = useLocalePath();
 
           <!-- Facility 2 -->
           <div
-            class="flex flex-col rounded-3xl bg-white border border-[#f4f6f8] overflow-hidden shadow-xs hover:shadow-md transition-all"
+            class="flex flex-col rounded-3xl bg-white border border-[#f4f6f8] overflow-hidden shadow-xs hover:shadow-md transition-all reveal-fade-up stagger-2 card-hover-subtle group"
             style="box-shadow: 0px 12px 24px 0 rgba(29,29,27,0.03);">
-            <img src="@/assets/images/aulas.png" alt="Aulas de aprendizaje"
-              class="w-full h-[220px] object-cover bg-[#f4f6f8]" />
+            <div class="w-full h-[220px] overflow-hidden bg-[#f4f6f8]">
+              <img src="@/assets/images/aulas.png" alt="Aulas de aprendizaje"
+                class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
+            </div>
             <div class="p-6">
               <h3 class="text-base font-bold text-[#0071bc]">
                 Aulas de aprendizaje
@@ -365,10 +374,12 @@ const localePath = useLocalePath();
 
           <!-- Facility 3 -->
           <div
-            class="flex flex-col rounded-3xl bg-white border border-[#f4f6f8] overflow-hidden shadow-xs hover:shadow-md transition-all"
+            class="flex flex-col rounded-3xl bg-white border border-[#f4f6f8] overflow-hidden shadow-xs hover:shadow-md transition-all reveal-fade-up stagger-3 card-hover-subtle group"
             style="box-shadow: 0px 12px 24px 0 rgba(29,29,27,0.03);">
-            <img src="@/assets/images/area.png" alt="Áreas de trabajo grupal"
-              class="w-full h-[220px] object-cover bg-[#f4f6f8]" />
+            <div class="w-full h-[220px] overflow-hidden bg-[#f4f6f8]">
+              <img src="@/assets/images/area.png" alt="Áreas de trabajo grupal"
+                class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
+            </div>
             <div class="p-6">
               <h3 class="text-base font-bold text-[#0071bc]">
                 Áreas de trabajo grupal
@@ -378,10 +389,12 @@ const localePath = useLocalePath();
 
           <!-- Facility 4 -->
           <div
-            class="flex flex-col rounded-3xl bg-white border border-[#f4f6f8] overflow-hidden shadow-xs hover:shadow-md transition-all"
+            class="flex flex-col rounded-3xl bg-white border border-[#f4f6f8] overflow-hidden shadow-xs hover:shadow-md transition-all reveal-fade-up stagger-4 card-hover-subtle group"
             style="box-shadow: 0px 12px 24px 0 rgba(29,29,27,0.03);">
-            <img src="@/assets/images/reciclaje-2.png" alt="Centro de acopio de reciclaje"
-              class="w-full h-[220px] object-cover bg-[#f4f6f8]" />
+            <div class="w-full h-[220px] overflow-hidden bg-[#f4f6f8]">
+              <img src="@/assets/images/reciclaje-2.png" alt="Centro de acopio de reciclaje"
+                class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
+            </div>
             <div class="p-6">
               <h3 class="text-base font-bold text-[#0071bc]">
                 Centro de acopio de reciclaje
@@ -391,7 +404,7 @@ const localePath = useLocalePath();
         </div>
 
         <!-- Visit CTA -->
-        <div class="flex flex-col items-center text-center gap-6 pt-4 max-w-2xl">
+        <div class="flex flex-col items-center text-center gap-6 pt-4 max-w-2xl reveal-fade-up stagger-4">
           <p class="text-xl sm:text-2xl font-bold text-[#1d1d1b]">
             ¿Te gustaría recorrer nuestros espacios de cerca?
           </p>
@@ -404,8 +417,9 @@ const localePath = useLocalePath();
     </section>
 
     <!-- SECTION: Blue CTA Banner -->
-    <section aria-labelledby="cta-blue-nosotros-title" class="bg-[#0071bc] py-16 md:py-24 px-4 sm:px-6 lg:px-12 w-full">
-      <div class="max-w-4xl mx-auto flex flex-col items-center text-center gap-8">
+    <section aria-labelledby="cta-blue-nosotros-title" class="bg-[#0071bc] py-16 md:py-24 px-4 sm:px-6 lg:px-12 w-full"
+      data-scroll data-scroll-class="is-inview">
+      <div class="max-w-4xl mx-auto flex flex-col items-center text-center gap-8 reveal-fade-up">
         <h2 id="cta-blue-nosotros-title"
           class="text-2xl sm:text-3xl lg:text-[38px] font-bold text-white leading-relaxed">
           Cada persona con síndrome de Down tiene una vida por delante llena de posibilidades. Ayúdanos a que nadie la

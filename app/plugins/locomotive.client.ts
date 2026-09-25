@@ -6,61 +6,105 @@ type ScrollOptions = ConstructorParameters<typeof LocomotiveScroll>[0];
 
 export default defineNuxtPlugin((nuxtApp) => {
   const instance = shallowRef<LocomotiveScroll | null>(null);
-  const onResize = () => {
-    instance.value?.resize();
-  };
+  let observer: IntersectionObserver | null = null;
 
   const destroy = () => {
+    if (observer) {
+      observer.disconnect();
+      observer = null;
+    }
     if (!instance.value) return;
-    instance.value.destroy();
+    try {
+      instance.value.destroy();
+    } catch (e) {
+      console.warn("Locomotive destroy warning:", e);
+    }
     instance.value = null;
   };
 
   /**
-   * SPA: la instancia anterior queda ligada al DOM que Vue ya desmontó.
-   * Si init() reutiliza esa instancia, Locomotive deja de funcionar tras el primer cambio de ruta.
+   * Fallback: Native IntersectionObserver to guarantee .is-inview is added
+   * even if Locomotive Scroll is re-initializing during route transitions.
    */
+  const setupIntersectionObserver = () => {
+    if (typeof window === "undefined" || !("IntersectionObserver" in window)) return;
+    if (observer) observer.disconnect();
+
+    observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("is-inview");
+          }
+        });
+      },
+      {
+        root: null,
+        rootMargin: "50px 0px 50px 0px",
+        threshold: 0.05,
+      }
+    );
+
+    const elements = document.querySelectorAll(
+      ".reveal-fade-up, .reveal-fade-in, .reveal-scale, .reveal-slide-right, .reveal-slide-left, [data-scroll]"
+    );
+
+    elements.forEach((el) => {
+      // Immediate check for top of page elements
+      const rect = el.getBoundingClientRect();
+      if (rect.top < window.innerHeight && rect.bottom > 0) {
+        el.classList.add("is-inview");
+      }
+      observer?.observe(el);
+    });
+  };
+
   const init = (options?: ScrollOptions) => {
     if (import.meta.server) return null;
-    if (instance.value) {
-      destroy();
-    }
+    destroy();
+
     instance.value = new LocomotiveScroll(options);
-    return instance.value;
-  };
+    document.documentElement.classList.add("has-locomotive");
 
-  const resize = () => {
-    if (!instance.value) return;
-    instance.value.resize();
-  };
+    setupIntersectionObserver();
 
-  const start = () => {
-    instance.value?.start();
-  };
-
-  const stop = () => {
-    instance.value?.stop();
-  };
-
-  const scrollTo = (
-    target: Parameters<LocomotiveScroll["scrollTo"]>[0],
-    options?: Parameters<LocomotiveScroll["scrollTo"]>[1]
-  ) => {
-    instance.value?.scrollTo(target, options);
-  };
-
-  nuxtApp.hook("app:mounted", () => {
-    window.addEventListener("resize", onResize, { passive: true });
-    (nuxtApp.$router as Router).beforeEach(() => {
-      destroy();
-    });
-  });
-
-  nuxtApp.hook("page:finish", () => {
     nextTick(() => {
       requestAnimationFrame(() => {
         instance.value?.resize();
       });
+    });
+
+    return instance.value;
+  };
+
+  const resize = () => {
+    instance.value?.resize();
+    setupIntersectionObserver();
+  };
+
+  nuxtApp.hook("app:mounted", () => {
+    const router = nuxtApp.$router as Router;
+
+    // Initial load
+    init();
+
+    window.addEventListener("resize", () => {
+      instance.value?.resize();
+    }, { passive: true });
+
+    // Handle SPA page transitions cleanly
+    router.afterEach(() => {
+      // 350ms matches the 0.3s page-leave/page-enter transition in app.vue
+      setTimeout(() => {
+        window.scrollTo(0, 0);
+        init();
+
+        // Extra recalculation after DOM layout/images stabilize
+        setTimeout(() => {
+          instance.value?.resize();
+          setupIntersectionObserver();
+        }, 200);
+      }, 350);
     });
   });
 
@@ -71,9 +115,9 @@ export default defineNuxtPlugin((nuxtApp) => {
         init,
         destroy,
         resize,
-        start,
-        stop,
-        scrollTo,
+        start: () => instance.value?.start(),
+        stop: () => instance.value?.stop(),
+        scrollTo: (target: any, options?: any) => instance.value?.scrollTo(target, options),
       },
     },
   };

@@ -29,13 +29,13 @@ useSchemaOrg([
 <template>
   <main class="flex flex-col flex-1 bg-white font-sans overflow-x-hidden">
     <!-- HERO SECTION: Educación y Concientización -->
-    <section aria-labelledby="hero-title"
+    <section aria-labelledby="hero-title" data-scroll data-scroll-class="is-inview"
       class="bg-[#fff5e0] px-4 sm:px-6 md:px-12 lg:px-20 pt-16 md:pt-20 lg:pt-24 pb-12 md:pb-16">
       <div class="max-w-5xl mx-auto flex flex-col items-center text-center gap-8 md:gap-10">
-        <div class="flex flex-col items-center gap-5 max-w-4xl">
+        <div class="flex flex-col items-center gap-5 max-w-4xl reveal-fade-up">
           <!-- Badge -->
           <div
-            class="inline-flex items-center px-[18px] py-1.5 rounded-full bg-white border-[1.5px] border-[#d9b421] shadow-xs">
+            class="inline-flex items-center px-[18px] py-1.5 rounded-full bg-white border-[1.5px] border-[#d9b421] shadow-xs reveal-fade-up stagger-1">
             <span class="text-xs md:text-[13px] font-bold uppercase tracking-wider text-[#0071bc]">
               Educación y Concientización
             </span>
@@ -43,14 +43,16 @@ useSchemaOrg([
 
           <!-- H1 Title -->
           <h1 id="hero-title"
-            class="text-3xl sm:text-4xl md:text-5xl lg:text-[56px] text-center text-[#0071bc] leading-tight">
+            class="text-3xl sm:text-4xl md:text-5xl lg:text-[56px] text-center text-[#0071bc] leading-tight reveal-fade-up stagger-2">
             <span class="font-bold">Comprendiendo el </span>
             <span class="font-black italic text-[#d9b421]">Síndrome de Down</span>
           </h1>
         </div>
 
         <!-- Highlight Box: Familias Nuevas -->
-        <FamiliasNuevasCard />
+        <div class="w-full reveal-fade-up stagger-3">
+          <FamiliasNuevasCard />
+        </div>
       </div>
     </section>
 
@@ -61,7 +63,7 @@ useSchemaOrg([
         <!-- Text & Stats Container -->
         <div class="flex flex-col lg:flex-row items-center justify-between gap-12 lg:gap-16">
           <!-- Text Content Column -->
-          <div class="flex flex-col items-start flex-1 gap-6">
+          <div data-scroll data-scroll-class="is-inview" class="flex flex-col items-start flex-1 gap-6 reveal-slide-right">
             <h2 id="what-is-title" class="text-3xl sm:text-4xl lg:text-[40px] text-left leading-tight">
               <span class="font-bold text-[#0071bc]">¿Qué es el </span>
               <span class="font-black italic text-[#d9b421]">síndrome de Down?</span>
@@ -86,9 +88,9 @@ useSchemaOrg([
           </div>
 
           <!-- Stats Cards Column -->
-          <div class="flex flex-col gap-5 w-full lg:w-[460px] shrink-0">
+          <div data-scroll data-scroll-class="is-inview" class="flex flex-col gap-5 w-full lg:w-[460px] shrink-0">
             <!-- Stat 1 -->
-            <div class="flex flex-col gap-3 p-8 rounded-3xl bg-[#0071bc] text-white shadow-md">
+            <div class="flex flex-col gap-3 p-8 rounded-3xl bg-[#0071bc] text-white shadow-md card-hover-subtle reveal-scale stagger-1">
               <span class="text-4xl sm:text-[44px] font-black text-left leading-none">
                 1 de cada 700
               </span>
@@ -98,7 +100,7 @@ useSchemaOrg([
             </div>
 
             <!-- Stat 2 -->
-            <div class="flex flex-col gap-3 p-8 rounded-3xl bg-[#d9b421] text-[#0071bc] shadow-md">
+            <div class="flex flex-col gap-3 p-8 rounded-3xl bg-[#d9b421] text-[#0071bc] shadow-md card-hover-subtle reveal-scale stagger-2">
               <span class="text-4xl sm:text-[44px] font-black text-left leading-none">
                 ~220,000
               </span>
@@ -111,7 +113,7 @@ useSchemaOrg([
 
         <!-- Tipos de Síndrome de Down Grid -->
         <div class="flex flex-col gap-10">
-          <div class="flex flex-col items-start gap-3 max-w-3xl">
+          <div data-scroll data-scroll-class="is-inview" class="flex flex-col items-start gap-3 max-w-3xl reveal-fade-up">
             <h2 class="text-2xl sm:text-3xl lg:text-[28px] font-bold text-left text-[#0071bc]">
               Tipos de síndrome de Down
             </h2>
@@ -124,8 +126,8 @@ useSchemaOrg([
           <!-- 3 Types Cards -->
           <div class="grid grid-cols-1 md:grid-cols-3 gap-6 w-full">
             <!-- Type 1: Trisomía 21 libre -->
-            <article
-              class="flex flex-col justify-between gap-5 p-8 md:p-9 rounded-3xl bg-white border-l-[6px] border-[#0071bc] shadow-sm hover:shadow-md transition-shadow">
+            <article data-scroll data-scroll-class="is-inview"
+              class="flex flex-col justify-between gap-5 p-8 md:p-9 rounded-3xl bg-white border-l-[6px] border-[#0071bc] shadow-sm card-hover-subtle reveal-fade-up stagger-1">
               <div class="flex justify-between items-center w-full">
                 <span class="text-sm font-bold uppercase text-[#4a4a48]">
                   Trisomía 21 libre
@@ -140,8 +142,8 @@ useSchemaOrg([
             </article>
 
             <!-- Type 2: Translocación -->
-            <article
-              class="flex flex-col justify-between gap-5 p-8 md:p-9 rounded-3xl bg-white border-l-[6px] border-[#d9b421] shadow-sm hover:shadow-md transition-shadow">
+            <article data-scroll data-scroll-class="is-inview"
+              class="flex flex-col justify-between gap-5 p-8 md:p-9 rounded-3xl bg-white border-l-[6px] border-[#d9b421] shadow-sm card-hover-subtle reveal-fade-up stagger-2">
               <div class="flex justify-between items-center w-full">
                 <span class="text-sm font-bold uppercase text-[#4a4a48]">
                   Translocación
@@ -157,8 +159,8 @@ useSchemaOrg([
             </article>
 
             <!-- Type 3: Mosaicismo -->
-            <article
-              class="flex flex-col justify-between gap-5 p-8 md:p-9 rounded-3xl bg-white border-l-[6px] border-[#e8734a] shadow-sm hover:shadow-md transition-shadow">
+            <article data-scroll data-scroll-class="is-inview"
+              class="flex flex-col justify-between gap-5 p-8 md:p-9 rounded-3xl bg-white border-l-[6px] border-[#e8734a] shadow-sm card-hover-subtle reveal-fade-up stagger-3">
               <div class="flex justify-between items-center w-full">
                 <span class="text-sm font-bold uppercase text-[#4a4a48]">
                   Mosaicismo
@@ -186,7 +188,7 @@ useSchemaOrg([
       class="bg-white px-4 sm:px-6 md:px-12 lg:px-20 py-16 md:py-24 lg:py-[100px]">
       <div class="max-w-7xl mx-auto flex flex-col items-center gap-12 md:gap-16">
         <!-- Header -->
-        <div class="flex flex-col items-center text-center gap-5 max-w-4xl">
+        <div data-scroll data-scroll-class="is-inview" class="flex flex-col items-center text-center gap-5 max-w-4xl reveal-fade-up">
           <h2 id="diagnosis-title"
             class="text-3xl sm:text-4xl lg:text-[40px] font-bold text-center text-[#0071bc] leading-tight">
             Diagnóstico y primeros pasos
@@ -206,8 +208,8 @@ useSchemaOrg([
         </div>
 
         <!-- WhatsApp CTA -->
-        <a href="https://wa.me/526145334010" target="_blank" rel="noopener noreferrer"
-          class="inline-flex items-center gap-4 pl-7 pr-5 py-4 rounded-full bg-[#25d366] hover:bg-[#20bd5a] text-white font-bold text-base shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-0.5"
+        <a href="https://wa.me/526145334010" target="_blank" rel="noopener noreferrer" data-scroll data-scroll-class="is-inview"
+          class="inline-flex items-center gap-4 pl-7 pr-5 py-4 rounded-full bg-[#25d366] hover:bg-[#20bd5a] text-white font-bold text-base shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-0.5 reveal-scale"
           aria-label="Contactar un orientador en WhatsApp">
           <span>Contactar un orientador en WhatsApp</span>
           <div class="flex justify-center items-center w-8 h-8 rounded-full bg-white text-[#25d366] shrink-0">
@@ -218,7 +220,7 @@ useSchemaOrg([
         <!-- Timeline Steps (3 Steps) -->
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-6 w-full max-w-5xl px-4 py-5 items-start">
           <!-- Step 1 -->
-          <div class="flex flex-col items-center text-center gap-4">
+          <div data-scroll data-scroll-class="is-inview" class="flex flex-col items-center text-center gap-4 reveal-fade-up stagger-1">
             <div
               class="flex justify-center items-center w-14 h-14 rounded-full bg-[#0071bc] text-white text-xl font-bold shadow-md">
               1
@@ -234,7 +236,7 @@ useSchemaOrg([
           </div>
 
           <!-- Step 2 -->
-          <div class="flex flex-col items-center text-center gap-4">
+          <div data-scroll data-scroll-class="is-inview" class="flex flex-col items-center text-center gap-4 reveal-fade-up stagger-2">
             <div
               class="flex justify-center items-center w-14 h-14 rounded-full bg-[#d9b421] text-white text-xl font-bold shadow-md">
               2
@@ -250,7 +252,7 @@ useSchemaOrg([
           </div>
 
           <!-- Step 3 -->
-          <div class="flex flex-col items-center text-center gap-4">
+          <div data-scroll data-scroll-class="is-inview" class="flex flex-col items-center text-center gap-4 reveal-fade-up stagger-3">
             <div
               class="flex justify-center items-center w-14 h-14 rounded-full bg-[#0071bc] text-white text-xl font-bold shadow-md">
               3
@@ -273,7 +275,7 @@ useSchemaOrg([
       class="bg-[#f4f6f8] px-4 sm:px-6 md:px-12 lg:px-20 py-16 md:py-24 lg:py-[100px]">
       <div class="max-w-7xl mx-auto flex flex-col lg:flex-row items-center justify-between gap-12 lg:gap-16">
         <!-- Chart Column -->
-        <div class="flex flex-col gap-6 p-7 md:p-9 rounded-[28px] bg-white w-full lg:w-[520px] shrink-0 shadow-sm">
+        <div data-scroll data-scroll-class="is-inview" class="flex flex-col gap-6 p-7 md:p-9 rounded-[28px] bg-white w-full lg:w-[520px] shrink-0 shadow-sm reveal-scale">
           <h3 class="text-xl md:text-[22px] font-bold text-left text-[#0071bc]">
             Evolución de la esperanza de vida
           </h3>
@@ -286,14 +288,14 @@ useSchemaOrg([
             <!-- 1960 -->
             <div class="flex flex-col items-center gap-3 flex-1">
               <span class="text-base font-bold text-[#4a4a48]">~10 años</span>
-              <div class="w-full h-9 rounded-xl bg-[#d9b421]"></div>
+              <div class="w-full h-9 rounded-xl bg-[#d9b421] bar-grow"></div>
               <span class="text-sm font-bold text-[#4a4a48]">1960</span>
             </div>
 
             <!-- Actualidad -->
             <div class="flex flex-col items-center gap-3 flex-1">
               <span class="text-xl font-bold text-[#0071bc]">~60 años</span>
-              <div class="w-full h-[110px] rounded-xl bg-[#0071bc]"></div>
+              <div class="w-full h-[110px] rounded-xl bg-[#0071bc] bar-grow"></div>
               <span class="text-sm font-bold text-[#0071bc]">Actualidad</span>
             </div>
           </div>
@@ -305,7 +307,7 @@ useSchemaOrg([
         </div>
 
         <!-- Text Column -->
-        <div class="flex flex-col items-start flex-1 gap-6">
+        <div data-scroll data-scroll-class="is-inview" class="flex flex-col items-start flex-1 gap-6 reveal-slide-left">
           <h2 id="life-expectancy-title" class="text-3xl sm:text-4xl lg:text-[40px] text-left leading-tight">
             <span class="font-bold text-[#0071bc]">Cada caso es </span>
             <span class="font-black italic text-[#d9b421]">único</span>
@@ -330,7 +332,7 @@ useSchemaOrg([
     <!-- SECTION: CTA BANNER FINAL -->
     <section aria-labelledby="cta-title"
       class="bg-[#0071bc] text-white px-4 sm:px-6 md:px-12 lg:px-[120px] py-16 md:py-20 lg:py-[110px] overflow-hidden">
-      <div class="max-w-4xl mx-auto flex flex-col items-center text-center gap-8 md:gap-9">
+      <div data-scroll data-scroll-class="is-inview" class="max-w-4xl mx-auto flex flex-col items-center text-center gap-8 md:gap-9 reveal-scale">
         <h2 id="cta-title"
           class="text-2xl sm:text-3xl md:text-4xl lg:text-[38px] font-bold text-center text-white leading-tight md:leading-snug">
           Cada paso cuenta para hacer posible un futuro autónomo y pleno. Conoce nuestros programas de estimulación,

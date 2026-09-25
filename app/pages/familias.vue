@@ -28,25 +28,25 @@ const localePath = useLocalePath();
 <template>
   <main class="flex flex-col flex-1 bg-white font-sans overflow-x-hidden">
     <!-- HERO SECTION: Aquí no estás solo -->
-    <section aria-labelledby="hero-familias-title"
+    <section aria-labelledby="hero-familias-title" data-scroll data-scroll-class="is-inview"
       class="bg-[#fff5e0] px-4 sm:px-6 md:px-12 lg:px-20 py-12 md:py-16 lg:py-24">
       <div class="max-w-7xl mx-auto flex flex-col lg:flex-row items-center justify-between gap-10 lg:gap-16">
         <!-- Left Content -->
-        <div class="flex flex-col items-start gap-6 lg:w-1/2">
+        <div class="flex flex-col items-start gap-6 lg:w-1/2 reveal-fade-up">
           <div
-            class="inline-flex items-center px-4 py-1.5 rounded-full bg-white border-[1.5px] border-[#d9b421] shadow-xs">
+            class="inline-flex items-center px-4 py-1.5 rounded-full bg-white border-[1.5px] border-[#d9b421] shadow-xs reveal-fade-up stagger-1">
             <span class="text-xs sm:text-[13px] font-bold uppercase tracking-wider text-[#0071bc]">
               Aquí no estás solo
             </span>
           </div>
 
           <h1 id="hero-familias-title"
-            class="text-3xl sm:text-4xl md:text-5xl lg:text-[52px] text-[#0071bc] leading-tight">
+            class="text-3xl sm:text-4xl md:text-5xl lg:text-[52px] text-[#0071bc] leading-tight reveal-fade-up stagger-2">
             <span class="font-bold">Familias unidas en un camino de </span>
             <span class="font-black italic">amor y desarrollo.</span>
           </h1>
 
-          <p class="text-base sm:text-lg text-[#4a4a48] leading-relaxed max-w-2xl">
+          <p class="text-base sm:text-lg text-[#4a4a48] leading-relaxed max-w-2xl reveal-fade-up stagger-3">
             Si tu bebé acaba de nacer o acabas de recibir el diagnóstico, respira: no estás solo. Miles de familias han
             estado justo donde tú estás hoy, y muchas de ellas forman parte de nuestra comunidad. Aquí encontrarás
             información clara, apoyo emocional y personas que entienden lo que sientes porque ya lo vivieron.
@@ -54,17 +54,17 @@ const localePath = useLocalePath();
         </div>
 
         <!-- Right Visual Container -->
-        <div class="flex justify-center items-center lg:w-1/2 w-full">
+        <div class="flex justify-center items-center lg:w-1/2 w-full reveal-scale">
           <div class="relative w-full max-w-[440px] flex justify-center py-4">
             <!-- Main Arched Image Frame -->
-            <div
+            <div data-scroll data-scroll-speed="0.03"
               class="w-full max-w-[380px] sm:max-w-[420px] h-[400px] sm:h-[500px] overflow-hidden rounded-tl-[180px] sm:rounded-tl-[210px] rounded-tr-[180px] sm:rounded-tr-[210px] rounded-bl-3xl rounded-br-3xl bg-[#f4f6f8] border border-[#9a9a97] shadow-xl relative">
               <img src="@/assets/images/familias-hero.png" alt="Familias unidas en el Instituto Down de Chihuahua"
                 class="w-full h-full object-cover" />
             </div>
 
             <!-- Floating Badge Overlay -->
-            <div
+            <div data-scroll data-scroll-speed="0.06"
               class="absolute left-2 sm:left-4 bottom-6 sm:bottom-10 w-[180px] sm:w-[220px] gap-2 p-4 sm:p-6 rounded-[20px] bg-white z-10"
               style="box-shadow: 0px 12px 32px 0 rgba(29,29,27,0.1);">
               <span class="block text-2xl sm:text-[28px] font-bold text-[#0071bc]">
@@ -76,7 +76,7 @@ const localePath = useLocalePath();
             </div>
 
             <!-- Decorative Arc SVG -->
-            <div
+            <div data-scroll data-scroll-speed="-0.03"
               class="absolute -right-2 sm:-right-4 top-2 w-[100px] sm:w-[140px] h-[50px] sm:h-[70px] overflow-hidden">
               <svg width="140" height="70" viewBox="0 0 140 70" fill="none" xmlns="http://www.w3.org/2000/svg"
                 class="w-full h-full">
@@ -91,20 +91,22 @@ const localePath = useLocalePath();
     <!-- SECTION: Banner & Vinculación al Mundo Exterior -->
     <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12 py-16 md:py-24 w-full flex flex-col gap-16 md:gap-20">
       <!-- Banner Card: ¿Acabas de recibir la noticia? -->
-      <FamiliasNuevasCard />
+      <div data-scroll data-scroll-class="is-inview" class="w-full reveal-fade-up">
+        <FamiliasNuevasCard />
+      </div>
 
       <!-- Block: Vinculación al Mundo Exterior -->
       <div class="flex flex-col lg:flex-row items-center justify-between gap-10 lg:gap-16">
         <!-- Left Image -->
-        <div
-          class="w-full lg:w-[480px] h-[260px] sm:h-[360px] rounded-[32px] border-[12px] border-white overflow-hidden shrink-0 shadow-xl"
+        <div data-scroll data-scroll-class="is-inview" data-scroll-speed="0.04"
+          class="w-full lg:w-[480px] h-[260px] sm:h-[360px] rounded-[32px] border-[12px] border-white overflow-hidden shrink-0 shadow-xl reveal-scale"
           style="filter: drop-shadow(0px 16px 40px rgba(29,29,27,0.09));">
           <img src="@/assets/images/vme-image.png" alt="Vinculación al Mundo Exterior del Instituto Down de Chihuahua"
             class="w-full h-full object-cover" />
         </div>
 
         <!-- Right Content -->
-        <div class="flex flex-col gap-6 lg:w-1/2">
+        <div data-scroll data-scroll-class="is-inview" class="flex flex-col gap-6 lg:w-1/2 reveal-slide-left">
           <h2 class="text-3xl sm:text-4xl lg:text-[40px] text-[#0071bc] leading-tight">
             <span class="font-bold">Vinculacion con </span>
             <span class="font-black italic">la comunidad</span>
@@ -122,7 +124,7 @@ const localePath = useLocalePath();
     <section aria-labelledby="recursos-title" class="bg-[#f4f6f8] py-16 md:py-24 px-4 sm:px-6 lg:px-12 w-full">
       <div class="max-w-7xl mx-auto flex flex-col items-center gap-12 md:gap-16">
         <!-- Header -->
-        <div class="flex flex-col items-center text-center gap-4 max-w-3xl">
+        <div data-scroll data-scroll-class="is-inview" class="flex flex-col items-center text-center gap-4 max-w-3xl reveal-fade-up">
           <span class="text-xs sm:text-sm font-bold uppercase tracking-wider text-[#d9b421]">
             Apoyo e Información Práctica
           </span>
@@ -140,7 +142,7 @@ const localePath = useLocalePath();
         <!-- 2x2 Grid of Feature Cards -->
         <div class="grid grid-cols-1 md:grid-cols-2 gap-6 w-full max-w-5xl">
           <!-- Card 1 -->
-          <div class="flex flex-col gap-5 p-6 sm:p-8 rounded-3xl bg-white border border-[#f4f6f8] shadow-sm"
+          <div data-scroll data-scroll-class="is-inview" class="flex flex-col gap-5 p-6 sm:p-8 rounded-3xl bg-white border border-[#f4f6f8] shadow-sm card-hover-subtle reveal-fade-up stagger-1"
             style="box-shadow: 0px 12px 24px 0 rgba(29,29,27,0.04);">
             <div class="w-14 h-14 rounded-2xl bg-[#0071bc] flex items-center justify-center shrink-0">
               <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -160,7 +162,7 @@ const localePath = useLocalePath();
           </div>
 
           <!-- Card 2 -->
-          <div class="flex flex-col gap-5 p-6 sm:p-8 rounded-3xl bg-white border border-[#f4f6f8] shadow-sm"
+          <div data-scroll data-scroll-class="is-inview" class="flex flex-col gap-5 p-6 sm:p-8 rounded-3xl bg-white border border-[#f4f6f8] shadow-sm card-hover-subtle reveal-fade-up stagger-2"
             style="box-shadow: 0px 12px 24px 0 rgba(29,29,27,0.04);">
             <div class="w-14 h-14 rounded-2xl bg-[#d9b421] flex items-center justify-center shrink-0">
               <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -180,7 +182,7 @@ const localePath = useLocalePath();
           </div>
 
           <!-- Card 3 -->
-          <div class="flex flex-col gap-5 p-6 sm:p-8 rounded-3xl bg-white border border-[#f4f6f8] shadow-sm"
+          <div data-scroll data-scroll-class="is-inview" class="flex flex-col gap-5 p-6 sm:p-8 rounded-3xl bg-white border border-[#f4f6f8] shadow-sm card-hover-subtle reveal-fade-up stagger-3"
             style="box-shadow: 0px 12px 24px 0 rgba(29,29,27,0.04);">
             <div class="w-14 h-14 rounded-2xl bg-[#e8734a] flex items-center justify-center shrink-0">
               <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -200,7 +202,7 @@ const localePath = useLocalePath();
           </div>
 
           <!-- Card 4 -->
-          <div class="flex flex-col gap-5 p-6 sm:p-8 rounded-3xl bg-white border border-[#f4f6f8] shadow-sm"
+          <div data-scroll data-scroll-class="is-inview" class="flex flex-col gap-5 p-6 sm:p-8 rounded-3xl bg-white border border-[#f4f6f8] shadow-sm card-hover-subtle reveal-fade-up stagger-4"
             style="box-shadow: 0px 12px 24px 0 rgba(29,29,27,0.04);">
             <div class="w-14 h-14 rounded-2xl bg-[#0071bc] flex items-center justify-center shrink-0">
               <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -221,8 +223,8 @@ const localePath = useLocalePath();
         </div>
 
         <!-- WhatsApp Help Card -->
-        <div
-          class="flex flex-col sm:flex-row justify-between items-center gap-6 p-6 sm:p-8 rounded-[36px] bg-white w-full max-w-4xl shadow-md"
+        <div data-scroll data-scroll-class="is-inview"
+          class="flex flex-col sm:flex-row justify-between items-center gap-6 p-6 sm:p-8 rounded-[36px] bg-white w-full max-w-4xl shadow-md card-hover-subtle reveal-scale"
           style="box-shadow: 0px 8px 24px 0 rgba(0,113,188,0.12);">
           <p class="text-lg font-bold text-[#1d1d1b] text-center sm:text-left">
             ¿No encuentras lo que buscas? Escríbenos
@@ -244,7 +246,7 @@ const localePath = useLocalePath();
 
     <!-- SECTION: CTA Blue Banner ("Cada familia tiene una historia...") -->
     <section aria-labelledby="cta-familias-title" class="bg-[#0071bc] py-16 md:py-24 px-4 sm:px-6 lg:px-12 w-full">
-      <div class="max-w-4xl mx-auto flex flex-col items-center text-center gap-8">
+      <div data-scroll data-scroll-class="is-inview" class="max-w-4xl mx-auto flex flex-col items-center text-center gap-8 reveal-scale">
         <h2 id="cta-familias-title" class="text-2xl sm:text-3xl lg:text-[38px] font-bold text-white leading-relaxed">
           Cada familia tiene una historia de amor y superación. Queremos escuchar la tuya y ser parte de tu camino.
         </h2>

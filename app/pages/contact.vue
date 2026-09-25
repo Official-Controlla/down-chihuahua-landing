@@ -42,28 +42,29 @@ const localePath = useLocalePath();
   <main class="flex flex-col flex-1 bg-white font-sans overflow-x-hidden">
     <!-- HERO SECTION: Contacto y Colaboración -->
     <section aria-labelledby="hero-contacto-title"
-      class="bg-[#fff5e0] px-4 sm:px-6 md:px-12 lg:px-20 py-12 md:py-16 lg:py-24">
+      class="bg-[#fff5e0] px-4 sm:px-6 md:px-12 lg:px-20 py-12 md:py-16 lg:py-24"
+      data-scroll data-scroll-class="is-inview">
       <div class="max-w-7xl mx-auto flex flex-col lg:flex-row items-center justify-between gap-10 lg:gap-16">
         <!-- Left Content -->
         <div class="flex flex-col items-start gap-6 lg:w-1/2">
           <div
-            class="inline-flex items-center px-4 py-1.5 rounded-full bg-white border-[1.5px] border-[#d9b421] shadow-xs">
+            class="inline-flex items-center px-4 py-1.5 rounded-full bg-white border-[1.5px] border-[#d9b421] shadow-xs reveal-fade-up">
             <span class="text-xs sm:text-[13px] font-bold uppercase tracking-wider text-[#0071bc]">
               Estamos listos para escucharte
             </span>
           </div>
 
           <h1 id="hero-contacto-title"
-            class="text-3xl sm:text-4xl md:text-5xl lg:text-[40px] font-bold text-[#0071bc] leading-tight">
+            class="text-3xl sm:text-4xl md:text-5xl lg:text-[40px] font-bold text-[#0071bc] leading-tight reveal-fade-up stagger-1">
             Contacto y Colaboración
           </h1>
 
-          <p class="text-base sm:text-lg text-[#4a4a48] leading-relaxed max-w-2xl">
+          <p class="text-base sm:text-lg text-[#4a4a48] leading-relaxed max-w-2xl reveal-fade-up stagger-2">
             ¿Tienes dudas, quieres inscribir a un familiar o simplemente conocernos? Escríbenos por WhatsApp, visítanos
             o súmate a nuestro propósito de vida.
           </p>
 
-          <div class="flex flex-wrap items-center gap-4 pt-2">
+          <div class="flex flex-wrap items-center gap-4 pt-2 reveal-fade-up stagger-3">
             <a href="https://wa.me/526145334010" target="_blank" rel="noopener noreferrer">
               <Button label="WhatsApp" icon="pi pi-whatsapp" iconPos="right"
                 class="!rounded-full !bg-[#25d366] !border-none !text-white font-bold !px-6 !py-3 hover:!bg-[#20bd5a] transition-all shadow-md" />
@@ -75,7 +76,7 @@ const localePath = useLocalePath();
           </div>
 
           <!-- Highlight Banner Card -->
-          <div class="flex items-center gap-4.5 p-5 sm:p-6 rounded-3xl bg-white w-full max-w-xl mt-4"
+          <div class="flex items-center gap-4.5 p-5 sm:p-6 rounded-3xl bg-white w-full max-w-xl mt-4 reveal-fade-up stagger-4 card-hover-subtle"
             style="box-shadow: 0px 12px 32px 0 rgba(0,113,188,0.08);">
             <div class="w-12 h-12 rounded-xl bg-[#d9b421] flex items-center justify-center shrink-0">
               <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"
@@ -93,10 +94,10 @@ const localePath = useLocalePath();
 
         <!-- Right Visual Container -->
         <div class="flex justify-center items-center lg:w-1/2 w-full">
-          <div class="relative w-full max-w-[440px] flex justify-center py-4">
+          <div class="relative w-full max-w-[440px] flex justify-center py-4" data-scroll data-scroll-speed="0.02">
             <!-- Arched Image Frame -->
             <div
-              class="w-full max-w-[380px] sm:max-w-[420px] h-[400px] sm:h-[500px] overflow-hidden rounded-tl-[180px] sm:rounded-tl-[210px] rounded-tr-[180px] sm:rounded-tr-[210px] rounded-bl-3xl rounded-br-3xl bg-[#f4f6f8] border border-[#9a9a97] shadow-xl relative">
+              class="w-full max-w-[380px] sm:max-w-[420px] h-[400px] sm:h-[500px] overflow-hidden rounded-tl-[180px] sm:rounded-tl-[210px] rounded-tr-[180px] sm:rounded-tr-[210px] rounded-bl-3xl rounded-br-3xl bg-[#f4f6f8] border border-[#9a9a97] shadow-xl relative reveal-scale">
               <img src="@/assets/images/contacto-hero.png"
                 alt="Atención y orientación directa en Instituto Down de Chihuahua"
                 class="w-full h-full object-cover" />
@@ -104,8 +105,8 @@ const localePath = useLocalePath();
 
             <!-- Floating Badge -->
             <div
-              class="absolute left-2 sm:left-4 bottom-6 sm:bottom-10 w-[180px] sm:w-[200px] p-5 rounded-[20px] bg-white z-10"
-              style="box-shadow: 0px 12px 32px 0 rgba(29,29,27,0.1);">
+              class="absolute left-2 sm:left-4 bottom-6 sm:bottom-10 w-[180px] sm:w-[200px] p-5 rounded-[20px] bg-white z-10 reveal-fade-up stagger-2"
+              style="box-shadow: 0px 12px 32px 0 rgba(29,29,27,0.1);" data-scroll data-scroll-speed="-0.02">
               <span class="block text-[15px] font-bold text-[#0071bc] leading-snug">
                 Atención y Orientación Directa
               </span>
@@ -113,7 +114,7 @@ const localePath = useLocalePath();
 
             <!-- Decorative Arc SVG -->
             <div
-              class="absolute -right-2 sm:-right-4 top-2 w-[100px] sm:w-[140px] h-[50px] sm:h-[70px] overflow-hidden">
+              class="absolute -right-2 sm:-right-4 top-2 w-[100px] sm:w-[140px] h-[50px] sm:h-[70px] overflow-hidden reveal-fade-in stagger-3">
               <svg width="140" height="70" viewBox="0 0 140 70" fill="none" xmlns="http://www.w3.org/2000/svg"
                 class="w-full h-full">
                 <circle cx="70" r="70" fill="#D9B421"></circle>
@@ -125,11 +126,12 @@ const localePath = useLocalePath();
     </section>
 
     <!-- SECTION: Visítanos - Atención Directa y Ubicación -->
-    <section aria-labelledby="ubicacion-title" class="bg-white py-16 md:py-24 px-4 sm:px-6 lg:px-12 w-full">
+    <section aria-labelledby="ubicacion-title" class="bg-white py-16 md:py-24 px-4 sm:px-6 lg:px-12 w-full"
+      data-scroll data-scroll-class="is-inview">
       <div class="max-w-7xl mx-auto flex flex-col lg:flex-row items-center justify-between gap-12 lg:gap-16">
         <!-- Left: Contact Details -->
         <div class="flex flex-col items-start gap-8 lg:w-1/2 w-full">
-          <div class="flex flex-col gap-4">
+          <div class="flex flex-col gap-4 reveal-fade-up">
             <div
               class="inline-flex items-center px-4 py-1.5 rounded-full bg-white border-[1.5px] border-[#d9b421] shadow-xs self-start">
               <span class="text-xs sm:text-[13px] font-bold uppercase tracking-wider text-[#0071bc]">
@@ -151,7 +153,7 @@ const localePath = useLocalePath();
           <div class="flex flex-col gap-6 w-full">
             <!-- Item 1: WhatsApp -->
             <a href="https://wa.me/526145334010" target="_blank" rel="noopener noreferrer"
-              class="flex items-center gap-4 group">
+              class="flex items-center gap-4 group reveal-fade-up stagger-1">
               <div
                 class="w-12 h-12 rounded-xl bg-[#d9b421] flex items-center justify-center shrink-0 group-hover:scale-105 transition-transform">
                 <i class="pi pi-whatsapp text-white text-xl"></i>
@@ -164,7 +166,7 @@ const localePath = useLocalePath();
 
             <!-- Item 2: Address -->
             <a href="https://maps.google.com/?q=Av.+Mirador+4307,+Campestre+Residencial,+Chihuahua,+Chih."
-              target="_blank" rel="noopener noreferrer" class="flex items-center gap-4 group">
+              target="_blank" rel="noopener noreferrer" class="flex items-center gap-4 group reveal-fade-up stagger-2">
               <div
                 class="w-12 h-12 rounded-xl bg-[#0071bc] flex items-center justify-center shrink-0 group-hover:scale-105 transition-transform">
                 <i class="pi pi-map-marker text-white text-xl"></i>
@@ -178,7 +180,7 @@ const localePath = useLocalePath();
             </a>
 
             <!-- Item 3: Email -->
-            <a href="mailto:instituto@downchihuahua.org" class="flex items-center gap-4 group">
+            <a href="mailto:instituto@downchihuahua.org" class="flex items-center gap-4 group reveal-fade-up stagger-3">
               <div
                 class="w-12 h-12 rounded-xl bg-[#0071bc] flex items-center justify-center shrink-0 group-hover:scale-105 transition-transform">
                 <i class="pi pi-envelope text-white text-xl"></i>
@@ -191,7 +193,7 @@ const localePath = useLocalePath();
             </a>
 
             <!-- Item 4: Schedule -->
-            <div class="flex items-center gap-4">
+            <div class="flex items-center gap-4 reveal-fade-up stagger-4">
               <div class="w-12 h-12 rounded-xl bg-[#e8734a] flex items-center justify-center shrink-0">
                 <i class="pi pi-clock text-white text-xl"></i>
               </div>
@@ -205,7 +207,7 @@ const localePath = useLocalePath();
 
         <!-- Right: Map Image Container -->
         <div
-          class="w-full lg:w-1/2 h-[400px] sm:h-[520px] rounded-[32px] overflow-hidden bg-[#f4f6f8] border-4 border-[#f4f6f8] shadow-lg relative group">
+          class="w-full lg:w-1/2 h-[400px] sm:h-[520px] rounded-[32px] overflow-hidden bg-[#f4f6f8] border-4 border-[#f4f6f8] shadow-lg relative group reveal-scale">
           <img src="@/assets/images/mapa-ubicacion.png"
             alt="Mapa de ubicación Instituto Down de Chihuahua Av. Mirador 4307"
             class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
@@ -220,10 +222,11 @@ const localePath = useLocalePath();
     </section>
 
     <!-- SECTION: Tú puedes ser el cambio (Apoyo e Impacto Social) -->
-    <section aria-labelledby="apoyo-impacto-title" class="bg-[#f4f6f8] py-16 md:py-24 px-4 sm:px-6 lg:px-12 w-full">
+    <section aria-labelledby="apoyo-impacto-title" class="bg-[#f4f6f8] py-16 md:py-24 px-4 sm:px-6 lg:px-12 w-full"
+      data-scroll data-scroll-class="is-inview">
       <div class="max-w-7xl mx-auto flex flex-col items-center gap-12 md:gap-16">
         <!-- Header -->
-        <div class="flex flex-col items-center text-center gap-4 max-w-3xl">
+        <div class="flex flex-col items-center text-center gap-4 max-w-3xl reveal-fade-up">
           <div
             class="inline-flex items-center px-4 py-1.5 rounded-full bg-white border-[1.5px] border-[#d9b421] shadow-xs">
             <span class="text-xs sm:text-[13px] font-bold uppercase tracking-wider text-[#0071bc]">
@@ -243,7 +246,7 @@ const localePath = useLocalePath();
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 w-full max-w-6xl">
           <!-- Card 1: Voluntariado -->
           <div
-            class="flex flex-col justify-between p-6 sm:p-8 rounded-3xl bg-white shadow-xs hover:shadow-md transition-all h-full"
+            class="flex flex-col justify-between p-6 sm:p-8 rounded-3xl bg-white shadow-xs hover:shadow-md transition-all h-full reveal-fade-up stagger-1 card-hover-subtle"
             style="box-shadow: 0px 8px 16px 0 rgba(29,29,27,0.03);">
             <div class="flex flex-col gap-6">
               <div class="w-14 h-14 rounded-2xl bg-[#0071bc] flex items-center justify-center shrink-0">
@@ -261,7 +264,7 @@ const localePath = useLocalePath();
 
           <!-- Card 2: Donativos en Especie -->
           <div
-            class="flex flex-col justify-between p-6 sm:p-8 rounded-3xl bg-white shadow-xs hover:shadow-md transition-all h-full"
+            class="flex flex-col justify-between p-6 sm:p-8 rounded-3xl bg-white shadow-xs hover:shadow-md transition-all h-full reveal-fade-up stagger-2 card-hover-subtle"
             style="box-shadow: 0px 8px 16px 0 rgba(29,29,27,0.03);">
             <div class="flex flex-col gap-6">
               <div class="w-14 h-14 rounded-2xl bg-[#d9b421] flex items-center justify-center shrink-0">
@@ -279,7 +282,7 @@ const localePath = useLocalePath();
 
           <!-- Card 3: Alianzas Empresariales -->
           <div
-            class="flex flex-col justify-between p-6 sm:p-8 rounded-3xl bg-white shadow-xs hover:shadow-md transition-all h-full"
+            class="flex flex-col justify-between p-6 sm:p-8 rounded-3xl bg-white shadow-xs hover:shadow-md transition-all h-full reveal-fade-up stagger-3 card-hover-subtle"
             style="box-shadow: 0px 8px 16px 0 rgba(29,29,27,0.03);">
             <div class="flex flex-col gap-6">
               <div class="w-14 h-14 rounded-2xl bg-[#e8734a] flex items-center justify-center shrink-0">
@@ -297,7 +300,7 @@ const localePath = useLocalePath();
 
           <!-- Card 4: Eventos y Campañas -->
           <div
-            class="flex flex-col justify-between p-6 sm:p-8 rounded-3xl bg-white shadow-xs hover:shadow-md transition-all h-full"
+            class="flex flex-col justify-between p-6 sm:p-8 rounded-3xl bg-white shadow-xs hover:shadow-md transition-all h-full reveal-fade-up stagger-4 card-hover-subtle"
             style="box-shadow: 0px 8px 16px 0 rgba(29,29,27,0.03);">
             <div class="flex flex-col gap-6">
               <div class="w-14 h-14 rounded-2xl bg-[#0071bc] flex items-center justify-center shrink-0">
@@ -317,14 +320,15 @@ const localePath = useLocalePath();
     </section>
 
     <!-- SECTION: Blue CTA & Bank Deposit Details -->
-    <section aria-labelledby="cta-banco-title" class="bg-[#0071bc] py-16 md:py-24 px-4 sm:px-6 lg:px-12 w-full">
-      <div class="max-w-4xl mx-auto flex flex-col items-center text-center gap-10">
+    <section aria-labelledby="cta-banco-title" class="bg-[#0071bc] py-16 md:py-24 px-4 sm:px-6 lg:px-12 w-full"
+      data-scroll data-scroll-class="is-inview">
+      <div class="max-w-4xl mx-auto flex flex-col items-center text-center gap-10 reveal-fade-up">
         <h2 id="cta-banco-title" class="text-2xl sm:text-3xl lg:text-[38px] font-bold text-white leading-relaxed">
           Tu aportación económica directa sostiene nuestro programa de becas. ¡Haz un donativo!
         </h2>
 
         <!-- White Card with Bank Details -->
-        <div class="bg-white rounded-3xl p-6 sm:p-8 w-full max-w-2xl flex flex-col gap-5 text-left shadow-xl">
+        <div class="bg-white rounded-3xl p-6 sm:p-8 w-full max-w-2xl flex flex-col gap-5 text-left shadow-xl reveal-scale stagger-1 card-hover-subtle">
           <h3 class="text-lg font-bold text-center text-[#0071bc]">
             Datos para Depósito o Transferencia
           </h3>
@@ -355,7 +359,7 @@ const localePath = useLocalePath();
         </div>
 
         <!-- Buttons -->
-        <div class="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6 w-full">
+        <div class="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6 w-full reveal-fade-up stagger-2">
           <a href="https://wa.me/526145334010" target="_blank" rel="noopener noreferrer">
             <Button label="Reportar Donativo" icon="pi pi-arrow-right" iconPos="right"
               class="!rounded-full !bg-[#d9b421] !border-none !text-[#0071bc] font-bold !px-8 !py-4 hover:!bg-[#c4a21d] transition-all shadow-md" />

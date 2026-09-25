@@ -19,7 +19,7 @@ withDefaults(
 
 <template>
   <div
-    class="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 sm:gap-5 p-5 md:p-6 w-full rounded-tl-xl rounded-tr-3xl rounded-bl-xl rounded-br-3xl bg-white border-l-[5px] border-[#d9b421]"
+    class="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 sm:gap-5 p-5 md:p-6 w-full rounded-tl-xl rounded-tr-3xl rounded-bl-xl rounded-br-3xl bg-white border-l-[5px] border-[#d9b421] card-hover-subtle"
     style="box-shadow: 0px 12px 32px 0 rgba(0,113,188,0.12);">
     <div class="flex items-center gap-4 flex-1">
       <div class="flex justify-center items-center shrink-0 w-12 h-12 rounded-xl bg-[#d9b421] text-white">

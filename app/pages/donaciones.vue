@@ -10,9 +10,10 @@ const localePath = useLocalePath();
 </script>
 
 <template>
-  <main class="flex flex-col flex-1 bg-white font-sans overflow-x-hidden pt-28 pb-20 px-4 sm:px-6 lg:px-12">
+  <main class="flex flex-col flex-1 bg-white font-sans overflow-x-hidden pt-28 pb-20 px-4 sm:px-6 lg:px-12"
+    data-scroll data-scroll-class="is-inview">
     <div class="max-w-7xl mx-auto flex flex-col gap-10">
-      <header class="flex flex-col items-start gap-4 max-w-3xl">
+      <header class="flex flex-col items-start gap-4 max-w-3xl reveal-fade-up">
         <span class="text-xs font-bold uppercase tracking-wider text-[#d9b421]">Apoya Nuestra Misión</span>
         <h1 class="text-4xl lg:text-5xl font-bold text-[#0071bc]">Donaciones y Colaboraciones</h1>
         <p class="text-lg text-[#4a4a48]">
@@ -21,7 +22,7 @@ const localePath = useLocalePath();
         </p>
       </header>
 
-      <div class="p-8 md:p-10 rounded-3xl bg-[#0071bc] text-white flex flex-col gap-6 max-w-2xl">
+      <div class="p-8 md:p-10 rounded-3xl bg-[#0071bc] text-white flex flex-col gap-6 max-w-2xl reveal-fade-up stagger-1 card-hover-subtle">
         <h2 class="text-2xl font-bold">Donativos Deducibles de Impuestos</h2>
         <p class="text-base text-[#fff5e0]">
           Somos una Asociación Civil autorizada para emitir recibos deducibles de impuestos. Puedes realizar tu donativo

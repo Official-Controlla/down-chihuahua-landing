@@ -24,13 +24,14 @@ useSchemaOrg([
 </script>
 
 <template>
-  <main class="flex flex-col flex-1 pt-32 pb-24">
+  <main class="flex flex-col flex-1 pt-32 pb-24 overflow-x-hidden">
     <!-- Hero Section -->
     <section
       class="max-w-4xl mx-auto px-6 lg:px-8 mb-20 text-center relative z-10"
+      data-scroll data-scroll-class="is-inview"
     >
       <div
-        class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-surface-100 dark:bg-surface-800 border border-surface-200 dark:border-surface-700 mb-8"
+        class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-surface-100 dark:bg-surface-800 border border-surface-200 dark:border-surface-700 mb-8 reveal-fade-up"
       >
         <span class="w-2 h-2 rounded-full bg-primary-500 animate-pulse"></span>
         <span
@@ -40,23 +41,23 @@ useSchemaOrg([
         </span>
       </div>
       <h1
-        class="text-5xl md:text-6xl font-bold text-surface-900 dark:text-surface-0 mb-6 tracking-tight leading-tight"
+        class="text-5xl md:text-6xl font-bold text-surface-900 dark:text-surface-0 mb-6 tracking-tight leading-tight reveal-fade-up stagger-1"
       >
         {{ $t("servicesPage.heroTitle") }}
       </h1>
       <p
-        class="text-lg text-surface-600 dark:text-surface-300 max-w-2xl mx-auto leading-relaxed"
+        class="text-lg text-surface-600 dark:text-surface-300 max-w-2xl mx-auto leading-relaxed reveal-fade-up stagger-2"
       >
         {{ $t("servicesPage.heroSubtitle") }}
       </p>
     </section>
 
     <!-- Services Bento Grid -->
-    <section class="max-w-7xl mx-auto px-6 lg:px-8 mb-32 relative z-10">
+    <section class="max-w-7xl mx-auto px-6 lg:px-8 mb-32 relative z-10" data-scroll data-scroll-class="is-inview">
       <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
         <!-- Card 1: Software Engineering (Span 2) -->
         <article
-          class="md:col-span-2 bg-surface-0 dark:bg-surface-900 rounded-2xl border border-surface-200 dark:border-surface-800 p-8 hover:border-surface-300 dark:hover:border-surface-700 hover:shadow-xl dark:shadow-none transition-all duration-300 flex flex-col group"
+          class="md:col-span-2 bg-surface-0 dark:bg-surface-900 rounded-2xl border border-surface-200 dark:border-surface-800 p-8 hover:border-surface-300 dark:hover:border-surface-700 hover:shadow-xl dark:shadow-none transition-all duration-300 flex flex-col group reveal-fade-up stagger-1 card-hover-subtle"
         >
           <div
             class="mb-6 inline-flex items-center justify-center w-12 h-12 rounded-lg border border-surface-100 dark:border-surface-800 bg-surface-50 dark:bg-surface-950 text-surface-700 dark:text-surface-300 group-hover:border-primary-500/20 group-hover:bg-primary-500/10 group-hover:text-primary-500 transition-colors"
@@ -104,7 +105,7 @@ useSchemaOrg([
 
         <!-- Card 2: Nearshore (Span 1) -->
         <article
-          class="md:col-span-1 bg-surface-0 dark:bg-surface-900 rounded-2xl border border-surface-200 dark:border-surface-800 p-8 hover:border-surface-300 dark:hover:border-surface-700 hover:shadow-xl dark:shadow-none transition-all duration-300 flex flex-col group"
+          class="md:col-span-1 bg-surface-0 dark:bg-surface-900 rounded-2xl border border-surface-200 dark:border-surface-800 p-8 hover:border-surface-300 dark:hover:border-surface-700 hover:shadow-xl dark:shadow-none transition-all duration-300 flex flex-col group reveal-fade-up stagger-2 card-hover-subtle"
         >
           <div
             class="mb-6 inline-flex items-center justify-center w-12 h-12 rounded-lg border border-surface-100 dark:border-surface-800 bg-surface-50 dark:bg-surface-950 text-surface-700 dark:text-surface-300 group-hover:border-primary-500/20 group-hover:bg-primary-500/10 group-hover:text-primary-500 transition-colors"
@@ -136,7 +137,7 @@ useSchemaOrg([
 
         <!-- Card 3: Legacy (Span 1) -->
         <article
-          class="md:col-span-1 bg-surface-0 dark:bg-surface-900 rounded-2xl border border-surface-200 dark:border-surface-800 p-8 hover:border-surface-300 dark:hover:border-surface-700 hover:shadow-xl dark:shadow-none transition-all duration-300 flex flex-col group"
+          class="md:col-span-1 bg-surface-0 dark:bg-surface-900 rounded-2xl border border-surface-200 dark:border-surface-800 p-8 hover:border-surface-300 dark:hover:border-surface-700 hover:shadow-xl dark:shadow-none transition-all duration-300 flex flex-col group reveal-fade-up stagger-3 card-hover-subtle"
         >
           <div
             class="mb-6 inline-flex items-center justify-center w-12 h-12 rounded-lg border border-surface-100 dark:border-surface-800 bg-surface-50 dark:bg-surface-950 text-surface-700 dark:text-surface-300 group-hover:border-primary-500/20 group-hover:bg-primary-500/10 group-hover:text-primary-500 transition-colors"
@@ -168,7 +169,7 @@ useSchemaOrg([
 
         <!-- Card 4: AI (Span 2) -->
         <article
-          class="md:col-span-2 bg-surface-0 dark:bg-surface-900 rounded-2xl border border-surface-200 dark:border-surface-800 p-8 hover:border-surface-300 dark:hover:border-surface-700 hover:shadow-xl dark:shadow-none transition-all duration-300 flex flex-col group relative overflow-hidden"
+          class="md:col-span-2 bg-surface-0 dark:bg-surface-900 rounded-2xl border border-surface-200 dark:border-surface-800 p-8 hover:border-surface-300 dark:hover:border-surface-700 hover:shadow-xl dark:shadow-none transition-all duration-300 flex flex-col group relative overflow-hidden reveal-fade-up stagger-4 card-hover-subtle"
         >
           <div
             class="absolute inset-0 bg-primary-500/5 dark:bg-primary-500/10 tech-grid opacity-50 pointer-events-none"
@@ -222,12 +223,12 @@ useSchemaOrg([
     </section>
 
     <!-- Integrations Carousel -->
-    <IntegrationsCarousel class="mb-32" />
+    <IntegrationsCarousel class="mb-32" data-scroll data-scroll-class="is-inview" />
 
     <!-- CTA Section -->
-    <section class="max-w-5xl mx-auto px-6 lg:px-8 relative z-10">
+    <section class="max-w-5xl mx-auto px-6 lg:px-8 relative z-10" data-scroll data-scroll-class="is-inview">
       <div
-        class="bg-surface-900 dark:bg-surface-950 rounded-2xl p-12 md:p-16 text-center border border-surface-800 shadow-2xl relative overflow-hidden tech-grid"
+        class="bg-surface-900 dark:bg-surface-950 rounded-2xl p-12 md:p-16 text-center border border-surface-800 shadow-2xl relative overflow-hidden tech-grid reveal-fade-up"
       >
         <div class="relative z-10 max-w-2xl mx-auto">
           <h2

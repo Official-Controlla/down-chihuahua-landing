@@ -117,3 +117,107 @@
   background: rgb(0 0 0 / 0.6);
   box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.3), 0 2px 4px -1px rgb(0 0 0 / 0.15);
 }
+
+/* Subtle Scroll Reveal & Motion Animations (Locomotive Scroll Compatible) */
+.reveal-fade-up {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.75s cubic-bezier(0.16, 1, 0.3, 1), transform 0.75s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: opacity, transform;
+}
+
+.reveal-fade-up.is-inview,
+.is-inview .reveal-fade-up {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.reveal-fade-in {
+  opacity: 0;
+  transition: opacity 0.85s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: opacity;
+}
+
+.reveal-fade-in.is-inview,
+.is-inview .reveal-fade-in {
+  opacity: 1;
+}
+
+.reveal-scale {
+  opacity: 0;
+  transform: scale(0.96);
+  transition: opacity 0.75s cubic-bezier(0.16, 1, 0.3, 1), transform 0.75s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: opacity, transform;
+}
+
+.reveal-scale.is-inview,
+.is-inview .reveal-scale {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.reveal-slide-right {
+  opacity: 0;
+  transform: translateX(-24px);
+  transition: opacity 0.75s cubic-bezier(0.16, 1, 0.3, 1), transform 0.75s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: opacity, transform;
+}
+
+.reveal-slide-right.is-inview,
+.is-inview .reveal-slide-right {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.reveal-slide-left {
+  opacity: 0;
+  transform: translateX(24px);
+  transition: opacity 0.75s cubic-bezier(0.16, 1, 0.3, 1), transform 0.75s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: opacity, transform;
+}
+
+.reveal-slide-left.is-inview,
+.is-inview .reveal-slide-left {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* Stagger Delays for Grid / Card Groups */
+.stagger-1 { transition-delay: 0ms; }
+.stagger-2 { transition-delay: 100ms; }
+.stagger-3 { transition-delay: 200ms; }
+.stagger-4 { transition-delay: 300ms; }
+
+/* Subtle Interactive Effects */
+.card-hover-subtle {
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.card-hover-subtle:hover {
+  transform: translateY(-4px);
+}
+
+/* Subtle Bar Grow Helper */
+.bar-grow {
+  transform-origin: bottom;
+  transition: transform 1.2s cubic-bezier(0.16, 1, 0.3, 1);
+  transform: scaleY(0);
+}
+
+.is-inview .bar-grow,
+.bar-grow.is-inview {
+  transform: scaleY(1);
+}
+
+/* Accessibility: Respect Reduced Motion Preferences */
+@media (prefers-reduced-motion: reduce) {
+  .reveal-fade-up,
+  .reveal-fade-in,
+  .reveal-scale,
+  .reveal-slide-right,
+  .reveal-slide-left {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+  }
+}
