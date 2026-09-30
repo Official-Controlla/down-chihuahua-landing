@@ -29,8 +29,8 @@ const localePath = useLocalePath();
   <main class="flex flex-col flex-1 bg-white font-sans overflow-x-hidden">
     <!-- HERO SECTION: Quiénes Somos -->
     <section aria-labelledby="hero-nosotros-title"
-      class="bg-[#fff5e0] px-4 sm:px-6 md:px-12 lg:px-20 py-12 md:py-16 lg:py-24"
-      data-scroll data-scroll-class="is-inview">
+      class="bg-[#fff5e0] px-4 sm:px-6 md:px-12 lg:px-20 py-12 md:py-16 lg:py-24" data-scroll
+      data-scroll-class="is-inview">
       <div class="max-w-7xl mx-auto flex flex-col lg:flex-row items-center justify-between gap-10 lg:gap-16">
         <!-- Left Content -->
         <div class="flex flex-col items-start gap-6 lg:w-1/2">
@@ -58,7 +58,8 @@ const localePath = useLocalePath();
               <Button label="Agenda una visita" icon="pi pi-arrow-right" iconPos="right"
                 class="!rounded-full !bg-[#d9b421] !border-none !text-[#0071bc] font-bold !px-6 !py-3 hover:!bg-[#c4a21d] transition-all shadow-md" />
             </NuxtLink>
-            <a href="https://www.paypal.com/donate/?hosted_button_id=SBY6NYQWH6CDJ" target="_blank" rel="noopener noreferrer">
+            <a href="https://www.paypal.com/donate/?hosted_button_id=SBY6NYQWH6CDJ" target="_blank"
+              rel="noopener noreferrer">
               <Button label="Donar ahora" icon="pi pi-heart" iconPos="right"
                 class="!rounded-full !bg-transparent !border-2 !border-[#0071bc] !text-[#0071bc] font-bold !px-6 !py-3 hover:!bg-[#0071bc]/10 transition-all" />
             </a>
@@ -251,79 +252,6 @@ const localePath = useLocalePath();
       </div>
     </section>
 
-    <!-- SECTION: Nuestros Especialistas -->
-    <section aria-labelledby="especialistas-title" class="bg-[#fff5e0] py-16 md:py-24 px-4 sm:px-6 lg:px-12 w-full"
-      data-scroll data-scroll-class="is-inview">
-      <div class="max-w-7xl mx-auto flex flex-col items-center gap-12 md:gap-16">
-        <!-- Header -->
-        <div class="flex flex-col items-center text-center gap-4 max-w-3xl reveal-fade-up">
-          <h2 id="especialistas-title" class="text-3xl sm:text-4xl lg:text-[32px] font-bold text-[#0071bc]">
-            Nuestros Especialistas
-          </h2>
-          <p class="text-base sm:text-lg text-[#4a4a48] leading-relaxed">
-            Detrás de cada avance hay un equipo multidisciplinario altamente especializado en discapacidad intelectual,
-            comprometido con guiar a cada familia y alumno hacia el éxito.
-          </p>
-        </div>
-
-        <!-- 3 Cards Grid -->
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 w-full max-w-6xl">
-          <!-- Specialist 1 -->
-          <div
-            class="flex flex-col justify-between gap-4 p-6 sm:p-8 rounded-3xl bg-white border border-[#eaecef] h-full reveal-fade-up stagger-1 card-hover-subtle"
-            style="box-shadow: 0px 12px 32px 0 rgba(29,29,27,0.02);">
-            <div class="flex flex-col gap-1">
-              <h3 class="text-xl font-bold text-[#1d1d1b]">
-                Lic. María Elena Chávez
-              </h3>
-              <span class="text-[13px] font-bold uppercase text-[#d9b421] tracking-wider">
-                Dirección General
-              </span>
-            </div>
-            <p class="text-[15px] text-[#4a4a48] leading-relaxed">
-              Coordinando esfuerzos de desarrollo integral, vinculación institucional y aseguramiento de la calidad
-              terapéutica.
-            </p>
-          </div>
-
-          <!-- Specialist 2 -->
-          <div
-            class="flex flex-col justify-between gap-4 p-6 sm:p-8 rounded-3xl bg-white border border-[#eaecef] h-full reveal-fade-up stagger-2 card-hover-subtle"
-            style="box-shadow: 0px 12px 32px 0 rgba(29,29,27,0.02);">
-            <div class="flex flex-col gap-1">
-              <h3 class="text-xl font-bold text-[#1d1d1b]">
-                Psic. Andrés Gómez
-              </h3>
-              <span class="text-[13px] font-bold uppercase text-[#d9b421] tracking-wider">
-                Terapia de Aprendizaje
-              </span>
-            </div>
-            <p class="text-[15px] text-[#4a4a48] leading-relaxed">
-              Especialista en desarrollo cognitivo temprano, estimulación sensorial y procesos adaptativos de
-              aprendizaje.
-            </p>
-          </div>
-
-          <!-- Specialist 3 -->
-          <div
-            class="flex flex-col justify-between gap-4 p-6 sm:p-8 rounded-3xl bg-white border border-[#eaecef] h-full reveal-fade-up stagger-3 card-hover-subtle"
-            style="box-shadow: 0px 12px 32px 0 rgba(29,29,27,0.02);">
-            <div class="flex flex-col gap-1">
-              <h3 class="text-xl font-bold text-[#1d1d1b]">
-                T.F. Sofía Rodríguez
-              </h3>
-              <span class="text-[13px] font-bold uppercase text-[#d9b421] tracking-wider">
-                Terapia Física
-              </span>
-            </div>
-            <p class="text-[15px] text-[#4a4a48] leading-relaxed">
-              Acompañamiento psicomotriz e independencia física, enfocado en el desarrollo de la motricidad gruesa y
-              fina.
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
 
     <!-- SECTION: Nuestras Instalaciones -->
     <section aria-labelledby="instalaciones-title" class="bg-white py-16 md:py-24 px-4 sm:px-6 lg:px-12 w-full"
@@ -427,7 +355,8 @@ const localePath = useLocalePath();
         </h2>
 
         <div class="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6 w-full">
-          <a href="https://www.paypal.com/donate/?hosted_button_id=SBY6NYQWH6CDJ" target="_blank" rel="noopener noreferrer">
+          <a href="https://www.paypal.com/donate/?hosted_button_id=SBY6NYQWH6CDJ" target="_blank"
+            rel="noopener noreferrer">
             <Button label="Donar ahora" icon="pi pi-heart" iconPos="right"
               class="!rounded-full !bg-[#d9b421] !border-none !text-[#0071bc] font-bold !px-8 !py-4 hover:!bg-[#c4a21d] transition-all shadow-md" />
           </a>
