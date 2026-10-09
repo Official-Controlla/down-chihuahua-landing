@@ -1,9 +1,60 @@
 <script lang="ts" setup>
-import ogImg from "@/assets/images/arch-bg.png";
+import heroHeroIndex from "@/assets/images/v2/heroindex.jpg";
+import aboutUsImg from "@/assets/images/qs-image.png";
+import card1V2 from "@/assets/images/v2/card-1.jpg";
+import card2V2 from "@/assets/images/v2/card-2.jpg";
+import card3V2 from "@/assets/images/v2/card-3.png";
+import card1Img from "@/assets/images/v2/familias.jpg";
+import card2Img from "@/assets/images/v2/programas.jpg";
+import card3Img from "@/assets/images/v2/hero_reciclaje.jpg";
+import card4Img from "@/assets/images/v2/colabora.png";
+import impactoBgImg from "@/assets/images/v2/alumna.png";
 import pdf2022 from "@/assets/PDF/INFORME ANUAL 2022.pdf";
 import pdf2023 from "@/assets/PDF/INFORME IDCHAC 2023.pdf";
 import pdf2024 from "@/assets/PDF/INFORME IDCHAC 2024.pdf";
 import pdf2025 from "@/assets/PDF/Informe Anual 2025.pdf";
+
+// Configuración de imágenes para reemplazo manual sencillo
+const images = {
+    // Imagen principal Hero
+    heroBg: heroHeroIndex,
+
+    // Imagen Sección "¿Quiénes Somos?"
+    aboutUs: aboutUsImg,
+
+    // Imagen Fondo Sección "Nuestro Impacto"
+    impactoBg: impactoBgImg,
+
+    // Imágenes para las tarjetas de "Lo que hacemos" (Imágenes a pantalla completa)
+    loQueHacemos: [
+        {
+            id: "festival",
+            title: "Festival de fin de cursos",
+            description: "Una celebración para compartir el talento, los logros y la alegría de nuestra comunidad.",
+            image: card1V2,
+        },
+        {
+            id: "huerto",
+            title: "Huerto Escolar",
+            description: "Una celebración para compartir el talento, los logros y la alegría de nuestra comunidad.",
+            image: card2V2,
+        },
+        {
+            id: "consultorio",
+            title: "Consultorio dental",
+            description: "Una celebración para compartir el talento, los logros y la alegría de nuestra comunidad.",
+            image: card3V2,
+        },
+    ],
+
+    // Imágenes para la sección "¿Cómo puedes formar parte?"
+    caminos: {
+        familias: card1Img,
+        programas: card2Img,
+        reciclaje: card4Img,
+        colabora: card3Img,
+    },
+};
 
 const informes = [
     { year: "2022", title: "Informe Anual 2022", file: pdf2022, fileName: "INFORME ANUAL 2022.pdf" },
@@ -12,13 +63,22 @@ const informes = [
     { year: "2025", title: "Informe Anual 2025", file: pdf2025, fileName: "Informe Anual 2025.pdf" },
 ];
 
+const impactoStats = [
+    { number: "40", label: "años de experiencia" },
+    { number: "500", label: "familias impactadas" },
+    { number: "54", label: "aliados" },
+    { number: "1,230", label: "alumnos" },
+    { number: "24", label: "becas" },
+    { number: "24", label: "Proyectos" },
+];
+
 useSeoMeta({
     title: "Instituto Down de Chihuahua A.C. | 40 Años Impulsando Vidas",
     description: "En Instituto Down de Chihuahua A.C. acompañamos a niñas, niños, jóvenes y adultos con síndrome de Down y a sus familias con estimulación temprana, educación, inclusión y apoyo integral en Chihuahua.",
     keywords: "Instituto Down Chihuahua, Síndrome de Down Chihuahua, atención integral síndrome de Down, inclusión educativa, estimulación temprana Chihuahua, apoyo familias síndrome de down, donaciones chihuahua",
     ogTitle: "Instituto Down de Chihuahua A.C. | 40 Años Impulsando Vidas",
     ogDescription: "Acompañamos a niñas, niños, jóvenes y adultos con síndrome de Down y a sus familias con estimulación temprana, educación e inclusión en Chihuahua desde 1984.",
-    ogImage: ogImg,
+    ogImage: images.heroBg,
     ogType: "website",
     twitterCard: "summary_large_image",
 });
@@ -43,100 +103,76 @@ useSchemaOrg([
 
 <template>
     <main class="flex flex-col flex-1 bg-white font-sans overflow-x-hidden">
-        <!-- HERO SECTION -->
+        <!-- 1. HERO SECTION CON IMAGEN DE FONDO Y TRANSPARENCIA AZUL -->
         <section aria-labelledby="hero-title"
-            class="relative bg-[#fff5e0] px-4 sm:px-6 md:px-12 lg:px-20 py-12 md:py-16 lg:py-[110px] overflow-hidden">
-            <div class="max-w-7xl mx-auto flex flex-col lg:flex-row items-center justify-between gap-12 lg:gap-16">
-                <!-- Left Content Column -->
-                <div data-scroll data-scroll-class="is-inview" class="flex flex-col items-start w-full lg:max-w-[620px] gap-8 md:gap-9 reveal-fade-up">
-                    <div class="flex flex-col items-start gap-6 w-full">
-                        <!-- Badge -->
-                        <div
-                            class="inline-flex items-center px-[18px] py-1.5 rounded-full bg-white border-[1.5px] border-[#d9b421] shadow-xs reveal-fade-up stagger-1">
-                            <span
-                                class="text-xs md:text-[13px] font-bold text-left uppercase text-[#0071bc] tracking-wide">
-                                40 Años de Amor y Desarrollo
-                            </span>
-                        </div>
+            class="relative px-4 sm:px-6 md:px-12 lg:px-20 pt-28 md:pt-32 lg:pt-36 pb-12 md:pb-16 lg:pb-24 overflow-hidden text-white min-h-[620px] flex items-center justify-center">
+            <!-- Capa de Imagen de Fondo y Transparencia Azul -->
+            <div class="absolute inset-0 z-0">
+                <img :src="images.heroBg" alt="Fondo Hero - Instituto Down de Chihuahua"
+                    class="w-full h-full object-cover object-center" />
+                <div class="absolute inset-0 bg-[#0075c3]/85 mix-blend-multiply"></div>
+                <div class="absolute inset-0 bg-[#0075c3]/40"></div>
+            </div>
 
-                        <!-- H1 Title -->
-                        <h1 id="hero-title"
-                            class="text-3xl sm:text-4xl md:text-5xl lg:text-[52px] font-bold text-left text-[#0071bc] leading-tight md:leading-[1.15] reveal-fade-up stagger-2">
-                            40 años impulsando a cada persona con síndrome de Down a vivir su vida <span
-                                class="font-black">al máximo.</span>
-                        </h1>
-
-                        <!-- Subtitle -->
-                        <p class="text-base sm:text-lg text-left text-[#4a4a48] leading-relaxed reveal-fade-up stagger-3">
-                            En Chihuahua acompañamos a niñas, niños, jóvenes y adultos con síndrome de Down y a sus
-                            familias con estimulación temprana, educación, inclusión y una comunidad que camina a su
-                            lado en cada etapa de la vida.
-                        </p>
+            <!-- Contenido Hero -->
+            <div
+                class="relative z-10 max-w-7xl mx-auto flex flex-col items-center justify-center gap-8 md:gap-9 text-center">
+                <!-- Badge Hero -->
+                <div data-scroll data-scroll-class="is-inview" class="reveal-fade-up stagger-1">
+                    <div
+                        class="inline-flex items-center px-4 md:px-[18px] py-1.5 rounded-full border-[1.5px] border-[#fc0] bg-[#0075c3]/40 backdrop-blur-xs">
+                        <span class="text-xs sm:text-[13px] font-bold uppercase tracking-wider text-[#fc0]">
+                            40 Años de Amor y Desarrollo
+                        </span>
                     </div>
-
-                    <!-- Action Buttons -->
-                    <div class="flex flex-wrap items-center gap-4 sm:gap-5 w-full reveal-fade-up stagger-4">
-                        <a href="https://www.paypal.com/donate/?hosted_button_id=SBY6NYQWH6CDJ" target="_blank"
-                            rel="noopener noreferrer">
-                            <Button label="Donar" icon="pi pi-arrow-right" iconPos="right"
-                                class="!bg-[#d9b421] !hover:bg-[#c4a11c] !text-[#0071bc] !font-bold !px-6 !py-3 !rounded-full !border-none flex items-center gap-3 shadow-md transition-all duration-300 transform hover:-translate-y-0.5"
-                                aria-label="Realizar una donación al Instituto Down de Chihuahua" />
-                        </a>
-                        <!-- link para ir a programas-->
-                        <a href="/programas">
-                            <Button label="Conoce nuestros programas" icon="pi pi-arrow-right" iconPos="right" outlined
-                                class="!border-2 !border-[#0071bc] !text-[#0071bc] !hover:bg-[#0071bc]/10 !font-bold !px-6 !py-3 !rounded-full flex items-center gap-3 transition-all duration-300"
-                                aria-label="Conocer los programas del Instituto Down de Chihuahua" />
-                        </a>
-                    </div>
-
-                    <!-- Highlight Card: Familias Nuevas -->
-                    <FamiliasNuevasCard />
                 </div>
 
-                <!-- Right Visual Column -->
+                <!-- H1 Title -->
+                <h1 id="hero-title" data-scroll data-scroll-class="is-inview"
+                    class="max-w-4xl text-3xl sm:text-4xl md:text-5xl lg:text-[52px] font-bold text-center text-white leading-tight md:leading-[1.15] reveal-fade-up stagger-2">
+                    40 años impulsando a cada persona con síndrome de Down a vivir su vida <span class="font-black">al
+                        máximo.</span>
+                </h1>
+
+                <!-- Subtitle Description -->
+                <p data-scroll data-scroll-class="is-inview"
+                    class="max-w-4xl text-base sm:text-lg text-center text-white/95 leading-relaxed reveal-fade-up stagger-3">
+                    En Chihuahua acompañamos a niñas, niños, jóvenes y adultos con síndrome de Down y a sus familias con
+                    estimulación temprana, educación, inclusión y una comunidad que camina a su lado en cada etapa de la
+                    vida.
+                </p>
+
+                <!-- Action Buttons (PrimeVue) -->
                 <div data-scroll data-scroll-class="is-inview"
-                    class="relative flex justify-center items-center w-full max-w-[420px] lg:max-w-none lg:w-[480px] shrink-0 reveal-scale">
-                    <div data-scroll data-scroll-speed="0.03"
-                        class="relative w-full aspect-[4/5] max-h-[500px] overflow-hidden rounded-t-[180px] sm:rounded-t-[210px] rounded-b-3xl bg-[#f4f6f8] border border-[#9a9a97] shadow-xl">
-                        <img src="/assets/images/arch-bg.png"
-                            alt=" Niños y jóvenes participando en el Instituto Down Chihuahua"
-                            class="w-full h-full object-cover" loading="eager" />
-                    </div>
+                    class="flex flex-wrap justify-center items-center gap-4 sm:gap-5 reveal-fade-up stagger-4">
+                    <a href="https://www.paypal.com/donate/?hosted_button_id=SBY6NYQWH6CDJ" target="_blank"
+                        rel="noopener noreferrer" aria-label="Realizar donación por PayPal">
+                        <Button label="Donar" icon="pi pi-arrow-right" iconPos="right"
+                            class="!bg-[#fc0] !hover:bg-[#e6b800] !text-[#0075c3] !font-bold !px-6 !py-3 !rounded-full !border-none flex items-center gap-3 shadow-md transition-all duration-300 transform hover:-translate-y-0.5"
+                            aria-label="Donar al Instituto Down de Chihuahua" />
+                    </a>
+                    <NuxtLink to="/programas">
+                        <Button label="Conoce nuestros programas" icon="pi pi-arrow-right" iconPos="right" outlined
+                            class="!border-2 !border-white !text-white !hover:bg-white/10 !font-bold !px-6 !py-3 !rounded-full flex items-center gap-3 transition-all duration-300"
+                            aria-label="Conocer los programas del Instituto Down de Chihuahua" />
+                    </NuxtLink>
+                </div>
 
-                    <!-- Floating Badge -->
-                    <div data-scroll data-scroll-speed="0.06"
-                        class="absolute -left-4 sm:left-2 lg:-left-6 bottom-6 sm:bottom-10 flex flex-col p-5 md:p-6 rounded-[20px] bg-white shadow-xl max-w-[180px] sm:max-w-[200px]"
-                        style="box-shadow: 0px 12px 32px 0 rgba(29,29,27,0.15);">
-                        <span
-                            class="text-4xl sm:text-5xl lg:text-[56px] font-bold text-left text-[#0071bc] leading-none mb-1">
-                            40
-                        </span>
-                        <span class="text-xs sm:text-sm font-bold text-left text-[#0071bc] leading-snug">
-                            Años de impacto continuo
-                        </span>
-                    </div>
-
-                    <!-- Decorative Arch SVG -->
-                    <div data-scroll data-scroll-speed="-0.03" class="absolute -right-4 sm:-right-6 -top-4 sm:-top-6 pointer-events-none z-10">
-                        <div class="w-[100px] h-[50px] sm:w-[140px] sm:h-[70px] overflow-hidden">
-                            <svg width="140" height="70" viewBox="0 0 140 70" fill="none"
-                                xmlns="http://www.w3.org/2000/svg" class="w-full h-full" preserveAspectRatio="none">
-                                <circle cx="70" r="70" fill="#D9B421" />
-                            </svg>
-                        </div>
-                    </div>
+                <!-- Highlight Card: Familias Nuevas -->
+                <div data-scroll data-scroll-class="is-inview" class="w-full max-w-2xl mt-4 reveal-fade-up stagger-4">
+                    <FamiliasNuevasCard buttonTo="/familias" />
                 </div>
             </div>
         </section>
 
-        <!-- SECTION: QUIÉNES SOMOS -->
+        <!-- 2. SECTION: ¿QUIÉNES SOMOS? -->
         <section aria-labelledby="about-title" class="bg-white px-4 sm:px-6 md:px-12 lg:px-20 py-16 md:py-24 lg:py-32">
             <div class="max-w-7xl mx-auto flex flex-col lg:flex-row items-center justify-between gap-12 lg:gap-20">
-                <!-- Text Column -->
-                <div data-scroll data-scroll-class="is-inview" class="flex flex-col items-start flex-1 gap-6 md:gap-7 reveal-slide-right">
+                <!-- Column Text -->
+                <article data-scroll data-scroll-class="is-inview"
+                    class="flex flex-col items-start flex-1 gap-6 md:gap-7 reveal-slide-right">
                     <h2 id="about-title"
-                        class="text-3xl sm:text-4xl lg:text-[40px] text-left text-[#0071bc] leading-tight">
+                        class="text-3xl sm:text-4xl lg:text-[40px] text-left text-[#0075c3] leading-tight">
                         <span class="font-bold">¿Quiénes </span>
                         <span class="font-black">Somos?</span>
                     </h2>
@@ -144,234 +180,69 @@ useSchemaOrg([
                         Somos una asociación civil sin fines de lucro fundada en 1984 en la ciudad de Chihuahua. Desde
                         entonces damos atención integral a personas con síndrome de Down de todas las edades. Nuestra
                         misión es impulsar a cada persona al máximo desarrollo de sus capacidades, para hacer posible su
-                        plena inclusión en la escuela, el trabajo y la vida social.
+                        plena inclusión en la comunidad.
                     </p>
-                </div>
+                </article>
 
-                <!-- Image Frame Column -->
-                <div data-scroll data-scroll-class="is-inview" data-scroll-speed="0.04" class="w-full lg:w-[480px] shrink-0 reveal-scale">
+                <!-- Column Image Frame (Manual image replacement prepared) -->
+                <div data-scroll data-scroll-class="is-inview" class="w-full lg:w-[480px] shrink-0 reveal-scale">
+                    <!-- IMAGEN QUIÉNES SOMOS: Reemplazar path en images.aboutUs o app/assets/images/qs-image.png -->
                     <div class="relative w-full aspect-[4/3] rounded-[32px] border-[8px] md:border-[12px] border-white overflow-hidden shadow-2xl"
-                        style="filter: drop-shadow(0px 16px 40px rgba(29,29,27,0.08));">
-                        <img src="/assets/images/qs-image.png"
-                            alt="Instalaciones y equipo del Instituto Down de Chihuahua"
+                        style="filter: drop-shadow(0px 16px 40px rgba(29,29,27,0.06));">
+                        <img :src="images.aboutUs" alt="Instalaciones y miembros del Instituto Down de Chihuahua"
                             class="w-full h-full object-cover" loading="lazy" />
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- SECTION: TRAYECTORIA / 40 AÑOS -->
-        <section aria-labelledby="trajectory-title"
-            class="bg-[#fff5e0] px-4 sm:px-6 md:px-12 lg:px-20 py-16 md:py-24 lg:py-[120px]">
-            <div class="max-w-7xl mx-auto flex flex-col items-center gap-12 md:gap-16">
-                <!-- Section Header -->
-                <div data-scroll data-scroll-class="is-inview" class="flex flex-col items-center text-center gap-3 md:gap-4 max-w-3xl reveal-fade-up">
-                    <span class="text-xs sm:text-sm font-bold uppercase tracking-wider text-[#0071bc]">
-                        El valor de nuestra trayectoria
-                    </span>
-                    <h2 id="trajectory-title"
-                        class="text-2xl sm:text-3xl md:text-4xl lg:text-[44px] font-bold text-[#1d1d1b] leading-tight">
-                        Cuatro décadas construyendo futuro
-                    </h2>
-                </div>
+        <!-- 3. SECTION: LO QUE HACEMOS (Pantalla completa / 100% de ancho) -->
+        <section aria-labelledby="what-we-do-title" class="bg-white pt-12 md:pt-20 pb-0 overflow-hidden w-full">
+            <!-- Header (Centrado) -->
+            <div
+                class="max-w-7xl mx-auto px-4 sm:px-6 md:px-12 flex flex-col items-center text-center gap-3 mb-10 md:mb-14">
+                <span class="text-xs sm:text-sm font-bold uppercase tracking-wider text-[#0075c3]">
+                    Caminos de participación
+                </span>
+                <h2 id="what-we-do-title"
+                    class="text-3xl sm:text-4xl lg:text-[40px] font-bold text-center text-[#1d1d1b]">
+                    Lo que hacemos
+                </h2>
+            </div>
 
-                <!-- 3 Cards Grid -->
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8 w-full">
-                    <!-- Card 1 (Blue) -->
-                    <article data-scroll data-scroll-class="is-inview"
-                        class="flex flex-col justify-between items-start gap-8 p-8 md:p-10 rounded-3xl bg-[#0071bc] text-white shadow-lg card-hover-subtle reveal-fade-up stagger-1">
-                        <div
-                            class="flex justify-center items-center w-14 h-14 rounded-2xl bg-white text-[#0071bc] shadow-xs">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
-                                xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                                <path
-                                    d="M8 1.99915V5.99947M16 1.99915V5.99947M3 9.99979H21M5 3.99931H19C20.1046 3.99931 21 4.89481 21 5.99947V20.0006C21 21.1052 20.1046 22.0007 19 22.0007H5C3.89543 22.0007 3 21.1052 3 20.0006V5.99947C3 4.89481 3.89543 3.99931 5 3.99931Z"
-                                    stroke="#0071BC" stroke-width="2" stroke-linecap="round"></path>
-                            </svg>
-                        </div>
-                        <div class="flex flex-col gap-2.5">
-                            <h3
-                                class="text-2xl md:text-3xl lg:text-[32px] font-bold text-left text-white leading-tight">
-                                Desde 1984
-                            </h3>
-                            <p class="text-base text-left text-[#fff5e0]">
-                                cuatro décadas de trabajo continuo.
-                            </p>
-                        </div>
-                    </article>
+            <!-- Banners Verticales a Pantalla Completa (100% Ancho) -->
+            <div class="flex flex-col w-full">
+                <article v-for="(card, index) in images.loQueHacemos" :key="card.id" data-scroll
+                    data-scroll-class="is-inview"
+                    class="relative w-full h-[360px] sm:h-[420px] md:h-[480px] overflow-hidden bg-slate-900 text-white flex flex-col justify-end reveal-fade-up">
+                    <!-- Background Image (100% Ancho) -->
+                    <div class="absolute inset-0 z-0">
+                        <img :src="card.image" :alt="card.title"
+                            class="w-full h-full object-cover opacity-90 transition-transform duration-700 hover:scale-105"
+                            loading="lazy" />
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/25 to-transparent"></div>
+                        <div class="absolute inset-0 bg-black/20"></div>
+                    </div>
 
-                    <!-- Card 2 (Yellow) -->
-                    <article data-scroll data-scroll-class="is-inview"
-                        class="flex flex-col justify-between items-start gap-8 p-8 md:p-10 rounded-3xl bg-[#d9b421] text-[#0071bc] shadow-lg card-hover-subtle reveal-fade-up stagger-2">
-                        <div
-                            class="flex justify-center items-center w-14 h-14 rounded-2xl bg-white text-[#d9b421] shadow-xs">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
-                                xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                                <path
-                                    d="M16.0001 21V19C16.0001 17.9391 15.5787 16.9217 14.8285 16.1716C14.0783 15.4214 13.0608 15 11.9998 15H5.99934C4.93839 15 3.9209 15.4214 3.17069 16.1716C2.42048 16.9217 1.99902 17.9391 1.99902 19V21M16.0001 3.12793C16.858 3.3503 17.6177 3.85119 18.16 4.55199C18.7023 5.25279 18.9966 6.11382 18.9966 6.99993C18.9966 7.88604 18.7023 8.74707 18.16 9.44787C17.6177 10.1487 16.858 10.6496 16.0001 10.8719M22.0006 20.9999V18.9999C22 18.1136 21.705 17.2527 21.1619 16.5522C20.6189 15.8517 19.8586 15.3515 19.0004 15.1299M12.9999 7C12.9999 9.20914 11.2089 11 8.99958 11C6.79027 11 4.99926 9.20914 4.99926 7C4.99926 4.79086 6.79027 3 8.99958 3C11.2089 3 12.9999 4.79086 12.9999 7Z"
-                                    stroke="#D9B421" stroke-width="2" stroke-linecap="round"></path>
-                            </svg>
-                        </div>
-                        <div class="flex flex-col gap-2.5">
-                            <h3
-                                class="text-2xl md:text-3xl lg:text-[32px] font-bold text-left text-[#0071bc] leading-tight">
-                                Todas las edades
-                            </h3>
-                            <p class="text-base text-left text-white">
-                                desde recién nacidos hasta la vida adulta.
-                            </p>
-                        </div>
-                    </article>
-
-                    <!-- Card 3 (Coral/Orange) -->
-                    <article data-scroll data-scroll-class="is-inview"
-                        class="flex flex-col justify-between items-start gap-8 p-8 md:p-10 rounded-3xl bg-[#e8734a] text-white shadow-lg card-hover-subtle reveal-fade-up stagger-3">
-                        <div
-                            class="flex justify-center items-center w-14 h-14 rounded-2xl bg-white text-[#e8734a] shadow-xs">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
-                                xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                                <path
-                                    d="M15 20.9991V12.9991C15 12.7339 14.8946 12.4796 14.7071 12.292C14.5196 12.1045 14.2652 11.9991 14 11.9991H10C9.73478 11.9991 9.48043 12.1045 9.29289 12.292C9.10536 12.4796 9 12.7339 9 12.9991V20.9991M3 9.99963C2.99993 9.70869 3.06333 9.42125 3.18579 9.15734C3.30824 8.89344 3.4868 8.65942 3.709 8.47163L10.709 2.47162C11.07 2.16653 11.5274 1.99915 12 1.99915C12.4726 1.99915 12.93 2.16653 13.291 2.47162L20.291 8.47163C20.5132 8.65942 20.6918 8.89344 20.8142 9.15734C20.9367 9.42125 21.0001 9.70869 21 9.99963V18.9996C21 19.5301 20.7893 20.0388 20.4142 20.4138C20.0391 20.7889 19.5304 20.9996 19 20.9996H5C4.46957 20.9996 3.96086 20.7889 3.58579 20.4138C3.21071 20.0388 3 19.5301 3 18.9996V9.99963Z"
-                                    stroke="#E8734A" stroke-width="2" stroke-linecap="round"></path>
-                            </svg>
-                        </div>
-                        <div class="flex flex-col gap-2.5">
-                            <h3
-                                class="text-2xl md:text-3xl lg:text-[32px] font-bold text-left text-white leading-tight">
-                                Instalaciones propias
-                            </h3>
-                            <p class="text-base text-left text-[#fff5e0]">
-                                un espacio pensado para el desarrollo y la terapia.
-                            </p>
-                        </div>
-                    </article>
-                </div>
+                    <!-- Card Content (Alineado al contenedor responsive) -->
+                    <div
+                        class="relative z-10 w-full max-w-7xl mx-auto px-6 sm:px-12 md:px-20 pb-10 md:pb-16 flex flex-col gap-2">
+                        <h3 class="text-2xl sm:text-3xl md:text-4xl font-bold text-left text-white leading-tight">
+                            {{ card.title }}
+                        </h3>
+                        <p class="text-base sm:text-lg text-left text-white/95 leading-relaxed max-w-3xl">
+                            {{ card.description }}
+                        </p>
+                    </div>
+                </article>
             </div>
         </section>
 
-        <!-- SECTION: CAMINOS DE PARTICIPACIÓN -->
-        <section aria-labelledby="paths-title"
-            class="bg-[#f4f6f8] px-4 sm:px-6 md:px-12 lg:px-20 py-16 md:py-24 lg:py-[120px]">
-            <div class="max-w-7xl mx-auto flex flex-col items-center gap-12 md:gap-14">
-                <!-- Section Header -->
-                <div data-scroll data-scroll-class="is-inview" class="flex flex-col items-center text-center gap-3 md:gap-4 max-w-3xl reveal-fade-up">
-                    <span class="text-xs sm:text-sm font-bold uppercase tracking-wider text-[#d9b421]">
-                        Caminos de participación
-                    </span>
-                    <h2 id="paths-title"
-                        class="text-2xl sm:text-3xl md:text-4xl lg:text-[40px] font-bold text-[#0071bc] leading-tight">
-                        ¿Cómo puedes formar parte de Instituto Down?
-                    </h2>
-                </div>
-
-                <!-- 4 Cards Grid -->
-                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 w-full">
-                    <!-- Card 1 -->
-                    <article data-scroll data-scroll-class="is-inview"
-                        class="group flex flex-col justify-between overflow-hidden rounded-3xl bg-white shadow-sm hover:shadow-xl card-hover-subtle transition-all duration-300 reveal-fade-up stagger-1">
-                        <div class="w-full h-44 overflow-hidden relative bg-slate-100">
-                            <img src="@/assets/images/card-1.png"
-                                alt="Familias nuevas - Apoyo a familias con síndrome de Down"
-                                class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" loading="lazy" />
-                        </div>
-                        <div class="flex flex-col justify-between flex-1 p-6 md:p-7 gap-5">
-                            <div class="flex flex-col gap-2">
-                                <h3 class="text-xl md:text-[22px] font-bold text-left text-[#0071bc]">
-                                    Familias nuevas
-                                </h3>
-                                <p class="text-sm text-left text-[#4a4a48]">
-                                    ¿Acabas de recibir la noticia? Estamos aquí.
-                                </p>
-                            </div>
-                            <NuxtLink to="/familias">
-                                <Button label="Encuentra apoyo →" text
-                                    class="!p-0 !justify-start !text-sm !font-bold !text-[#0071bc] hover:!underline"
-                                    aria-label="Encuentra apoyo para familias nuevas" />
-                            </NuxtLink>
-                        </div>
-                    </article>
-
-                    <!-- Card 2 -->
-                    <article data-scroll data-scroll-class="is-inview"
-                        class="group flex flex-col justify-between overflow-hidden rounded-3xl bg-white shadow-sm hover:shadow-xl card-hover-subtle transition-all duration-300 reveal-fade-up stagger-2">
-                        <div class="w-full h-44 overflow-hidden relative bg-slate-100">
-                            <img src="@/assets/images/card-2.png" alt="Programas de atención integral y educación"
-                                class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" loading="lazy" />
-                        </div>
-                        <div class="flex flex-col justify-between flex-1 p-6 md:p-7 gap-5">
-                            <div class="flex flex-col gap-2">
-                                <h3 class="text-xl md:text-[22px] font-bold text-left text-[#0071bc]">
-                                    Programas
-                                </h3>
-                                <p class="text-sm text-left text-[#4a4a48]">
-                                    Un camino de apoyo para cada edad.
-                                </p>
-                            </div>
-                            <!-- boton para ir a programas-->
-                            <NuxtLink to="/programas">
-                                <Button label="Conoce más →" text
-                                    class="!p-0 !justify-start !text-sm !font-bold !text-[#0071bc] hover:!underline"
-                                    aria-label="Conoce más sobre los programas del Instituto Down" />
-                            </NuxtLink>
-                        </div>
-                    </article>
-
-                    <!-- Card 3 -->
-                    <article data-scroll data-scroll-class="is-inview"
-                        class="group flex flex-col justify-between overflow-hidden rounded-3xl bg-white shadow-sm hover:shadow-xl card-hover-subtle transition-all duration-300 reveal-fade-up stagger-3">
-                        <div class="w-full h-44 overflow-hidden relative bg-slate-100">
-                            <img src="@/assets/images/card-4.png" alt="Programa de reciclaje ecológico y donaciones"
-                                class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" loading="lazy" />
-                        </div>
-                        <div class="flex flex-col justify-between flex-1 p-6 md:p-7 gap-5">
-                            <div class="flex flex-col gap-2">
-                                <h3 class="text-xl md:text-[22px] font-bold text-left text-[#0071bc]">
-                                    Reciclaje
-                                </h3>
-                                <p class="text-sm text-left text-[#4a4a48]">
-                                    Reciclar con nosotros -también transforma vidas.
-                                </p>
-                            </div>
-                            <!-- boton para ir a reciclaje-->
-                            <NuxtLink to="/reciclaje">
-                                <Button label="Quiero reciclar →" text
-                                    class="!p-0 !justify-start !text-sm !font-bold !text-[#0071bc] hover:!underline"
-                                    aria-label="Quiero reciclar con el Instituto Down" />
-                            </NuxtLink>
-                        </div>
-                    </article>
-
-                    <!-- Card 4 -->
-                    <article data-scroll data-scroll-class="is-inview"
-                        class="group flex flex-col justify-between overflow-hidden rounded-3xl bg-white shadow-sm hover:shadow-xl card-hover-subtle transition-all duration-300 reveal-fade-up stagger-4">
-                        <div class="w-full h-44 overflow-hidden relative bg-slate-100">
-                            <img src="@/assets/images/card-3.png" alt="Colabora y apoya al Instituto Down de Chihuahua"
-                                class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" loading="lazy" />
-                        </div>
-                        <div class="flex flex-col justify-between flex-1 p-6 md:p-7 gap-5">
-                            <div class="flex flex-col gap-2">
-                                <h3 class="text-xl md:text-[22px] font-bold text-left text-[#0071bc]">
-                                    Colabora
-                                </h3>
-                                <p class="text-sm text-left text-[#4a4a48]">
-                                    Tu apoyo sostiene 40 años de historia.
-                                </p>
-                            </div>
-                            <NuxtLink to="/contacto#cta-banco-title">
-                                <Button label="Apoyar ahora →" text
-                                    class="!p-0 !justify-start !text-sm !font-bold !text-[#0071bc] hover:!underline"
-                                    aria-label="Apoyar ahora con una colaboración" />
-                            </NuxtLink>
-                        </div>
-                    </article>
-                </div>
-            </div>
-        </section>
-
-        <!-- SECTION: CTA BANNER -->
+        <!-- 4. SECTION: CTA BANNER -->
         <section aria-labelledby="cta-title"
-            class="bg-[#0071bc] text-white px-4 sm:px-6 md:px-12 lg:px-[120px] py-16 md:py-20 lg:py-[110px] overflow-hidden">
-            <div data-scroll data-scroll-class="is-inview" class="max-w-4xl mx-auto flex flex-col items-center text-center gap-8 md:gap-9 reveal-scale">
+            class="bg-[#0075c3] text-white px-4 sm:px-6 md:px-12 lg:px-[120px] py-16 md:py-20 lg:py-[110px] overflow-hidden">
+            <div data-scroll data-scroll-class="is-inview"
+                class="max-w-4xl mx-auto flex flex-col items-center text-center gap-8 md:gap-9 reveal-scale">
                 <h2 id="cta-title"
                     class="text-2xl sm:text-3xl md:text-4xl lg:text-[38px] font-bold text-center text-white leading-tight md:leading-snug">
                     Cada persona con síndrome de Down tiene una vida por delante llena de posibilidades. Ayúdanos a que
@@ -380,9 +251,9 @@ useSchemaOrg([
 
                 <div class="flex flex-wrap justify-center items-center gap-4 md:gap-5">
                     <a href="https://www.paypal.com/donate/?hosted_button_id=SBY6NYQWH6CDJ" target="_blank"
-                        rel="noopener noreferrer">
+                        rel="noopener noreferrer" aria-label="Realizar una donación al Instituto Down por PayPal">
                         <Button label="Donar" icon="pi pi-arrow-right" iconPos="right"
-                            class="!bg-[#d9b421] !hover:bg-[#c4a11c] !text-[#0071bc] !font-bold !px-6 !py-3 !rounded-full !border-none flex items-center gap-3 shadow-md transition-all duration-300 transform hover:-translate-y-0.5"
+                            class="!bg-[#fc0] !hover:bg-[#e6b800] !text-[#0075c3] !font-bold !px-6 !py-3 !rounded-full !border-none flex items-center gap-3 shadow-md transition-all duration-300 transform hover:-translate-y-0.5"
                             aria-label="Donar al Instituto Down de Chihuahua" />
                     </a>
 
@@ -395,41 +266,168 @@ useSchemaOrg([
             </div>
         </section>
 
-        <!-- SECTION: INFORME ANUAL -->
-        <section aria-labelledby="informe-anual-title"
-            class="bg-[#f4f6f8] px-4 sm:px-6 md:px-12 lg:px-20 py-16 md:py-24">
-            <div class="max-w-7xl mx-auto flex flex-col items-center gap-10 md:gap-14">
-                <!-- Header -->
-                <div data-scroll data-scroll-class="is-inview" class="flex flex-col items-center text-center reveal-fade-up">
-                    <h2 id="informe-anual-title"
-                        class="text-3xl sm:text-4xl md:text-[40px] font-bold text-[#0071bc] text-center inline-block border-b-4 border-[#0071bc] pb-1 tracking-tight">
-                        Informe Anual
+        <!-- 5. SECTION: CAMINOS DE PARTICIPACIÓN / ¿CÓMO PUEDES FORMAR PARTE? -->
+        <section aria-labelledby="paths-title"
+            class="bg-[#f4f6f8] px-4 sm:px-6 md:px-12 lg:px-20 py-16 md:py-24 lg:py-[120px]">
+            <div class="max-w-7xl mx-auto flex flex-col items-center gap-12 md:gap-14">
+                <!-- Section Header -->
+                <div data-scroll data-scroll-class="is-inview"
+                    class="flex flex-col items-center text-center gap-3 md:gap-4 max-w-3xl reveal-fade-up">
+                    <span class="text-xs sm:text-sm font-bold uppercase tracking-wider text-[#fc0]">
+                        Caminos de participación
+                    </span>
+                    <h2 id="paths-title"
+                        class="text-2xl sm:text-3xl md:text-4xl lg:text-[40px] font-bold text-[#0075c3] leading-tight">
+                        ¿Cómo puedes formar parte de Instituto Down?
                     </h2>
                 </div>
 
                 <!-- 4 Cards Grid -->
                 <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 w-full">
-                    <article v-for="(informe, index) in informes" :key="informe.year" data-scroll data-scroll-class="is-inview"
-                        :class="['flex flex-col justify-between p-6 sm:p-7 rounded-3xl bg-white shadow-xs hover:shadow-md card-hover-subtle transition-all duration-300 min-h-[140px] reveal-fade-up', `stagger-${index + 1}`]">
-                        <div class="flex flex-col gap-2">
-                            <h3 class="text-xl sm:text-[22px] font-bold text-left text-[#0071bc]">
-                                {{ informe.title }}
-                            </h3>
+                    <!-- Card 1: Familias nuevas -->
+                    <article data-scroll data-scroll-class="is-inview"
+                        class="group flex flex-col justify-between overflow-hidden rounded-3xl bg-white shadow-xs hover:shadow-xl card-hover-subtle transition-all duration-300 reveal-fade-up stagger-1">
+                        <!-- IMAGEN CAMINO 1: Reemplazar path en images.caminos.familias -->
+                        <div class="w-full h-44 overflow-hidden relative bg-slate-100">
+                            <img :src="images.caminos.familias" alt="Familias nuevas - Apoyo desde el primer día"
+                                class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                                loading="lazy" />
                         </div>
-                        <a :href="informe.file" :download="informe.fileName" target="_blank" rel="noopener noreferrer"
-                            class="inline-flex items-center gap-2 text-sm sm:text-base font-bold text-[#0071bc] hover:underline transition-all mt-6 w-fit"
-                            :aria-label="`Descargar ${informe.title}`">
-                            <span>Descargar</span>
-                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
-                                <polyline points="7 10 12 15 17 10"></polyline>
-                                <line x1="12" y1="15" x2="12" y2="3"></line>
-                            </svg>
-                        </a>
+                        <div class="flex flex-col justify-between flex-1 p-6 md:p-7 gap-5">
+                            <div class="flex flex-col gap-2">
+                                <h3 class="text-xl md:text-[22px] font-bold text-left text-[#0075c3]">
+                                    Familias nuevas
+                                </h3>
+                                <p class="text-sm text-left text-[#4a4a48]">
+                                    ¿Acabas de recibir la noticia? Estamos aquí.
+                                </p>
+                            </div>
+                            <NuxtLink to="/familias">
+                                <Button label="Encuentra apoyo →" text
+                                    class="!p-0 !justify-start !text-sm !font-bold !text-[#0075c3] hover:!underline"
+                                    aria-label="Encuentra apoyo para familias nuevas" />
+                            </NuxtLink>
+                        </div>
+                    </article>
+
+                    <!-- Card 2: Programas -->
+                    <article data-scroll data-scroll-class="is-inview"
+                        class="group flex flex-col justify-between overflow-hidden rounded-3xl bg-white shadow-xs hover:shadow-xl card-hover-subtle transition-all duration-300 reveal-fade-up stagger-2">
+                        <!-- IMAGEN CAMINO 2: Reemplazar path en images.caminos.programas -->
+                        <div class="w-full h-44 overflow-hidden relative bg-slate-100">
+                            <img :src="images.caminos.programas" alt="Programas educativos e inclusión integral"
+                                class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                                loading="lazy" />
+                        </div>
+                        <div class="flex flex-col justify-between flex-1 p-6 md:p-7 gap-5">
+                            <div class="flex flex-col gap-2">
+                                <h3 class="text-xl md:text-[22px] font-bold text-left text-[#0075c3]">
+                                    Programas
+                                </h3>
+                                <p class="text-sm text-left text-[#4a4a48]">
+                                    Un camino de apoyo para cada edad.
+                                </p>
+                            </div>
+                            <NuxtLink to="/programas">
+                                <Button label="Conoce más →" text
+                                    class="!p-0 !justify-start !text-sm !font-bold !text-[#0075c3] hover:!underline"
+                                    aria-label="Conoce más sobre los programas del Instituto Down" />
+                            </NuxtLink>
+                        </div>
+                    </article>
+
+                    <!-- Card 3: Reciclaje -->
+                    <article data-scroll data-scroll-class="is-inview"
+                        class="group flex flex-col justify-between overflow-hidden rounded-3xl bg-white shadow-xs hover:shadow-xl card-hover-subtle transition-all duration-300 reveal-fade-up stagger-3">
+                        <!-- IMAGEN CAMINO 3: Reemplazar path en images.caminos.reciclaje -->
+                        <div class="w-full h-44 overflow-hidden relative bg-slate-100">
+                            <img :src="images.caminos.reciclaje" alt="Programa de reciclaje con causa social"
+                                class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                                loading="lazy" />
+                        </div>
+                        <div class="flex flex-col justify-between flex-1 p-6 md:p-7 gap-5">
+                            <div class="flex flex-col gap-2">
+                                <h3 class="text-xl md:text-[22px] font-bold text-left text-[#0075c3]">
+                                    Reciclaje
+                                </h3>
+                                <p class="text-sm text-left text-[#4a4a48]">
+                                    Reciclar con nosotros también transforma vidas.
+                                </p>
+                            </div>
+                            <NuxtLink to="/reciclaje">
+                                <Button label="Quiero reciclar →" text
+                                    class="!p-0 !justify-start !text-sm !font-bold !text-[#0075c3] hover:!underline"
+                                    aria-label="Quiero reciclar con el Instituto Down" />
+                            </NuxtLink>
+                        </div>
+                    </article>
+
+                    <!-- Card 4: Colabora -->
+                    <article data-scroll data-scroll-class="is-inview"
+                        class="group flex flex-col justify-between overflow-hidden rounded-3xl bg-white shadow-xs hover:shadow-xl card-hover-subtle transition-all duration-300 reveal-fade-up stagger-4">
+                        <!-- IMAGEN CAMINO 4: Reemplazar path en images.caminos.colabora -->
+                        <div class="w-full h-44 overflow-hidden relative bg-slate-100">
+                            <img :src="images.caminos.colabora" alt="Colaboraciones, voluntariado y apoyo al instituto"
+                                class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                                loading="lazy" />
+                        </div>
+                        <div class="flex flex-col justify-between flex-1 p-6 md:p-7 gap-5">
+                            <div class="flex flex-col gap-2">
+                                <h3 class="text-xl md:text-[22px] font-bold text-left text-[#0075c3]">
+                                    Colabora
+                                </h3>
+                                <p class="text-sm text-left text-[#4a4a48]">
+                                    Tu apoyo sostiene 40 años de historia.
+                                </p>
+                            </div>
+                            <NuxtLink to="/contacto">
+                                <Button label="Apoyar ahora →" text
+                                    class="!p-0 !justify-start !text-sm !font-bold !text-[#0075c3] hover:!underline"
+                                    aria-label="Apoyar ahora con una colaboración" />
+                            </NuxtLink>
+                        </div>
                     </article>
                 </div>
             </div>
         </section>
+
+        <!-- 6. SECTION: NUESTRO IMPACTO (Fondo Amarillo con Imagen de Alumnos) -->
+        <section aria-labelledby="impact-title"
+            class="relative w-full overflow-hidden py-16 md:py-24 lg:py-28 text-[#0075c3]">
+            <!-- Capa de Imagen de Fondo con Filtro Amarillo -->
+            <div class="absolute inset-0 z-0">
+                <img :src="images.impactoBg" alt="Alumnos del Instituto Down de Chihuahua"
+                    class="w-full h-full object-cover object-center" />
+                <div class="absolute inset-0 bg-[#fc0]/90 mix-blend-multiply"></div>
+                <div class="absolute inset-0 bg-[#fc0]/60"></div>
+            </div>
+
+            <!-- Contenido de Estadísticas -->
+            <div
+                class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 md:px-12 flex flex-col items-center gap-10 md:gap-14">
+                <div data-scroll data-scroll-class="is-inview"
+                    class="flex flex-col items-center text-center reveal-fade-up">
+                    <h2 id="impact-title" class="text-3xl sm:text-4xl lg:text-[42px] font-bold text-center text-black">
+                        Nuestro impacto
+                    </h2>
+                </div>
+
+                <!-- Grid de Estadísticas (Sin tarjetas blancas, números azules grandes) -->
+                <div class="grid grid-cols-2 md:grid-cols-3 gap-8 md:gap-12 lg:gap-16 w-full max-w-5xl mx-auto">
+                    <article v-for="(stat, index) in impactoStats" :key="index" data-scroll
+                        data-scroll-class="is-inview"
+                        :class="['flex flex-col justify-center items-center text-center reveal-fade-up', `stagger-${(index % 4) + 1}`]">
+                        <span
+                            class="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-black text-[#0075c3] leading-none mb-2">
+                            {{ stat.number }}
+                        </span>
+                        <span class="text-sm sm:text-base md:text-lg font-bold text-[#0075c3] leading-snug">
+                            {{ stat.label }}
+                        </span>
+                    </article>
+                </div>
+            </div>
+        </section>
+
     </main>
 </template>

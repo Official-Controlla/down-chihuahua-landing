@@ -46,7 +46,7 @@ export default defineNuxtPlugin((nuxtApp) => {
     );
 
     const elements = document.querySelectorAll(
-      ".reveal-fade-up, .reveal-fade-in, .reveal-scale, .reveal-slide-right, .reveal-slide-left, [data-scroll]"
+      ".reveal-fade-up, .reveal-fade-in, .reveal-scale, .reveal-slide-right, .reveal-slide-left, .reveal-blur-in, [data-scroll]"
     );
 
     elements.forEach((el) => {
